@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemical Labs - Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+<body class="font-sans antialiased bg-white text-gray-800">
+    <main class="py-10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-6 flex items-center justify-between">
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Chemical Labs - Details</h1>
+                <a href="chemical.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium">
+                    <i class="fa-solid fa-arrow-left mr-2"></i> Back to Chemical Labs
+                </a>
+            </div>
+
+            <div class="rounded-xl border border-blue-100 bg-blue-50 p-5 mb-6">
+                <p class="text-sm text-blue-900">
+                    You navigated here from a "Read More" link. The sector key is extracted from the URL and shown below.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-6">
+                <h2 id="details-title" class="text-xl font-bold text-gray-900 mb-2">Details</h2>
+                <p id="details-desc" class="text-gray-700 leading-relaxed">
+                    Loading sector details...
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        (function(){
+            const params = new URLSearchParams(window.location.search);
+            const sector = params.get('sector') || 'general';
+            const title = document.getElementById('details-title');
+            const desc = document.getElementById('details-desc');
+            const content = {
+                gas: {
+                    title: 'Gas Sector',
+                    desc: 'In-depth information about Gas Sector instrumentation, methods, calibration routines, and QA/QC workflows.'
+                },
+                'gas-devices': {
+                    title: 'Gas Sector Devices',
+                    desc: 'Expanded list of Gas sector devices, maintenance schedules, and performance benchmarks.'
+                },
+                research: {
+                    title: 'Research Sector',
+                    desc: 'Protocols, spectrometry methods, and sample preparation standards used in the Research Sector.'
+                },
+                evaluation: {
+                    title: 'Evaluation & Studies Sector',
+                    desc: 'Evaluation methodologies, study frameworks, and reporting templates for distillates and feedstocks.'
+                },
+                quality: {
+                    title: 'Quality Control Sector',
+                    desc: 'Quality systems, accreditation scope, and verification procedures across petroleum products.'
+                },
+                water: {
+                    title: 'Water Sector',
+                    desc: 'Water analysis parameters, regulatory thresholds, and reference instrumentation.'
+                },
+                products: {
+                    title: 'Products Analysis Sector',
+                    desc: 'Detailed test methods and acceptance criteria for multiple product categories.'
+                },
+                general: {
+                    title: 'Chemical Laboratories',
+                    desc: 'Explore details for each sector via the links on the Chemical Labs page.'
+                }
+            };
+            const data = content[sector] || content.general;
+            title.textContent = data.title + ' - Details';
+            desc.textContent = data.desc;
+        })();
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="https://example.com" class="block w-16 h-16 overflow-hidden">
+                        <img src="images/logo.png" 
+                            alt="Logo" 
+                            class="w-full h-full object-contain" />
+                    </a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex md:items-center md:flex-1 md:justify-center md:space-x-1">
+                    <a href="index.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow active">
+                        Home
+                    </a>
+                    <a href="about.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        About Us
+                    </a>
+                    <a href="projects.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Projects
+                    </a>
+                    <a href="projects.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Products
+                    </a>
+                    <a href="services.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Services
+                    </a>
+                    <a href="units.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Units
+                    </a>
+                    <a href="portfolio.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Portfolio
+                    </a>
+                    <a href="contact.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Search and action buttons -->
+                <div class="hidden md:flex md:items-center md:space-x-2">
+                    <button class="p-2 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow">
+                        <span class="sr-only">Search</span>
+                        <i class="fas fa-search h-4 w-4"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Image Slider -->
+    <section class="hero-slider relative h-[90vh] w-full overflow-hidden">
+        <!-- Slide 1 -->
+        <div class="slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100" data-slide="1">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"></div>
+            <img src="images/home/homesection-1.jpg" 
+                 alt="Modern Business Building" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in">
+                        Welcome To
+                        <span class="text-blue-400">Alexandria Petroleum</span>
+                        Company
+                    </h1>
+                    <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed animate-fade-in-delay">
+                        One Of The Egyptian General Petroleum Corporation Companies.
+                    </p>
+                    <a href="about.html" class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 animate-fade-in-delay-2">
+                        Get Started Today
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0" data-slide="2">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"></div>
+            <img src="images/home/homesection-2.jpg" 
+                 alt="Creative Team Collaboration" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                        Our Mission Is To
+                        <span class="text-red-400">Fullfill</span>
+                        The Needs Of The Local Market
+                    </h1>
+                    <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed">
+                        And Export The Excess To Increase The National Income.
+                    </p>
+                    <a href="about.html" class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        Read More
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0" data-slide="3">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"></div>
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" 
+                 alt="Data Analytics Dashboard" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                        Petroleum Port Is Directed By
+                        <span class="text-purple-400">Alexandria Petroleum</span>
+                        Company.
+                    </h1>
+                    <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed">
+                        We Deliver And Receive Many Products For Many Companies.
+                    </p>
+                    <a href="about.html" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+
+       
+        <!-- Navigation Arrows -->
+        <button class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 z-10" id="prevSlide">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 z-10" id="nextSlide">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+
+        <!-- Progress Bar -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+            <div class="flex space-x-2">
+            <!-- Slide 1 -->
+            <button class="w-16 h-1 bg-white/30 rounded-full overflow-hidden cursor-pointer hover:bg-white/40 transition-all duration-300 progress-indicator" data-slide="1">
+                <div class="h-full bg-white rounded-full progress-bar" data-slide="1" style="width: 0%; transition: width 10000ms ease-out;"></div>
+            </button>
+        
+            <!-- Slide 2 -->
+            <button class="w-16 h-1 bg-white/30 rounded-full overflow-hidden cursor-pointer hover:bg-white/40 transition-all duration-300 progress-indicator" data-slide="2">
+                <div class="h-full bg-white rounded-full progress-bar" data-slide="2" style="width: 0%; transition: width 10000ms ease-out;"></div>
+            </button>
+        
+            <!-- Slide 3 -->
+            <button class="w-16 h-1 bg-white/30 rounded-full overflow-hidden cursor-pointer hover:bg-white/40 transition-all duration-300 progress-indicator" data-slide="3">
+                <div class="h-full bg-white rounded-full progress-bar" data-slide="3" style="width: 0%; transition: width 10000ms ease-out;"></div>
+            </button>
+        
+            
+            </div>
+        </div>
+  
+    </section>
+
+   <!-- Features Section -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Our <span class="text-blue-600">Core</span> Competencies
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mx-auto mb-6 rounded-full"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    The strategic pillars that define Alexandria Petroleum Company's industry leadership
+                </p>
+            </div>
+
+                    <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1: Quality Certification -->
+                <div class="feature-card group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-100">
+                    <div class="flex flex-col items-center h-full">
+                        <!-- Circular Image Container -->
+                        <div class="image-container mb-6">
+                            <div class="relative w-20 h-20 mx-auto">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                                <div class="relative w-20 h-20 rounded-full overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300">
+                                    <img src="images/home/icon-1.png" alt="Quality Certification" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="content-wrapper flex-1 flex flex-col justify-start text-center">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                                Quality Certification
+                            </h3>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">
+                                Alexandria Petroleum Company Obtains three Different ISO Certifications.
+                            </p>
+                        </div>
+                        
+                        <!-- Read More Link -->
+                        <a href="about.html#iso-certifications" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors duration-300 mt-auto">
+                            Learn more
+                            <i class="fas fa-chevron-right ml-1 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Ecological Management -->
+                <div class="feature-card group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-green-100">
+                    <div class="flex flex-col items-center h-full">
+                        <!-- Circular Image Container -->
+                        <div class="image-container mb-6">
+                            <div class="relative w-20 h-20 mx-auto">
+                                <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-green-600 rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                                <div class="relative w-20 h-20 rounded-full overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300">
+                                    <img src="images/home/icon-2.png" alt="Ecological Management" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="content-wrapper flex-1 flex flex-col justify-start text-center">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3 group-hover:text-green-600 transition-colors duration-300">
+                                Ecological Management
+                            </h3>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">
+                                APC Implements the Environmental Managment policy system to reduce pollution rate.
+                            </p>
+                        </div>
+                        
+                        <!-- Read More Link -->
+                        <a href="about.html#environmental-managment" class="inline-flex items-center text-sm font-medium text-green-600 hover:text-green-700 transition-colors duration-300 mt-auto">
+                            Learn more
+                            <i class="fas fa-chevron-right ml-1 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Feature 3: APC Role -->
+                <div class="feature-card group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-purple-100">
+                    <div class="flex flex-col items-center h-full">
+                        <!-- Circular Image Container -->
+                        <div class="image-container mb-6">
+                            <div class="relative w-20 h-20 mx-auto">
+                                <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                                <div class="relative w-20 h-20 rounded-full overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300">
+                                    <img src="images/home/icon-3.png" alt="APC Role" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="content-wrapper flex-1 flex flex-col justify-start text-center">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors duration-300">
+                                APC Role
+                            </h3>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">
+                                Supporting the National Economy and Availability of the Petroleum Products for the local market .
+                            </p>
+                        </div>
+                        
+                        <!-- Read More Link -->
+                        <a href="about.html#our-role" class="inline-flex items-center text-sm font-medium text-purple-600 hover:text-purple-700 transition-colors duration-300 mt-auto">
+                            Learn more
+                            <i class="fas fa-chevron-right ml-1 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Increasing Resources -->
+                <div class="feature-card group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-orange-100">
+                    <div class="flex flex-col items-center h-full">
+                        <!-- Circular Image Container -->
+                        <div class="image-container mb-6">
+                            <div class="relative w-20 h-20 mx-auto">
+                                <div class="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full blur-md opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                                <div class="relative w-20 h-20 rounded-full overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300">
+                                    <img src="images/home/icon-4.png" alt="Increasing Resources" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="content-wrapper flex-1 flex flex-col justify-start text-center">
+                            <h3 class="text-lg font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors duration-300">
+                                Increasing Resources
+                            </h3>
+                            <p class="text-gray-500 text-sm leading-relaxed mb-4 flex-1">
+                                Alexandria Petroleum Company had carried the construction of four other service depositories.
+                            </p>
+                        </div>
+                        
+                        <!-- Read More Link -->
+                        <a href="services.html#investments" class="inline-flex items-center text-sm font-medium text-orange-600 hover:text-orange-700 transition-colors duration-300 mt-auto">
+                            Learn more
+                            <i class="fas fa-chevron-right ml-1 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                    </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Mission Content -->
+                <div class="mission-content lg:order-2">
+                    <div class="max-w-lg mx-auto lg:mx-0">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                            Our <span class="text-blue-600">Mission</span>
+                        </h1>
+                        <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mb-8 rounded-full"></div>
+                        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                            Fulfilling the needs of the local market from the petroleum products and exporting the excess in order to increase the national income and to save the foreign specie. In order to do that, the company uses the advanced technology to put into effect the highest production rate and to renew the styles of the work and to develop the information systems for enhancing the operating economies.
+                        </p>
+                        <p class="text-lg text-gray-600 leading-relaxed mb-10">
+                            Also achieving the government policy in the field of privatization by executing the several from the joint-stoke companies with the private sector.
+                        </p>
+                        
+                        <!-- Read More Button -->
+                        <a href="about.html" class="mission-btn bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group">
+                            Read More Info
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mission Image -->
+                <div class="mission-image lg:order-1">
+                    <div class="flex justify-center lg:justify-start">
+                        <div class="relative">
+                            <!-- Background glow effect -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+                            
+                            <!-- Main circular image -->
+                            <div class="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+                                <img src="images/home/our-mission.png" 
+                                    alt="Alexandria Petroleum Mission" 
+                                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-700">
+                            </div>
+                            
+                            <!-- Floating elements for visual appeal -->
+                            <div class="absolute -top-4 -right-4 w-16 h-16 bg-blue-500 rounded-full opacity-20 animate-bounce"></div>
+                            <div class="absolute -bottom-4 -left-4 w-12 h-12 bg-blue-400 rounded-full opacity-30 animate-bounce" style="animation-delay: 0.5s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Producing Units Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Main <span class="text-blue-600">Producing Units</span>
+                </h1>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mx-auto mb-6 rounded-full"></div>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Alex Petroleum Company Has many producting units, mostly are helping units and there are Six Main Units Which Are
+                </p>
+            </div>
+
+            <!-- Units Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+
+                <!-- Left Column -->
+                <div class="space-y-8">
+                    <!-- Unit 4: Atmospheric Distillation Units -->
+                    <div class="unit-card group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <!-- Image -->
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 bg-blue-50">
+                                    <img src="images/home/Atmospheric-Distillation_02.png" alt="Atmospheric Distillation Units" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                                    Atmospheric Distillation Units</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    APC have 3 diatillation units with total capacity about 5 million tons per year.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 5: Vapour Recovery Unit -->
+                    <div class="unit-card group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <!-- Image -->
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 bg-blue-50">
+                                    <img src="images/home/Vapour-Recovery_02.png" alt="Vapour Recovery Unit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                                    VAPOUR RECOVERY UNIT
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Established with production capacity of 52000 tons per year [64 ton/hr] Stabilized Naphtha.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 6: Solvent Production Complex -->
+                    <div class="unit-card group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <!-- Image -->
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 bg-blue-50">
+                                    <img src="images/home/Solvent-Production_02.png" alt="Solvent Production Complex" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                                    Solvent Production Complex
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Have 2 Main Hexane Sulpholane Unit & Hydrotreating Unit and other treating and utility units.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="space-y-8">
+                    <!-- Unit 1: Lube Oil Complex Unit -->
+                    <div class="unit-card group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <!-- Image -->
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 bg-blue-50">
+                                    <img src="images/home/Lube-Oile _02.png" alt="Lube Oil Complex Unit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                                Lube Oile Complex Unit
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                Consists of processing and support fasilities designed forlubricatingoil base stoke production and food grade wax.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 2: Re-refining Spent Oil Units -->
+                    <div class="unit-card group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <!-- Image -->
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 bg-blue-50">
+                                    <img src="images/home/Re-refining-Spent_02.png" alt="Re-refining Spent Oil Units" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                                Re-refining Spent Oil Units</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                Started in 1997 in order to protect the enviroment with feeding capacity 30000 tons per year.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unit 3: Oxidized Bitumen Unit -->
+                    <div class="unit-card group bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+                        <div class="flex items-start space-x-4">
+                            <!-- Image -->
+                            <div class="flex-shrink-0">
+                                <div class="w-16 h-16 rounded-full overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 bg-blue-50">
+                                    <img src="images/home/Oxidized-Bitumen_02.png" alt="Oxidized Bitumen Unit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                                Oxidized Bitumen Unit</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                Started production in 1997 and is capable to produce blown bitumen packing in pallet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Projects Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Recent <span class="text-blue-600">Projects</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
+                    The Newest Projects Implemented By Alexandria Petroleum Company
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-blue-700 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                    ALL
+                </button>
+                <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                    MAJOR PROJECTS
+                </button>
+                <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                    REPLACEMENT RENOVATION & UNIT DEVELOPMENT
+                </button>
+                <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                    GEOGRAPHICAL REGION
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1: New Distillation Unit -->
+                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                            alt="New Distillation Unit" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-xl font-bold mb-2">New Distillation Unit</h3>
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                Advanced atmospheric distillation unit with 2.5 million tons annual capacity, featuring cutting-edge technology for enhanced efficiency and environmental compliance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Atmospheric Distillation Unit</h4>
+                        <p class="text-gray-600 text-sm">Capacity: 2.5M tons/year | Status: Completed 2023</p>
+                    </div>
+                </div>
+
+                <!-- Project 2: Vapour Recovery System -->
+                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                            alt="Vapour Recovery System" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-xl font-bold mb-2">Vapour Recovery System</h3>
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                State-of-the-art vapour recovery system designed to capture and process hydrocarbon vapors, reducing emissions and improving environmental sustainability.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Environmental Protection</h4>
+                        <p class="text-gray-600 text-sm">Efficiency: 95% | Status: Operational 2023</p>
+                    </div>
+                </div>
+
+                <!-- Project 3: Solvent Production Complex -->
+                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                            alt="Solvent Production Complex" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-xl font-bold mb-2">Solvent Production Complex</h3>
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                Comprehensive solvent production facility including hexane and sulpholane units, with advanced hydrotreating capabilities for high-purity products.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Chemical Processing</h4>
+                        <p class="text-gray-600 text-sm">Products: Hexane, Sulpholane | Status: Active</p>
+                    </div>
+                </div>
+
+                <!-- Project 4: Lube Oil Refinery -->
+                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                            alt="Lube Oil Refinery" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-xl font-bold mb-2">Lube Oil Refinery</h3>
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                Modern lubricating oil production facility with food-grade wax capabilities, featuring advanced processing units and quality control systems.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Lubricant Production</h4>
+                        <p class="text-gray-600 text-sm">Capacity: 500K tons/year | Status: Operational</p>
+                    </div>
+                </div>
+
+                <!-- Project 5: Waste Oil Recycling -->
+                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                            alt="Waste Oil Recycling" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-xl font-bold mb-2">Waste Oil Recycling</h3>
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                Environmentally conscious waste oil re-refining facility processing 30,000 tons annually, contributing to circular economy and sustainability goals.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Environmental Initiative</h4>
+                        <p class="text-gray-600 text-sm">Capacity: 30K tons/year | Status: Active since 1997</p>
+                    </div>
+                </div>
+
+                <!-- Project 6: Bitumen Production -->
+                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                            alt="Bitumen Production" 
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-xl font-bold mb-2">Bitumen Production</h3>
+                            <p class="text-sm text-gray-200 leading-relaxed">
+                                Specialized oxidized bitumen production unit with automated packaging systems, delivering high-quality products for construction and industrial applications.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Construction Materials</h4>
+                        <p class="text-gray-600 text-sm">Product: Blown Bitumen | Status: Operational 1997</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Investments Projects Section -->
+            <div class="mt-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Left side - Navigation Buttons and Content -->
+                    <div class="navigation-section">
+                        <!-- Horizontal Buttons Row -->
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <button class="nav-btn active px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-blue-700 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm" data-target="petroleum-port">
+                                Petroleum Port
+                            </button>
+                            <button class="nav-btn px-4 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm" data-target="petroleum-basin">
+                                Petroleum Basin
+                            </button>
+                            <button class="nav-btn px-4 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm" data-target="export">
+                                Export
+                            </button>
+                            <button class="nav-btn px-4 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm" data-target="import">
+                                Import
+                            </button>
+                            <button class="nav-btn px-4 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm" data-target="investment-companies">
+                                Investment Companies
+                            </button>
+                        </div>
+
+                        <!-- Content Sections -->
+                        <div class="content-area">
+                            <!-- Petroleum Port Content -->
+                            <div id="petroleum-port" class="content-section active">
+                                <div class="bg-white rounded-xl p-6 shadow-lg h-full">
+                                    <img src="images/home/Petroleum Port.png" 
+                                        alt="Petroleum Port" 
+                                        class="tab-image object-cover rounded-lg mb-6" loading="lazy">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Petroleum Port</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-4">
+                                        Petroleum Port is directed by Alexandria Petroleum Company as (Egyptian general petroleum corporation) representative there are many companies inside petroleum port under command of Alex. Petrpleum Company such as:
+                                    </p>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Co-petrol company - Misr Petroleum Company - Exxon Mobil - Gasco - Anarbec - Amoc - Amreya pet.com. - Petrogas - artivitial fibre co. - food oil company-Alex. Pet. Co. we delivered and received many products for the above mention companies.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Petroleum Basin Content -->
+                            <div id="petroleum-basin" class="content-section hidden">
+                                <div class="bg-white rounded-xl p-6 shadow-lg h-full">
+                                    <img src="images/home/Petroleum Basin.png" 
+                                        alt="Petroleum Basin" 
+                                        class="tab-image object-cover rounded-lg mb-6" loading="lazy">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Petroleum Basin</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-4">
+                                        General Administration of Petroleum ports, Alexandria Petroleum Company is responsible for the management and supervision of the petroleum basin, which through it petroleum products are exported and imported through pipelines from petroleum companies to the basin.
+                                    </p>
+                                    <p class="text-gray-600 leading-relaxed mb-4">
+                                        The Petroleum basin of Alexandria port holds the berth no.87 in the port authority and under it, there is 5 sea berths as follow:
+                                    </p>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                        <li>Berths no.87/1 and 87/2 have maximum draft 32 feet.</li>
+                                        <li>Berth no.87/3 have maximum draft 33 feet.</li>
+                                        <li>Berths no.87/4 and 87/5 have maximum draft 34 feet.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Export Content -->
+                            <div id="export" class="content-section hidden">
+                                <div class="bg-white rounded-xl p-6 shadow-lg h-full">
+                                    <img src="images/home/Petroleum Company Exports.png" 
+                                        alt="Export" 
+                                        class="tab-image object-cover rounded-lg mb-6" loading="lazy">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Export</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-4">
+                                        Alexandria Petroleum Company Exports Some Products such as:
+                                    </p>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                        <li>Vacuum distillates (Alexandria pet.co. and AMREYA co.)</li>
+                                        <li>Fuel oil (AMOC)</li>
+                                        <li>Linear Alkyl Benzene /lab (Amreya and Elab)</li>
+                                        <li>Jet A-1 (Alexandria pet. Co.)</li>
+                                        <li>Wax (Alexandria and Amreya)</li>
+                                        <li>Propane (Gasco)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Import Content -->
+                            <div id="import" class="content-section hidden">
+                                <div class="bg-white rounded-xl p-6 shadow-lg h-full">
+                                    <img src="images/home/Petroleum Company Imports.png" 
+                                        alt="Import" 
+                                        class="tab-image object-cover rounded-lg mb-6" loading="lazy">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Import</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-4">
+                                        Alexandria Petroleum Company Imports Some Products such as:
+                                    </p>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                                        <li>Gasoil, Gasoline, Luboil, LPG and Bitumen 60/70 (All for EGPC's account)</li>
+                                        <li>(Cutter stock for Amoc's account)</li>
+                                        <li>Vegoils (for food industries authority)</li>
+                                    </ul>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Alexandria Petroleum basin the only outlet in Egypt, through which bitumem 60/70 (Asphalt) is imported to meet the needs of the national roads paving project under the patronage of the president ABD EL-FATAH EL-SISI.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Investment Companies Content -->
+                            <div id="investment-companies" class="content-section hidden">
+                                <div class="bg-white rounded-xl p-6 shadow-lg h-full">
+                                    <img src="images/home/petroleum investment companies.png" 
+                                        alt="Investment Companies" 
+                                        class="tab-image object-cover rounded-lg mb-6" loading="lazy">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Investment Companies</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-4">
+                                        The EGPC companies which uses the petroleum basin for export and import are:
+                                    </p>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                                        <li>ALEXANDRIA PETROLEUM CO.</li>
+                                        <li>AMREYA REFINERY CO.</li>
+                                        <li>PETROLEUM GAS CO. (PETROGAS)</li>
+                                        <li>MISR PETROLEUM CO.</li>
+                                        <li>COOPERATION PETROLEUM COMPANY</li>
+                                    </ul>
+                                    <p class="text-gray-600 leading-relaxed mb-4">
+                                        The petroleum investment companies are:
+                                    </p>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                                        <li>AMOC</li>
+                                        <li>ANRPC</li>
+                                        <li>GASCO</li>
+                                        <li>ELAP</li>
+                                    </ul>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Additional to the food industries company of the ministry of supply. Alexandria Petroleum Company has facilities contracts with Petroleum Investment Companies to use petroleum basin for import and export.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right side - Investments Projects -->
+                    <div class="investments-section">
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+                            <span class="text-blue-600">Investments</span> Projects
+                        </h1>
+                        
+                        <!-- FAQ Accordion -->
+                        <div class="space-y-4">
+                            <!-- FAQ Item 1 -->
+                            <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                                <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center">
+                                    <span class="font-semibold text-gray-800">Upgrading Industrial Security System</span>
+                                    <svg class="faq-icon w-5 h-5 text-gray-600 transform rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer overflow-hidden transition-all duration-300" style="max-height: 200px;">
+                                    <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed">
+                                        Develop and update the fire systems in all units of the company's system &amp; installing an early warning to avoid the dangers of fire, maintaining the highest levels of security and safety and provide a clean environment.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                                <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center">
+                                    <span class="font-semibold text-gray-800">Computer System Development</span>
+                                    <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed">
+                                        To link networks of computers, computer equipment and the establishment of the centeral integrated information network within the company.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                                <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center">
+                                    <span class="font-semibold text-gray-800">Replacement Of Production Units</span>
+                                    <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed">
+                                        To maintain the productive capacity of the units and ensure the continuity of production processes.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 4 -->
+                            <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                                <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center">
+                                    <span class="font-semibold text-gray-800">Rent Tanks</span>
+                                    <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed">
+                                        <ul class="list-disc list-inside space-y-2">
+                                            <li>Letting out 2 tanks near the port to work for the others for the exportation with a capacity of 3000 tons &amp; a rental value monthly.</li>
+                                            <li>3 tanks with volume 10,000 m3 for each tank have been rented to AMOC to store gas oil product and re-export it for it's account by APC's pumps and lines.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 5 -->
+                            <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                                <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center">
+                                    <span class="font-semibold text-gray-800">Other Investments</span>
+                                    <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                                    <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed">
+                                        <ul class="list-disc list-inside space-y-2">
+                                            <li>A piece of land has been rented to Emirate Misr co. and a Gas station has been built on this land.</li>
+                                            <li>Reacting the Banker agreement with the Grecian Mac Oil Company.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ISO Certifications Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Content -->
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <!-- Horizontal Image -->
+                <div class="w-full lg:w-1/2 relative lg:pr-10">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl blur-xl opacity-20 -z-10"></div>
+                    <div class="max-w-xl mr-auto grid grid-cols-3 gap-5 transform lg:-translate-x-3">
+                        <div class="group relative overflow-hidden rounded-xl shadow-2xl border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
+                            <div class="pt-[100%]"></div>
+                            <img src="images/home/certificate-1.png" alt="Certificate 1" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                        <div class="group relative overflow-hidden rounded-xl shadow-2xl border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
+                            <div class="pt-[100%]"></div>
+                            <img src="images/home/certificate-2.jpg" alt="Certificate 2" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                        <div class="group relative overflow-hidden rounded-xl shadow-2xl border-4 border-white transform hover:scale-[1.02] transition-transform duration-500">
+                            <div class="pt-[100%]"></div>
+                            <img src="images/home/certificate-3.png" alt="Certificate 3" class="absolute inset-0 w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2">
+                    <!-- Title -->
+                    <div class="mb-6">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+                            <span class="text-blue-600">ISO</span> CERTIFICATIONS
+                        </h2>
+                        <div class="w-16 h-1 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"></div>
+                    </div>
+                    
+                    <!-- Description -->
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Alexandria Petroleum Company maintains multiple ISO certifications including:
+                    </p>
+                    
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 w-5 h-5 text-blue-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>ISO 9001:2015 (Quality Management)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 w-5 h-5 text-blue-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>ISO 14001:2015 (Environmental)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 w-5 h-5 text-blue-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>ISO 45001:2018 (Health & Safety)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 w-5 h-5 text-blue-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>ISO 27001:2022 (Information Security)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 w-5 h-5 text-blue-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>ISO 17025:2017 (Testing Labs)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 w-5 h-5 text-blue-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>ISO 50001:2018 (Energy Management)</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- Button -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        
+                        <a href="about.html#iso-certifications" class="flex-1 flex items-center justify-center px-6 py-3 bg-white border border-blue-200 text-blue-600 hover:text-blue-700 hover:border-blue-300 font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                            <span>Learn More</span>
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ <!-- What We Produce Section -->
+ <section class="py-20 bg-white">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <!-- Section Header -->
+         <div class="text-center mb-16">
+             <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                 What <span class="text-blue-600">We Produce</span>
+             </h1>
+             <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mx-auto mb-6 rounded-full"></div>
+             <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                 We Produce Six Different Kinds Of Petroleum Product Which Are
+             </p>
+         </div>
+
+         <!-- Products Grid -->
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+             <!-- Product 1: Main Products -->
+             <div class="product-card bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                 <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                     <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                     </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Main Products APC</h3>
+                 <p class="text-gray-600 leading-relaxed text-center">
+                     produces Alot of the main petroleum products such as: Straight Run Naphtha for Exportation - Turbine Jet A-1 - Fuel Oil - Gas Oil.
+                 </p>
+             </div>
+
+             <!-- Product 2: Petroleum Solvents -->
+             <div class="product-card bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                 <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                     <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                     </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Petroleum Solvents APC</h3>
+                 <p class="text-gray-600 leading-relaxed text-center">
+                     also produces some petroleum solvents such as: Turpentine - Commercial Hexane (Food Grade) for Exportation - Special Hexane.
+                 </p>
+             </div>
+
+             <!-- Product 3: Lube Oil Products -->
+             <div class="product-card bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                 <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                     <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2"></path>
+                     </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Lube Oil Products APC</h3>
+                 <p class="text-gray-600 leading-relaxed text-center">
+                     also produces three lubricationg oil producs which are: Bright Stock Oil - Cylinder Oil - Micro Cystalline Wax Exportation.
+                 </p>
+             </div>
+
+             <!-- Product 4: Bituminous Products -->
+             <div class="product-card bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                 <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                     <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                     </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Bituminous Products APC</h3>
+                 <p class="text-gray-600 leading-relaxed text-center">
+                     also produces two main Bituminous products which are: Oxidized Bitumen 60/70 Heavy Duty - Oxidized Bitumen (Grade 95/25).
+                 </p>
+             </div>
+
+             <!-- Product 5: Re-refined Spent Oil -->
+             <div class="product-card bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                 <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                     <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                     </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Re-refined Spent Oil APC</h3>
+                 <p class="text-gray-600 leading-relaxed text-center">
+                     also produces some re-refined spent oil products, they are: Used Oil Sample - Used Oil for Exportation - Neutral Oil.
+                 </p>
+             </div>
+
+             <!-- Product 6: Products For Sale -->
+             <div class="product-card bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                 <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                     <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                     </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Products For Sale Our</h3>
+                 <p class="text-gray-600 leading-relaxed text-center">
+                     products that are for sale are all produced from low boiling hydrocarbons distilled from portion of gasoline cut.
+                 </p>
+             </div>
+         </div>
+     </div>
+ </section>
+
+ <!-- Environment Protection Procedures Section -->
+ <section class="py-20 bg-gradient-to-br from-green-50 to-white">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+             <!-- Left side - Image -->
+             <div class="flex justify-center lg:justify-start">
+                 <div class="relative">
+                     <div class="absolute inset-0 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl blur-2xl opacity-20 animate-pulse"></div>
+                     <img src="images/home/ecological.png" 
+                          alt="Environment Protection" 
+                          class="relative w-96 h-96 object-cover rounded-2xl shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-500">
+                 </div>
+             </div>
+
+             <!-- Right side - Content -->
+             <div class="text-center lg:text-left">
+                 <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                     <span class="text-green-600">Environment</span> Protection Procedures
+                 </h1>
+                 <div class="w-20 h-1 bg-gradient-to-r from-green-500 to-green-300 mb-8 rounded-full lg:mx-0 mx-auto"></div>
+                 
+                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                     APC followes some procedures to ensure environmental protection such as:
+                 </p>
+
+                 <!-- Procedures List -->
+                 <div class="space-y-4 mb-8">
+                     <div class="flex items-start">
+                         <svg class="flex-shrink-0 w-5 h-5 text-green-500 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                         </svg>
+                         <span class="text-gray-700">Reduce petroleum wastes.</span>
+                     </div>
+                     <div class="flex items-start">
+                         <svg class="flex-shrink-0 w-5 h-5 text-green-500 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                         </svg>
+                         <span class="text-gray-700">Treating waste gases.</span>
+                     </div>
+                     <div class="flex items-start">
+                         <svg class="flex-shrink-0 w-5 h-5 text-green-500 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                         </svg>
+                         <span class="text-gray-700">Treating waste liquid.</span>
+                     </div>
+                     <div class="flex items-start">
+                         <svg class="flex-shrink-0 w-5 h-5 text-green-500 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                         </svg>
+                         <span class="text-gray-700">Treating product which is used as a fuel.</span>
+                     </div>
+                     <div class="flex items-start">
+                         <svg class="flex-shrink-0 w-5 h-5 text-green-500 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                         </svg>
+                         <span class="text-gray-700">Re-cycling and Re-using petroleum waste.</span>
+                     </div>
+                     <div class="flex items-start">
+                         <svg class="flex-shrink-0 w-5 h-5 text-green-500 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                         </svg>
+                         <span class="text-gray-700">Using protective maintenance system.</span>
+                     </div>
+                     <div class="flex items-start">
+                         <svg class="flex-shrink-0 w-5 h-5 text-green-500 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                         </svg>
+                         <span class="text-gray-700">Using close cooling systems.</span>
+                     </div>
+                     <div class="flex items-start">
+                         <svg class="flex-shrink-0 w-5 h-5 text-green-500 mt-1 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                         </svg>
+                         <span class="text-gray-700">Re-refining used motor oil.</span>
+                     </div>
+                 </div>
+
+                 <!-- Button -->
+                 <a href="about.html#environmental-managment" class="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group">
+                     <span>Read More</span>
+                     <svg class="ml-3 w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                     </svg>
+                 </a>
+             </div>
+         </div>
+     </div>
+ </section>
+ <!-- National Economy Support Section -->
+ <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
+            We Support the National Economy<br>
+            and Availability of the<br>
+            Petroleum Products for the<br>
+            <span class="text-yellow-300">LOCAL EGYPTIAN MARKET!</span>
+        </h2>
+        <a href="about.html#our-role" class="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group">
+            <span>More About Our Role</span>
+            <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+        </a>
+    </div>
+ </section>
+
+ 
+  <!-- What We Offer Section -->
+  <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                What <span class="text-blue-600">We Offer</span>
+            </h1>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mx-auto mb-6 rounded-full"></div>
+              <p class="text-lg text-gray-600">We Offer Different Kinds Of Services Such As</p>
+          </div>
+
+          <!-- Offers Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <!-- Offer 1 (services card style) -->
+              <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full">
+                  <div class="h-56 md:h-72 overflow-hidden relative">
+                      <img src="images/home/maintenance.jpg" alt="Maintenance Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm">Maintenance Services</span>
+                  </div>
+                  <div class="p-4">
+                      <p class="text-gray-700 text-sm leading-relaxed sv-desc">We provide alot of services in maintenance field like: We offer a wide range of maintenance services, including: Machining & Metalworking, Heat Exchanger Services, Piping Fabrication, Sheet Metal Working, and Valve Testing & Maintenance.</p>
+                      <a href="maintenance.html" class="inline-flex items-center gap-2 mt-3 text-blue-700 font-semibold hover:text-blue-800 transition-colors">Read more <i class="fas fa-arrow-right text-sm"></i></a>
+                  </div>
+              </div>
+
+              <!-- Offer 2 (services card style) -->
+              <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full">
+                  <div class="h-56 md:h-72 overflow-hidden relative">
+                      <img src="images/home/chemical.jpg" alt="Chemical Plants Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm">Chemical Laboratories</span>
+                  </div>
+                  <div class="p-4">
+                      <p class="text-gray-700 text-sm leading-relaxed sv-desc">We provide alot of services in maintenance field like: To help you follow the production units and product analysis and ensure compliance with international standards and using the latest hardware, chemical plants Includes many research departments</p>
+                      <a href="chemical.html" class="inline-flex items-center gap-2 mt-3 text-blue-700 font-semibold hover:text-blue-800 transition-colors">Read more <i class="fas fa-arrow-right text-sm"></i></a>
+                  </div>
+              </div>
+
+              <!-- Offer 3 (services card style) -->
+              <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full">
+                  <div class="h-56 md:h-72 overflow-hidden relative">
+                      <img src="images/home/investment.jpg" alt="Investment Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm">Investment Services</span>
+                  </div>
+                  <div class="p-4">
+                      <p class="text-gray-700 text-sm leading-relaxed sv-desc">We provide alot of services in maintenance field like: Alexandria Petroleum Company takes on letting out two tanks near to the port to work for the others for the exportation with a capacity of 3000 tons and a rental value monthly.</p>
+                      <a href="services.html#investments" class="inline-flex items-center gap-2 mt-3 text-blue-700 font-semibold hover:text-blue-800 transition-colors">Read more <i class="fas fa-arrow-right text-sm"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Technical Courses Section -->
+  <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Header -->
+          <div class="text-center mb-12">
+              <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                  Some of the <span class="text-blue-600">Technical Courses</span> We Organize
+              </h1>
+              <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mx-auto rounded-full"></div>
+          </div>
+
+          <!-- Courses Grid: 2 rows x 5 columns (10 items) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+              <!-- 1 -->
+              <div class="course-card group bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                      <i class="fas fa-flask"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-gray-800 leading-snug">Production of</h3>
+                  <h4 class="text-sm font-bold text-gray-800 leading-snug mb-1">Hydrotreated Kerosene</h4>
+                  <p class="text-xs text-gray-600">Production &amp; Hydro- treated Kerosene</p>
+                  <p class="text-xs text-gray-600">Engineers &amp; Chemists</p>
+                  <p class="text-xs font-medium text-blue-600">for Five Days</p>
+              </div>
+
+              <!-- 2 -->
+              <div class="course-card group bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                      <i class="fas fa-cogs"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-gray-800 leading-snug mb-1">Technical Design of Refining Equipment</h3>
+                  <p class="text-xs text-gray-600">Development And Technology</p>
+                  <p class="text-xs text-gray-600">Engineers &amp; Chemists</p>
+                  <p class="text-xs font-medium text-blue-600">for Five Days</p>
+              </div>
+
+              <!-- 3 -->
+              <div class="course-card group bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                      <i class="fas fa-chart-line"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-gray-800 leading-snug mb-1">Operation, Annual Plan &amp; Reducing The Lost</h3>
+                  <p class="text-xs text-gray-600">Productive Planning</p>
+                  <p class="text-xs text-gray-600">Engineers, Chemists &amp; Technicians</p>
+                  <p class="text-xs font-medium text-blue-600">for Five Days</p>
+              </div>
+
+              <!-- 4 -->
+              <div class="course-card group bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                      <i class="fas fa-vials"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-gray-800 leading-snug mb-1">Evaluation Of Crude Oil &amp; Its Products</h3>
+                  <p class="text-xs text-gray-600">Researches &amp; Labs Studies</p>
+                  <p class="text-xs text-gray-600">Chemists &amp; Technicians</p>
+                  <p class="text-xs font-medium text-blue-600">for Five Days</p>
+              </div>
+
+              <!-- 5 -->
+              <div class="course-card group bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                      <i class="fas fa-filter"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-gray-800 leading-snug mb-1">Distillation Processing</h3>
+                  <p class="text-xs text-gray-600">Distillation</p>
+                  <p class="text-xs text-gray-600">Supervisor &amp; Technicians</p>
+                  <p class="text-xs font-medium text-blue-600">for Five Days</p>
+              </div>
+
+              <!-- 6 -->
+              <div class="course-card group bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                      <i class="fas fa-tools"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-gray-800 leading-snug mb-1">Welding Technology &amp; Heat Treatment</h3>
+                  <p class="text-xs text-gray-600">Engineering Inspection</p>
+                  <p class="text-xs text-gray-600">Engineers &amp; Technicians</p>
+                  <p class="text-xs font-medium text-blue-600">for Five Days</p>
+              </div>
+
+              <!-- 7 -->
+              <div class="course-card group bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                      <i class="fas fa-leaf"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-gray-800 leading-snug mb-1">Enviroment Protection From Pollution</h3>
+                  <p class="text-xs text-gray-600">Safety And Health</p>
+                  <p class="text-xs text-gray-600">Workers</p>
+                  <p class="text-xs font-medium text-blue-600">for Five Days</p>
+              </div>
+
+              <!-- 8 -->
+              <div class="course-card group bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                      <i class="fas fa-exchange-alt"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-gray-800 leading-snug mb-1">Convert Extraction Unit From Furfural To NMP</h3>
+                  <p class="text-xs text-gray-600">Lube Oils</p>
+                  <p class="text-xs text-gray-600">Head Dept. &amp; Unit Chief</p>
+                  <p class="text-xs font-medium text-blue-600">for Five Days</p>
+              </div>
+
+              <!-- 9 -->
+              <div class="course-card group bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                      <i class="fas fa-recycle"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-gray-800 leading-snug mb-1">Application Of Preventing Pollution At Refinery</h3>
+                  <p class="text-xs text-gray-600">Spent Oils</p>
+                  <p class="text-xs text-gray-600">Technicians</p>
+                  <p class="text-xs font-medium text-blue-600">for Five Days</p>
+              </div>
+
+              <!-- 10 -->
+              <div class="course-card group bg-white rounded-xl p-5 shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-4 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                      <i class="fas fa-flask"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-gray-800 leading-snug mb-1">Hexane Food Grade</h3>
+                  <p class="text-xs text-gray-600">Petroleum Solvents</p>
+                  <p class="text-xs text-gray-600">Engineers, Chemists &amp; Technicians</p>
+                  <p class="text-xs font-medium text-blue-600">for Five Days</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+<!-- National Economy Support Section -->
+<section class="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
+             We Provide Different Types of<br>
+             Medical Services for our<br>
+             <span class="text-yellow-300">EMPLOYEES & THEIR FAMILIES!</span>
+        </h2>
+         <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+             <a href="services.html" class="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group">
+                 <span>Read More</span>
+                 <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                 </svg>
+             </a>
+             <button class="inline-flex items-center px-6 py-3 bg-transparent border border-white text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white hover:text-blue-700 transform hover:-translate-y-1 group">
+                 <span>Out Medical Brcure</span>
+                 <svg class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                 </svg>
+             </button>
+         </div>
+    </div>
+ </section>
+
+ <!-- Infinite Scrolling Logos/Links Section -->
+ <section class="py-12 bg-white">
+     <div class="max-w-4xl mx-auto px-4">
+        <div class="relative overflow-hidden">
+            <div class="flex items-center marquee">
+                <!-- Original Set -->
+                <a href="http://www.anrpc.com/" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/ANRPC.png" alt="Atmospheric Distillation" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="https://www.amoceg.com/en" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/AMOC.png" alt="Vapour Recovery" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="https://www.asppc.com.eg/" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/ASPPC.png" alt="Solvent Production" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="https://www.petromaint.net/" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/PETROMAINT.png" alt="Re-refining Spent Oil" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="https://www.midom.com/lander" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/MIDOM.png" alt="Oxidized Bitumen" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="http://www.acpaegypt.com/" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/ACPA.png" alt="Our Mission" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="https://www.petrosafe.com.eg/" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/PETROSAFE.png" alt="Quality Certification" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                
+                <!-- Duplicate Set (for seamless looping) -->
+                <a href="http://www.anrpc.com/" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/ANRPC.png" alt="Atmospheric Distillation" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="https://www.amoceg.com/en" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/AMOC.png" alt="Vapour Recovery" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="https://www.asppc.com.eg/" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/ASPPC.png" alt="Solvent Production" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="https://www.petromaint.net/" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/PETROMAINT.png" alt="Re-refining Spent Oil" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="https://www.midom.com/lander" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/MIDOM.png" alt="Oxidized Bitumen" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="http://www.acpaegypt.com/" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/ACPA.png" alt="Our Mission" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+                <a href="https://www.petrosafe.com.eg/" class="relative block marquee-item">
+                    <span class="absolute -inset-2 rounded-xl bg-blue-500 blur-xl opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
+                    <img src="images/PETROSAFE.png" alt="Quality Certification" class="relative z-10 h-20 w-36 object-cover rounded-xl shadow-sm transition-transform duration-300 hover:scale-105">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+              <!-- Brand -->
+              <div>
+                <a href="#" class="inline-flex items-center text-2xl font-extrabold tracking-tight">
+                    <img src="images/logo.png" 
+                         alt="Logo" 
+                         class="w-16 h-16 object-contain" />
+                </a>
+                <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
+                    Alexandria Petroleum Company. Supporting the national economy and ensuring the availability of petroleum products for the Egyptian market.
+                </p>
+            </div>
+            
+
+              <!-- Useful Links -->
+              <div>
+                  <h3 class="text-white font-semibold text-lg mb-4">Useful Links</h3>
+                  <ul class="space-y-3 text-sm">
+                      <li>
+                          <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                              <span class="relative">Home</span>
+                              <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                              <span class="relative">About Us</span>
+                              <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                              <span class="relative">Projects</span>
+                              <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                              <span class="relative">Products</span>
+                              <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                              <span class="relative">Services</span>
+                              <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                              <span class="relative">Units</span>
+                              <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                              <span class="relative">Contact</span>
+                              <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+
+              <!-- Contact -->
+              <div class="md:col-span-2 lg:col-span-2">
+                  <h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
+                  <ul class="space-y-3 text-sm">
+                      <li class="flex items-start gap-3">
+                          <i class="fas fa-map-marker-alt mt-0.5 text-blue-400"></i>
+                          <span>3 Al Max - Alexandria - Egypt</span>
+                      </li>
+                      <li class="flex items-start gap-3">
+                          <i class="fas fa-phone mt-0.5 text-blue-400"></i>
+                          <div class="space-y-1">
+                              <a href="tel:+2034402832" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2832</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                              <a href="tel:+2034402833" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2833</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                              <a href="tel:+2034430123" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0123</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                              <a href="tel:+2034430124" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0124</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                          </div>
+                      </li>
+                      <li class="flex items-start gap-3">
+                          <i class="fas fa-envelope mt-0.5 text-blue-400"></i>
+                          <a href="mailto:chairman@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">chairman@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                      </li>
+                      <li class="flex items-start gap-3">
+                          <i class="fas fa-laptop-code mt-0.5 text-blue-400"></i>
+                          <div>
+                              <p>Site Designed By Alexandria Petroleum Co., IT Deptartment.</p>
+                              <a href="mailto:IT@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">IT@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="mt-12 pt-6 border-t border-white/10 text-xs text-gray-400 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+              <p>© <span id="year"></span> Alexandria Petroleum Company. All rights reserved.</p>
+          </div>
+      </div>
+  </footer>
+
+  <script>
+      // Footer dynamic year
+      (function(){
+          var y = document.getElementById('year');
+          if (y) y.textContent = new Date().getFullYear();
+      })();
+  </script>
+
+
+
+  <!-- Mobile menu overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu-container fixed inset-y-0 right-0 z-50 w-80 max-w-full bg-white shadow-xl">
+        <div class="flex flex-col h-full">
+            <!-- Mobile menu header -->
+            <div class="flex items-center justify-between px-6 py-4 border-b">
+                <a href="#" class="group flex items-center gap-3" aria-label="Alexandria Petroleum Company home">
+                    <img src="images/logo.png" 
+                        alt="AP Logo" 
+                        class="h-8 w-8 rounded-full object-cover shadow-sm ring-1 ring-blue-500/20" />
+
+                    <span class="leading-tight">
+                        <span class="block text-base font-extrabold tracking-tight text-gray-900 group-hover:text-blue-700 transition-colors">Alexandria Petroleum Co.</span>
+                        <span class="block text-[11px] text-gray-500">Refining Excellence</span>
+                    </span>
+                </a>
+                <button class="mobile-menu-close p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile menu content -->
+            <div class="flex-1 overflow-y-auto px-6 py-4">
+                <div class="space-y-2">
+                    <a href="index.html" class="block px-3 py-3 rounded-lg text-blue-700 bg-blue-50 font-semibold transition-slow">
+                        <i class="fas fa-home mr-3 text-blue-500"></i> Home
+                    </a>
+                    <a href="about.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-info-circle mr-3 text-blue-500"></i> About Us
+                    </a>
+                    <a href="projects.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-project-diagram mr-3 text-blue-500"></i> Projects
+                    </a>
+                    <a href="projects.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-box-open mr-3 text-blue-500"></i> Products
+                    </a>
+                    <a href="services.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-concierge-bell mr-3 text-blue-500"></i> Services
+                    </a>
+                    <a href="units.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-building mr-3 text-blue-500"></i> Units
+                    </a>
+                    <a href="portfolio.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-briefcase mr-3 text-blue-500"></i> Portfolio
+                    </a>
+                    <a href="contact.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-envelope mr-3 text-blue-500"></i> Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Compan (floating, premium, clean) -->
+ 
+    <div id="cn-banner"
+         class="fixed right-2 left-2 sm:left-auto sm:right-4 z-[9999] opacity-0 pointer-events-auto w-[calc(100%-1rem)] sm:w-auto max-w-xl"
+         role="status" aria-live="polite">
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-2xl ring-1 ring-black/10 px-4 py-3 sm:px-5 sm:py-3.5">
+        <!-- Icon + Label + Action (stacked) -->
+        <div class="flex flex-col items-start gap-1 shrink-0 sm:gap-1.5 w-full sm:w-auto">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex h-7 w-7 sm:h-6 sm:w-6 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-500 text-white shadow-sm">
+              <i class="fa-solid fa-bullhorn text-[12px] sm:text-[11px]"></i>
+            </span>
+            <span class="text-sm sm:text-base font-semibold text-gray-900">
+              Today’s Company News:
+            </span>
+          </div>
+          <a href="new.html" class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-blue-600 text-white hover:bg-blue-700 text-sm transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+            <i class="fa-solid fa-newspaper"></i>
+            <span>View all news</span>
+          </a>
+        </div>
+        <!-- Text / Ticker -->
+        <div class="min-w-0 flex-1 w-full">
+          <div class="cn-ticker relative overflow-hidden">
+            <div class="cn-track text-sm sm:text-base text-gray-900 leading-snug"></div>
+          </div>
+        </div>
+        <!-- Dismiss -->
+        <button id="cn-close" class="order-first self-end sm:order-none sm:self-auto shrink-0 inline-flex items-center justify-center h-9 w-9 sm:h-8 sm:w-8 rounded-full text-gray-500 hover:text-blue-700 hover:bg-blue-50 transition" aria-label="Dismiss news banner">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

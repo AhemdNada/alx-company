@@ -1,0 +1,58 @@
+/* Projects page specific styles */
+
+/* Smooth card hover reveal */
+.project-card {
+  position: relative;
+}
+
+.project-card .project-desc {
+  /* hidden by default; revealed on hover */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .35s ease, opacity .3s ease;
+}
+
+.project-card:hover .project-desc {
+  max-height: 3.5rem; /* enough for ~2 lines */
+  opacity: 0.95;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 -120px 120px -60px rgba(0,0,0,0.45);
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+/* Filter buttons */
+.filter-btn.active {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 10px 15px -3px rgba(37,99,235,0.25), 0 4px 6px -2px rgba(37,99,235,0.15);
+}
+
+/* Hide with scale for filter animation */
+.project-card[data-hidden="true"] {
+  transform: scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+/* Responsive image heights tweaks if needed */
+@media (max-width: 640px) {
+  .project-card .h-80 { height: 16rem; }
+}
+

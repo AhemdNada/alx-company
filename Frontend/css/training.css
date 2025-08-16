@@ -1,0 +1,15 @@
+
+/* Training page custom tweaks to match chemical page vibe */
+.table-card table th {
+    position: sticky;
+    top: 0;
+}
+
+.table-card table th,
+.table-card table td {
+    white-space: nowrap;
+}
+
+/* Subtle zebra background already via odd:bg- utilities; add smooth fade */
+.table-card tbody tr { transition: background-color .2s ease; }
+
