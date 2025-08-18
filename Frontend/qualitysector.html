@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quality Control Sector — Alexandria Petroleum Company</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/qualitysector.css">
+  <link rel="icon" href="images/logo.png" />
+  <meta name="description" content="Alexandria Petroleum Company — Quality Control Sector devices and testing capabilities.">
+</head>
+<body class="font-sans antialiased">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <a href="index.html" class="block w-16 h-16 overflow-hidden">
+            <img src="images/logo.png" alt="Logo" class="w-full h-full object-contain" />
+          </a>
+        </div>
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex md:items-center md:flex-1 md:justify-center md:space-x-1">
+          <a href="index.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Home</a>
+          <a href="about.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">About Us</a>
+          <a href="projects.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Projects</a>
+          <a href="products.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Products</a>
+          <a href="services.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Services</a>
+          <a href="units.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Units</a>
+          <a href="portfolio.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Portfolio</a>
+          <a href="contact.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Contact</a>
+        </div>
+
+        <!-- Search and action buttons -->
+        <div class="hidden md:flex md:items-center md:space-x-2">
+          <button class="p-2 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow" aria-label="Search">
+            <i class="fas fa-search h-4 w-4"></i>
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page header -->
+  <section class="relative bg-gradient-to-br from-blue-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-extrabold text-gray-800">
+            Quality <span class="text-blue-600">Control</span> Sector
+          </h1>
+        </div>
+        <nav aria-label="Breadcrumb">
+          <ol class="flex items-center text-sm text-gray-500">
+            <li><a href="services.html" class="text-blue-600 hover:text-blue-700 font-medium">Services</a></li>
+            <li class="px-2 text-gray-400">/</li>
+            <li><a href="chemical.html" class="text-blue-600 hover:text-blue-700 font-medium">Chemical</a></li>
+            <li class="px-2 text-gray-400">/</li>
+            <li class="text-gray-700 font-semibold" aria-current="page">Quality Sector</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links (grid, no horizontal scroll) -->
+  <section class="bg-white/60 border-y border-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex flex-wrap gap-2 -mx-1 px-1 md:grid md:grid-cols-3 lg:grid-cols-6" role="navigation" aria-label="Quick links to Quality sections">
+        <a href="#sec-qs1" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Density Meter</a>
+        <a href="#sec-qs2" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Centrifuge</a>
+        <a href="#sec-qs3" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Lubricity</a>
+        <a href="#sec-qs4" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">JFTOT</a>
+        <a href="#sec-qs5" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Atmospheric Distillation</a>
+        <a href="#sec-qs6" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Kinematic Viscometer</a>
+        <a href="#sec-qs7" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Micro Carbon Residue</a>
+        <a href="#sec-qs8" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">CFR</a>
+        <a href="#sec-qs9" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Freezing Point</a>
+        <a href="#sec-qs10" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Smoke Point</a>
+        <a href="#sec-qs11" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Particulate</a>
+        <a href="#sec-qs12" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Conductivity</a>
+        <a href="#sec-qs13" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Automatic Flash Point</a>
+        <a href="#sec-qs14" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Stabinger</a>
+        <a href="#sec-qs15" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Gum</a>
+        <a href="#sec-qs16" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">RVP (Eravap)</a>
+        <a href="#sec-qs17" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Oxidation Stability</a>
+        <a href="#sec-qs18" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Water Separometer</a>
+        <a href="#sec-qs19" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Karl Fischer</a>
+        <a href="#sec-qs20" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Total Sediment</a>
+        <a href="#sec-qs21" data-scroll class="qs-quick-btn md:w-full text-center px-4 py-2 rounded-lg text-sm font-semibold bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white transition">Color Device</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Helper to generate section block -->
+  <!-- Section 1: Density Meter (3 images) -->
+  <section id="sec-qs1" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs1-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/1.png" alt="Density Meter - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/2.png" alt="Density Meter - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/3.png" alt="Density Meter - 3" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs1-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs1-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs1-dots" aria-label="Density Meter indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button><button class="sv-dot" aria-label="Slide 3"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Density Meter</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>DMA 4200M</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM d-4052 &amp; ASTM d-5002</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is used to measure the density of crude and all petroleum products necessary to calculate the quantities according to the standard method.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Centrifuge (2 images) -->
+  <section id="sec-qs2" class="py-12 bg-gray-50 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs2-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/4.png" alt="Centrifuge - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/5.png" alt="Centrifuge - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs2-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs2-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs2-dots" aria-label="Centrifuge indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Centrifuge Device</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>Orto alresa1</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 1796, D 2709 &amp; D 4007</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is used to measure the percentage of water and sediment for crude petroleum products by the centrifugal method according to the standard method.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Lubricity (3 images) -->
+  <section id="sec-qs3" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs3-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/6.png" alt="Lubricity - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/7.png" alt="Lubricity - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/8.png" alt="Lubricity - 3" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs3-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs3-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs3-dots" aria-label="Lubricity indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button><button class="sv-dot" aria-label="Slide 3"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Lubricity Device</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>PCS Instruments</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTMD- 6079 &amp; ISO 12156-1</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is used for the Determination of Lubricity in Diesel Fuel.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: JFTOT (2 images) -->
+  <section id="sec-qs4" class="py-12 bg-gray-50 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs4-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/9.png" alt="JFTOT - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/10.png" alt="JFTOT - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs4-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs4-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs4-dots" aria-label="JFTOT indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">JFTOT Device</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>230 MARK IV</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 3241</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is used to measure Thermal Stability for Jet fuel.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Automatic Atmospheric Distillation (2 images) -->
+  <section id="sec-qs5" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs5-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/11.png" alt="Atmospheric Distillation - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/12.png" alt="Atmospheric Distillation - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs5-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs5-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs5-dots" aria-label="Atmospheric Distillation indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Automatic Atmospheric Distillation</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>Diana 700</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D-86 (gp 1-4) , ASTM D-850 , ASTM D-1078 , ASTM D-189, ASTM D-4350 , ASTM D-524 , IP 159 , IP 123</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is used to automatically perform high-precision distillation range analysis at atmospheric pressure. Typical samples to be characterized include petrochemical products, aromatic hydrocarbons as well as other volatile organic liquids.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Kinematic Viscometer (3 images) -->
+  <section id="sec-qs6" class="py-12 bg-gray-50 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs6-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/13.png" alt="Kinematic Viscometer - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/14.png" alt="Kinematic Viscometer - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/15.png" alt="Kinematic Viscometer - 3" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs6-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs6-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs6-dots" aria-label="Kinematic Viscometer indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button><button class="sv-dot" aria-label="Slide 3"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Kinematic Viscometer</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>Cannon CAV 4.2</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 445</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is used to measure kinematic viscosity in petroleum products.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Micro Carbon Residue Tester (2 images) -->
+  <section id="sec-qs7" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs7-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/16.png" alt="MCRT - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/17.png" alt="MCRT - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs7-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs7-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs7-dots" aria-label="MCRT indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Micro Carbon Residue Tester</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>STANHOPE-SETA</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 4530, D 189 &amp; IP 13, IP 398.</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is an automatic airtight A furnace that is pre-programmed to run tests to determine Micro (Conradson) Carbon residue of petroleum products.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: CFR (2 images) with EGAC callout -->
+  <section id="sec-qs8" class="py-12 bg-gray-50 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs8-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/18.png" alt="CFR - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/19.png" alt="CFR - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs8-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs8-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs8-dots" aria-label="CFR indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">CFR Device</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>XCP digital control unit</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 2699 &amp; D 2700.</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for determining the Octane number for gasoline.</span></li>
+          </ul>
+          <div class="info-callout mt-6 text-gray-800">
+            <p>EGAC Accredited Testing Lab With Respect To</p>
+            <p>ISO/ IEC 17025 For 2017 Requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Freezing Point (2 images) -->
+  <section id="sec-qs9" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs9-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/20.png" alt="Freezing Point - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/21.png" alt="Freezing Point - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs9-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs9-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs9-dots" aria-label="Freezing Point indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Freezing Point</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>PAC (optifzp)</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 7153 &amp; D 2386</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for determining the freezing point of jet fuel.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: Smoke Point (2 images) -->
+  <section id="sec-qs10" class="py-12 bg-gray-50 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs10-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/22.png" alt="Smoke Point - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/23.png" alt="Smoke Point - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs10-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs10-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs10-dots" aria-label="Smoke Point indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Smoke Point</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>Ad systems ( SP20 )</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 1322</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for the determination of the Smoke point of jet fuel.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 11: Particulate Contamination (2 images) -->
+  <section id="sec-qs11" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs11-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/24.png" alt="Particulate - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/25.png" alt="Particulate - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs11-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs11-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs11-dots" aria-label="Particulate indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Particulate Contamination</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>SETA</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>IP 565</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for the determination of the Particular Contamination of jet fuel.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 12: Conductivity Device (2 images) -->
+  <section id="sec-qs12" class="py-12 bg-gray-50 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs12-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/26.png" alt="Conductivity - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/27.png" alt="Conductivity - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs12-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs12-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs12-dots" aria-label="Conductivity indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Conductivity Device</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>SETA</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>IP 2624</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for determining the electrical conductivity of jet fuel.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 13: Automatic Flash Point (3 images) -->
+  <section id="sec-qs13" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs13-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/28.png" alt="Auto Flash - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/29.png" alt="Auto Flash - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/30.png" alt="Auto Flash - 3" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs13-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs13-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs13-dots" aria-label="Auto Flash indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button><button class="sv-dot" aria-label="Slide 3"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Automatic Flash Point</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>PAC</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 93</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for the determination of the flash point of petroleum products.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 14: Stabinger (2 images) with EGAC callout -->
+  <section id="sec-qs14" class="py-12 bg-gray-50 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs14-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/31.png" alt="Stabinger - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/32.png" alt="Stabinger - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs14-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs14-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs14-dots" aria-label="Stabinger indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Stabinger Device</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>Anton par (SVM 3001)</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 7042</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for the determination of the Kinematic Viscosity for Lubricating Oils &amp; Petroleum products.</span></li>
+          </ul>
+          <div class="info-callout mt-6 text-gray-800">
+            <p>EGAC Accredited Testing Lab With Respect To</p>
+            <p>ISO/ IEC 17025 For 2017 Requirements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 15: Gum Device (2 images) -->
+  <section id="sec-qs15" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs15-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/33.png" alt="Gum - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/34.png" alt="Gum - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs15-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs15-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs15-dots" aria-label="Gum indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Gum Device</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>Anton par</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 381 &amp; IP 540</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for the determination of gum content in light petroleum products.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 16: RVP Eravap (2 images) -->
+  <section id="sec-qs16" class="py-12 bg-gray-50 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs16-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/35.png" alt="RVP Eravap - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/36.png" alt="RVP Eravap - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs16-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs16-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs16-dots" aria-label="RVP Eravap indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Reid Vapor Pressure</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>Eravap</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 5188, D6378, D 5191</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for the determination of the vapor pressure of light petroleum products.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 17: Oxidation Stability (2 images) -->
+  <section id="sec-qs17" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs17-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/37.png" alt="Oxidation Stability - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/38.png" alt="Oxidation Stability - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs17-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs17-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs17-dots" aria-label="Oxidation Stability indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Oxidation Stability</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>Rofox</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 525</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for determining the oxidation stability of jet fuel.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 18: Water Separometer (2 images) -->
+  <section id="sec-qs18" class="py-12 bg-gray-50 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs18-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/39.png" alt="Water Separometer - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/40.png" alt="Water Separometer - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs18-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs18-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs18-dots" aria-label="Water Separometer indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Water Separometer</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>MARKX</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 3948</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for the determination of the water separation characteristics of aviation turbine fuels.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 19: Karl Fischer (2 images) -->
+  <section id="sec-qs19" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs19-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/41.png" alt="Karl Fischer - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/42.png" alt="Karl Fischer - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs19-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs19-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs19-dots" aria-label="Karl Fischer indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Karl Fischer</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>Titrando 851 ( KF- Thermoprep )</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 6304</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for the determination of the concentration of water in oil</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 20: Total Sediment (2 images) -->
+  <section id="sec-qs20" class="py-12 bg-gray-50 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs20-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/43.png" alt="Total Sediment - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/44.png" alt="Total Sediment - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs20-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs20-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs20-dots" aria-label="Total Sediment indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Total Sediment</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>PMTamson</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 4870</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for determining the total sediment in residual fuels.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 21: Color Device (2 images) -->
+  <section id="sec-qs21" class="py-12 bg-white scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+        <div>
+          <div class="relative group">
+            <div class="overflow-hidden rounded-2xl ring-1 ring-black/5 shadow-lg bg-white slider-draggable">
+              <div id="qs21-slider" class="flex transition-transform duration-500 ease-out will-change-transform">
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/45.png" alt="Color Device - 1" class="w-full h-full object-cover" draggable="false" /></div></div>
+                <div class="w-full flex-shrink-0"><div class="w-full aspect-[4/3] overflow-hidden"><img src="images/services/chemical/qualitysector/46.png" alt="Color Device - 2" class="w-full h-full object-cover" draggable="false" /></div></div>
+              </div>
+            </div>
+            <button id="qs21-prev" class="hidden md:flex items-center justify-center absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Previous slide"><i class="fas fa-chevron-left text-gray-700"></i></button>
+            <button id="qs21-next" class="hidden md:flex items-center justify-center absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-white/90 ring-1 ring-black/10 shadow hover:bg-white transition-slow" aria-label="Next slide"><i class="fas fa-chevron-right text-gray-700"></i></button>
+            <div class="mt-4 flex items-center justify-center gap-2" id="qs21-dots" aria-label="Color Device indicators"><button class="sv-dot" aria-label="Slide 1"></button><button class="sv-dot" aria-label="Slide 2"></button></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold text-gray-800">Color Device</h3>
+          <ul class="device-info mt-5 space-y-4 text-gray-700 leading-relaxed">
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Model</span><span>Lovibond (Spectro colorimeter )</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Method</span><span>This device is compatible with<br/>ASTM D 6045</span></li>
+            <li class="flex items-start gap-2"><span class="min-w-[4.5rem]">Use</span><span>The device is for the determination of the color in petroleum products.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        <!-- Brand -->
+        <div>
+          <a href="#" class="inline-flex items-center text-2xl font-extrabold tracking-tight">
+            <img src="images/logo.png" alt="Logo" class="w-16 h-16 object-contain" />
+          </a>
+          <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
+            Alexandria Petroleum Company. Supporting the national economy and ensuring the availability of petroleum products for the Egyptian market.
+          </p>
+        </div>
+
+        <!-- Useful Links -->
+        <div>
+          <h3 class="text-white font-semibold text-lg mb-4">Useful Links</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="index.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Home</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li><a href="about.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">About Us</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li><a href="projects.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Projects</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li><a href="projects.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Products</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li><a href="services.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Services</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li><a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Units</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li><a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Contact</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="md:col-span-2 lg:col-span-2">
+          <h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-0.5 text-blue-400"></i><span>3 Al Max - Alexandria - Egypt</span></li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-phone mt-0.5 text-blue-400"></i>
+              <div class="space-y-1">
+                <a href="tel:+2034402832" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2832</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                <a href="tel:+2034402833" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2833</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                <a href="tel:+2034430123" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0123</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                <a href="tel:+2034430124" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0124</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3"><i class="fas fa-envelope mt-0.5 text-blue-400"></i><a href="mailto:chairman@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">chairman@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li class="flex items-start gap-3"><i class="fas fa-laptop-code mt-0.5 text-blue-400"></i>
+              <div>
+                <p>Site Designed By Alexandria Petroleum Co., IT Deptartment.</p>
+                <a href="mailto:IT@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">IT@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-6 border-t border-white/10 text-xs text-gray-400 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+        <p>© <span id="year"></span> Alexandria Petroleum Company. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu-overlay"></div>
+  <!-- Mobile menu -->
+  <div class="mobile-menu-container fixed inset-y-0 right-0 z-50 w-80 max-w-full bg-white shadow-xl">
+    <div class="flex flex-col h-full">
+      <div class="flex items-center justify-between px-6 py-4 border-b">
+        <a href="index.html" class="group flex items-center gap-3" aria-label="Alexandria Petroleum Company home">
+          <img src="images/logo.png" alt="AP Logo" class="h-8 w-8 rounded-full object-cover shadow-sm ring-1 ring-blue-500/20" />
+          <span class="leading-tight">
+            <span class="block text-base font-extrabold tracking-tight text-gray-900 group-hover:text-blue-700 transition-colors">Alexandria Petroleum Co.</span>
+            <span class="block text-[11px] text-gray-500">Refining Excellence</span>
+          </span>
+        </a>
+        <button class="mobile-menu-close p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none" aria-label="Close menu">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+      <div class="flex-1 overflow-y-auto px-6 py-4">
+        <div class="space-y-2">
+          <a href="index.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-home mr-3 text-blue-500"></i> Home</a>
+          <a href="about.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-info-circle mr-3 text-blue-500"></i> About Us</a>
+          <a href="projects.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-project-diagram mr-3 text-blue-500"></i> Projects</a>
+          <a href="projects.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-box-open mr-3 text-blue-500"></i> Products</a>
+          <a href="services.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-concierge-bell mr-3 text-blue-500"></i> Services</a>
+          <a href="units.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-building mr-3 text-blue-500"></i> Units</a>
+          <a href="portfolio.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-briefcase mr-3 text-blue-500"></i> Portfolio</a>
+          <a href="contact.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-envelope mr-3 text-blue-500"></i> Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script src="js/navbar.js"></script>
+  <script src="js/qualitysector.js"></script>
+</body>
+</html>
+
+
