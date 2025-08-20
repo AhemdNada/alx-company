@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexandria Petroleum Co. — Latest News</title>
+  <title>Alexandria Petroleum Co. — News Details</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/detailsnews.css" />
 </head>
 <body class="font-sans antialiased bg-white">
   <!-- Navigation (consistent with site) -->
@@ -52,23 +53,85 @@
   </nav>
 
   <main id="main" class="min-h-screen">
-    <!-- Page Header -->
+    <!-- Page Title (dynamic) -->
     <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 id="news-heading" class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          <span class="text-blue-600">Latest</span> News
-        </h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Stay updated with the most recent developments and achievements across our operations.</p>
+        <div id="skelTopTitle" class="inline-block h-10 w-2/3 md:w-1/2 bg-gray-200 rounded animate-pulse"></div>
+        <h1 id="newsTitle" class="hidden text-4xl md:text-5xl font-bold text-gray-800"></h1>
       </div>
     </section>
 
-    <!-- News Grid (dynamic) -->
-    <section class="pb-20">
+    <!-- First Section: Two-column layout -->
+    <section class="py-8 sm:py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div id="newsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-        <div id="newsEmpty" class="hidden rounded-xl border border-dashed border-gray-300 p-10 text-center text-gray-500">No news available.</div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
+          <!-- Left: Image gallery -->
+          <div class="lg:order-1">
+            <!-- Skeleton: Gallery -->
+            <div id="skelGallery">
+              <div class="w-full rounded-2xl bg-gray-200 border border-gray-100 aspect-video animate-pulse"></div>
+              <div class="mt-4">
+                <div class="flex items-center justify-center gap-3 mb-3">
+                  <div class="h-9 w-9 rounded-lg bg-gray-200 animate-pulse"></div>
+                  <div class="h-9 w-9 rounded-lg bg-gray-200 animate-pulse"></div>
+                </div>
+                <ul class="flex flex-wrap justify-center items-center gap-3">
+                  <li class="h-20 w-32 rounded-xl bg-gray-200 animate-pulse"></li>
+                  <li class="h-20 w-32 rounded-xl bg-gray-200 animate-pulse"></li>
+                  <li class="h-20 w-32 rounded-xl bg-gray-200 animate-pulse"></li>
+                  <li class="h-20 w-32 rounded-xl bg-gray-200 animate-pulse"></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Real Gallery -->
+            <div id="galleryContainer" class="hidden">
+              <div class="relative w-full overflow-hidden rounded-2xl shadow-lg border border-gray-100">
+                <div class="pt-[56.25%]"></div>
+                <img id="gallery-main" src="" alt="Main gallery image" class="absolute inset-0 w-full h-full object-cover" />
+              </div>
+
+              <!-- Thumbnails with prev/next (no horizontal scroll) -->
+              <div class="mt-4">
+                <div class="flex items-center justify-center gap-3 mb-3">
+                  <button id="gallery-prev" class="inline-flex items-center justify-center px-3 py-2 rounded-lg bg-white shadow ring-1 ring-black/5 text-gray-600 hover:text-blue-600 hover:bg-blue-50 focus:outline-none" aria-label="Previous image">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button id="gallery-next" class="inline-flex items-center justify-center px-3 py-2 rounded-lg bg-white shadow ring-1 ring-black/5 text-gray-600 hover:text-blue-600 hover:bg-blue-50 focus:outline-none" aria-label="Next image">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+                <ul id="gallery-thumbs" class="flex flex-wrap justify-center items-center gap-3"></ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Text content -->
+          <div class="lg:order-2">
+            <!-- Skeleton: Right content -->
+            <div id="skelRight" class="space-y-3">
+              <div class="h-8 bg-gray-200 rounded w-3/4 animate-pulse"></div>
+              <div class="h-5 bg-gray-200 rounded w-1/2 animate-pulse"></div>
+              <div class="space-y-2 pt-2">
+                <div class="h-4 bg-gray-200 rounded w-full animate-pulse"></div>
+                <div class="h-4 bg-gray-200 rounded w-11/12 animate-pulse"></div>
+                <div class="h-4 bg-gray-200 rounded w-5/6 animate-pulse"></div>
+                <div class="h-4 bg-gray-200 rounded w-4/5 animate-pulse"></div>
+              </div>
+            </div>
+
+            <!-- Real Right content -->
+            <div id="rightContainer" class="hidden">
+              <h2 id="newsTitleRight" class="text-2xl md:text-3xl font-bold text-gray-800 mb-2"></h2>
+              <p id="newsSubtitleRight" class="text-blue-600 font-semibold mb-4"></p>
+              <div id="newsBody" class="space-y-4 text-gray-700"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Second Section removed -->
   </main>
 
   <!-- Footer (consistent with site) -->
@@ -174,42 +237,8 @@
 
   <script src="js/navbar.js"></script>
   <script>
-    (function(){
-      const API = (window && window.API_BASE ? window.API_BASE : '/api').replace(/\/$/, '');
-      async function loadNews(){
-        const grid = document.getElementById('newsGrid');
-        const empty = document.getElementById('newsEmpty');
-        if (!grid || !empty) return;
-        grid.innerHTML = '';
-        try {
-          const res = await fetch(API + '/news');
-          if (!res.ok) throw new Error('Request failed');
-          const rows = await res.json();
-          if (!rows.length){ empty.classList.remove('hidden'); return; }
-          empty.classList.add('hidden');
-          rows.forEach(n => {
-            const card = document.createElement('article');
-            card.className = 'group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden';
-            card.innerHTML = `
-              <div class="relative w-full pt-[56.25%] overflow-hidden">${n.coverImage ? `<img src="${n.coverImage}" alt="${(n.title||'')}&nbsp;cover" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />` : ''}</div>
-              <div class="p-5">
-                <h3 class="text-lg font-bold text-gray-800 mb-2">${n.title || ''}</h3>
-                ${n.subtitle ? `<p class=\"text-gray-600 mb-3\">${n.subtitle}</p>` : ''}
-                <a href="news-details.html?id=${n.id}" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500/40 rounded" aria-label="Read more about ${(n.title||'').replace(/\"/g,'')}">
-                  Read more
-                  <i class="fas fa-arrow-right ml-1 text-xs transition-transform duration-300 group-hover:translate-x-0.5"></i>
-                </a>
-              </div>`;
-            grid.appendChild(card);
-          });
-        } catch (e){
-          empty.classList.remove('hidden');
-        }
-      }
-      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadNews); else loadNews();
-    })();
+ 
   </script>
+  <script src="js/detailsnews.js"></script>
 </body>
 </html>
-
-

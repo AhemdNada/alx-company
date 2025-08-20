@@ -69,6 +69,7 @@
                 <div class="tab-group">
                     <div class="tabs mb-4">
                         <button class="tab-btn active" data-tab="about"><i class="fa-solid fa-circle-info"></i><span>About</span></button>
+                        <button class="tab-btn" data-tab="news"><i class="fa-solid fa-newspaper"></i><span>News</span></button>
                     </div>
                     <div class="tab-panel" data-tab="about">
                         <!-- Inner tabs for About -->
@@ -111,6 +112,52 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- News Panel -->
+                    <div class="tab-panel hidden" data-tab="news">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold">News</h3>
+                            <button id="addNewsBtn" class="btn-primary"><i class="fa-solid fa-plus"></i>Add</button>
+                        </div>
+                        <div class="overflow-x-auto rounded-xl border border-slate-200/70 dark:border-slate-700/60">
+                            <table class="w-full text-left align-middle">
+                                <thead class="text-sm text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900/40">
+                                    <tr>
+                                        <th class="py-2 pr-4">Title</th>
+                                        <th class="py-2 pr-4">Subtitle</th>
+                                        <th class="py-2 pr-4">Orientation</th>
+                                        <th class="py-2 pr-4">Images</th>
+                                        <th class="py-2 pr-4 w-40">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="newsBody" class="divide-y divide-slate-100 dark:divide-slate-700/60 text-sm">
+                                    <!-- Rendered by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Ticker Messages -->
+                        <div class="mt-8">
+                            <div class="flex items-center justify-between mb-3">
+                                <h4 class="text-base font-bold">Ticker Messages</h4>
+                                <form id="tickerCreateForm" class="flex items-center gap-2">
+                                    <input id="tickerMessageInput" type="text" maxlength="255" class="w-72 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-4 py-2 text-sm outline-none" placeholder="Add new message...">
+                                    <button class="btn-primary" type="submit"><i class="fa-solid fa-plus"></i>Add</button>
+                                </form>
+                            </div>
+                            <div class="overflow-x-auto rounded-xl border border-slate-200/70 dark:border-slate-700/60">
+                                <table class="w-full text-left align-middle">
+                                    <thead class="text-sm text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900/40">
+                                        <tr>
+                                            <th class="py-2 pr-4">Message</th>
+                                            <th class="py-2 pr-4 w-40">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tickerBody" class="divide-y divide-slate-100 dark:divide-slate-700/60 text-sm"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -141,6 +188,78 @@
                     </div>
                     <div class="flex items-center justify-end gap-3 pt-2">
                         <button type="button" class="quick-action" data-close="rateModal">Cancel</button>
+                        <button type="submit" class="btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- News Modal -->
+    <div id="newsModal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/50" data-close="newsModal"></div>
+        <div class="relative z-10 min-h-full flex items-center justify-center p-4">
+            <div class="w-full max-w-4xl rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 shadow-xl p-6 max-h-[85vh] flex flex-col">
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-200/70 dark:border-slate-700/60">
+                    <h3 id="newsModalTitle" class="text-lg font-semibold">Add News</h3>
+                    <button class="text-slate-500 hover:text-slate-700 dark:text-slate-400" data-close="newsModal"><i class="fa-solid fa-xmark text-xl"></i></button>
+                </div>
+                <form id="newsForm" class="flex-1 min-h-0 flex flex-col">
+                    <div id="newsFormBody" class="flex-1 min-h-0 overflow-y-auto pr-1 space-y-5">
+                        <input type="hidden" id="newsId" value="">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm mb-1">Title</label>
+                                <input id="newsTitle" type="text" class="w-full rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-4 py-2 text-sm outline-none" placeholder="News title">
+                            </div>
+                            <div>
+                                <label class="block text-sm mb-1">Subtitle</label>
+                                <input id="newsSubtitle" type="text" class="w-full rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-4 py-2 text-sm outline-none" placeholder="Subtitle (optional)">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm mb-1">Image Orientation</label>
+                                <select id="newsOrientation" class="w-full rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-4 py-2 text-sm outline-none">
+                                    <option value="horizontal">Horizontal</option>
+                                    <option value="vertical">Vertical</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <label class="block text-sm font-semibold">Description</label>
+                                <div class="flex gap-2">
+                                    <button type="button" id="addParaBlockBtn" class="chip"><i class="fa-solid fa-paragraph"></i><span>Add Paragraph</span></button>
+                                    <button type="button" id="addListBlockBtn" class="chip"><i class="fa-solid fa-list-ul"></i><span>Add List</span></button>
+                                </div>
+                            </div>
+                            <div id="newsDescriptionBlocks" class="space-y-3"></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm mb-1">Upload Images</label>
+                                <input id="newsImagesFiles" type="file" accept="image/*" multiple class="block w-full text-sm">
+                                <p class="mt-1 text-xs text-slate-500">You can select multiple files or add in batches.</p>
+                                <div id="newsImagesPreview" class="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-2"></div>
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between">
+                                    <label class="block text-sm mb-1">Image URLs</label>
+                                    <button type="button" id="addNewsImageUrlBtn" class="chip"><i class="fa-solid fa-plus"></i><span>Add URL</span></button>
+                                </div>
+                                <div id="newsImageUrls" class="space-y-2">
+                                    <input type="url" class="w-full rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-4 py-2 text-sm outline-none" placeholder="https://...">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="existingImagesWrap" class="hidden">
+                            <label class="block text-sm font-semibold mb-1">Existing Images (keep/remove)</label>
+                            <div id="existingImagesList" class="grid grid-cols-2 md:grid-cols-3 gap-3"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-end gap-3 pt-3 border-t border-slate-200/70 dark:border-slate-700/60 bg-white dark:bg-slate-800">
+                        <button type="button" class="quick-action" data-close="newsModal">Cancel</button>
                         <button type="submit" class="btn-primary">Save</button>
                     </div>
                 </form>

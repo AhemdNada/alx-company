@@ -132,15 +132,8 @@
     let reShowTimer = null;
     let index = 0;
   
-    // Placeholder rotating news (replace with API later)
-    const newsItems = [
-      'APC expands environmental programs and strengthens ISO certifications across operations.',
-      'Safety milestone: 1,000,000+ working hours with zero LTI achieved this quarter.',
-      'New vapour recovery enhancements reduce emissions while improving efficiency.',
-      'Digital transformation: modernized lab systems accelerate quality analytics.',
-      'Sustainability spotlight: energy optimization delivers measurable savings.',
-      'Community initiative launched to support local technical education.'
-    ];
+    // News items loaded from API
+    let newsItems = [];
   
     function setTopOffset() {
       const nav = document.querySelector('nav');
@@ -226,6 +219,7 @@
     }
   
     function rotateNews() {
+      if (!newsItems.length) return;
       index = (index + 1) % newsItems.length;
       applyText(newsItems[index]);
     }
@@ -238,28 +232,36 @@
       };
     }
   
-    function init() {
+    async function init() {
       setTopOffset();
       window.addEventListener('resize', debounce(() => {
         setTopOffset();
         setupTicker(track?.textContent || '');
       }, 150));
   
-      applyText(newsItems[index]);
-      showBanner();
-  
-      setInterval(rotateNews, 15000);
+      try {
+        const API = (window && window.API_BASE ? window.API_BASE : '/api').replace(/\/$/, '');
+        const res = await fetch(API + '/news/ticker');
+        if (res.ok) {
+          const rows = await res.json();
+          newsItems = rows.map(r => r.message).filter(Boolean);
+        }
+      } catch {}
+
+      if (newsItems.length) {
+        applyText(newsItems[index]);
+        showBanner();
+        setInterval(rotateNews, 15000);
+      } else {
+        banner.style.display = 'none';
+      }
   
       if (closeBtn) {
         closeBtn.addEventListener('click', hideBanner);
       }
     }
   
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
   })();
 // end news banner
 
