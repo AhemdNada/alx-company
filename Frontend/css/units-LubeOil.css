@@ -1,0 +1,11 @@
+/* Hide native scrollbar on the slider track */
+.uds-track { scrollbar-width: none; }
+.uds-track::-webkit-scrollbar { display: none; }
+
+/* Dot pagination */
+.uds-dots .uds-dot { width: 10px; height: 10px; border-radius: 9999px; background: rgba(255,255,255,0.7); border: 1px solid rgba(0,0,0,0.15); box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+.uds-dots .uds-dot.active { background: #2563eb; border-color: #1d4ed8; }
+
+/* Grabbing state helper */
+.cursor-grabbing { cursor: grabbing !important; }
+

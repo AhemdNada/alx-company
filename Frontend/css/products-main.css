@@ -1,0 +1,89 @@
+/* Products main page styles */
+.prod-link {
+    display: grid;
+    grid-template-columns: 1.25rem 1fr 1rem;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(59,130,246,0.15);
+    background: #ffffff;
+    color: #1f2937;
+    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.prod-link:hover {
+    background: #f8fafc;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
+}
+
+.table-scroll { overflow: hidden; }
+.table-scroll > div { overflow-x: auto; }
+
+.prod-table th,
+.prod-table td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.prod-table thead th {
+    background: #f1f5f9;
+    color: #0f172a;
+    font-weight: 700;
+    text-align: left;
+}
+
+.prod-table tbody tr:nth-child(even) td { background: #fafafa; }
+
+.prod-table { border-collapse: separate; border-spacing: 0; }
+
+/* Smooth section anchor offset for sticky nav */
+:target { scroll-margin-top: 90px; }
+
+/* Improved table layout and lines */
+.prod-table { border: 1px solid rgba(0,0,0,0.08); border-radius: 0.75rem; overflow: hidden; }
+.prod-table th, .prod-table td { vertical-align: middle; }
+.prod-table td + td, .prod-table th + th { border-left: 1px solid rgba(0,0,0,0.06); }
+
+.thead-top th { background: #b91c1c; color: #ffffff; }
+.thead-sub th { background: #dc2626; color: #ffffff; font-weight: 700; }
+.th-group { text-align: center; }
+/* Ensure METHOD header centers despite generic thead rule */
+.prod-table thead th.th-group { text-align: center; }
+
+.prod-table tbody tr.row-section td { background: #FFDADA; color: #b91c1c; font-weight: 600; }
+.prod-table tbody tr.row-section td + td { background: #FFDADA; }
+/* Keep background on hover and override zebra striping */
+.prod-table tbody tr.row-section:hover td { background: #FFDADA; }
+
+.col-test { width: 45%; }
+.col-method { width: 14%; }
+.col-spec { width: 28%; }
+
+/* Row hover effects for a more professional feel */
+.prod-table tbody tr td { transition: background-color .15s ease, border-left-color .15s ease; }
+.prod-table tbody tr:not(.row-section):hover td { background: #f8fafc; }
+.prod-table tbody tr:not(.row-section):hover td:first-child { border-left-color: #3b82f6; border-left-width: 3px; }
+
+/* Center content when both METHOD columns merge */
+.prod-table td.method-span { text-align: center; font-weight: 600; color: #111827; }
+
+/* Notes / guidance boxes below tables */
+.note-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.75rem 0.875rem;
+    margin-top: 0.75rem;
+    border-radius: 0.5rem;
+    background: #fff7ed; /* orange-50 */
+    border: 1px solid #fed7aa; /* orange-200 */
+    border-left: 4px solid #f59e0b; /* orange-500 */
+    color: #7c2d12; /* orange-900 */
+}
+.note-title { font-weight: 700; }
+.note-list { margin: 0.25rem 0 0 1rem; }
+.note-list li { list-style: disc; margin: 0.125rem 0; }
+
+

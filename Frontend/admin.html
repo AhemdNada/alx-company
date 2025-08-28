@@ -9,59 +9,11 @@
     <link rel="stylesheet" href="css/admin.css">
 </head>
 <body class="bg-gray-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
-    <!-- Sidebar overlay (mobile) -->
-    <div id="sidebarOverlay" class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
-
-    <!-- Sidebar -->
-    <aside id="sidebar" class="fixed inset-y-0 left-0 w-72 bg-white dark:bg-slate-800 border-r border-slate-200/70 dark:border-slate-700/60 transform -translate-x-full md:translate-x-0 transition-transform duration-300 will-change-transform z-40 flex flex-col">
-        <div class="h-20 flex items-center gap-3 px-6 border-b border-slate-200/70 dark:border-slate-700/60">
-            <img src="images/logo.png" alt="Logo" class="w-12 h-12 object-contain">
-            <div>
-                <div class="text-lg font-extrabold tracking-wide">Admin</div>
-                <div class="text-xs text-slate-500 dark:text-slate-400">Control Panel</div>
-            </div>
-        </div>
-
-        <nav class="flex-1 overflow-y-auto py-4 px-3">
-            <a href="#about" class="nav-item active"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
-        </nav>
-
-        
-    </aside>
+    
 
     <!-- Main -->
-    <div class="md:pl-72 min-h-screen flex flex-col">
-        <!-- Topbar -->
-        <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/90 dark:bg-slate-900/80 border-b border-slate-200/70 dark:border-slate-700/60">
-            <div class="h-20 flex items-center justify-between gap-3 px-4 sm:px-6">
-                <div class="flex items-center gap-3">
-                    <button id="openSidebar" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 hover:text-blue-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"><i class="fa-solid fa-bars text-xl"></i></button>
-                    <div class="hidden sm:flex items-center gap-2 text-slate-500 text-sm">
-                        <span class="font-semibold text-slate-700 dark:text-slate-200">About</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-2 sm:gap-3">
-                    <div class="relative hidden md:block">
-                        <input type="text" placeholder="Search..." class="w-64 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-4 py-2 text-sm outline-none placeholder-slate-400 dark:placeholder-slate-500">
-                        <i class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
-                    </div>
-                    <button id="themeToggle" class="inline-flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 hover:text-blue-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800" aria-label="Toggle dark mode">
-                        <i class="fa-solid fa-moon"></i>
-                    </button>
-                    <button class="inline-flex items-center justify-center w-10 h-10 rounded-lg text-slate-600 hover:text-blue-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800" aria-label="Notifications">
-                        <i class="fa-regular fa-bell"></i>
-                    </button>
-                    <div class="flex items-center gap-3 pl-2">
-                        <div class="text-right hidden sm:block leading-tight">
-                            <div class="text-sm font-semibold">Admin User</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-400">Administrator</div>
-                        </div>
-                        <img src="images/home/Atmospheric-Distillation_02.png" alt="Avatar" class="w-10 h-10 rounded-xl object-cover ring-2 ring-blue-500/20">
-                    </div>
-                </div>
-            </div>
-        </header>
+    <div class="min-h-screen flex flex-col">
+        <!-- No topbar -->
 
         <!-- Content -->
         <main class="flex-1 p-4 sm:p-6 lg:p-8 space-y-6">

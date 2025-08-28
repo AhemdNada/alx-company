@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Alexandria Petroleum Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="icon" href="images/logo.png">
+    <meta name="description" content="An overview of the different kinds of petroleum products and solvents produced by Alexandria Petroleum Company.">
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="block w-16 h-16 overflow-hidden">
+                        <img src="images/logo.png" alt="Logo" class="w-full h-full object-contain" />
+                    </a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex md:items-center md:flex-1 md:justify-center md:space-x-1">
+                    <a href="index.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Home</a>
+                    <a href="about.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">About Us</a>
+                    <a href="projects.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Projects</a>
+                    <a href="products.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow active">Products</a>
+                    <a href="services.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Services</a>
+                    <a href="units.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Units</a>
+                    <a href="portfolio.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Portfolio</a>
+                    <a href="contact.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Contact</a>
+                </div>
+
+                <!-- Search and action buttons -->
+                <div class="hidden md:flex md:items-center md:space-x-2">
+                    <button class="p-2 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow">
+                        <span class="sr-only">Search</span>
+                        <i class="fas fa-search h-4 w-4"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="pt-10 sm:pt-14 pb-10 bg-gradient-to-br from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8 sm:mb-10">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                        <div class="text-center sm:text-left">
+                            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+                                <span class="text-blue-600">Our</span> Products
+                            </h1>
+                            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-4 rounded-full mx-auto sm:mx-0"></div>
+                            <p class="text-base sm:text-lg text-gray-600 mt-4 max-w-3xl">
+                                An overview to the different kinds of petroleum products and solvents We produce
+                            </p>
+                        </div>
+                        <nav aria-label="Breadcrumb">
+                            <ol class="flex items-center text-sm text-gray-500 justify-center sm:justify-end">
+                                <li><a href="index.html" class="text-blue-600 hover:text-blue-700 font-medium">Home</a></li>
+                                <li class="px-2 text-gray-400">/</li>
+                                <li class="text-gray-700 font-semibold" aria-current="page">Products</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+                    <!-- Left: Top product tabs/content -->
+                    <div class="lg:col-span-8 xl:col-span-9">
+                        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-5 sm:p-6">
+                            <div class="product-tabs" data-group="top">
+                                <div class="tab-buttons grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                                    <button class="tab-btn group flex items-center gap-3 w-full rounded-lg bg-white hover:bg-blue-50 text-gray-800 ring-1 ring-black/5 hover:ring-blue-300 transition-all p-3 shadow-sm hover:shadow-md active" data-target="main">
+                                        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-500 text-white shadow">
+                                            <i class="fa-solid fa-droplet"></i>
+                                        </span>
+                                        <span class="text-left">
+                                            <span class="block font-bold">Main</span>
+                                            <span class="block text-xs text-gray-500">Petroleum Products</span>
+                                        </span>
+                                    </button>
+                                    <button class="tab-btn group flex items-center gap-3 w-full rounded-lg bg-white hover:bg-blue-50 text-gray-800 ring-1 ring-black/5 hover:ring-blue-300 transition-all p-3 shadow-sm hover:shadow-md" data-target="solvents">
+                                        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-green-600 to-green-500 text-white shadow">
+                                            <i class="fa-solid fa-flask"></i>
+                                        </span>
+                                        <span class="text-left">
+                                            <span class="block font-bold">Solvents</span>
+                                            <span class="block text-xs text-gray-500">Petroleum Solvents</span>
+                                        </span>
+                                    </button>
+                                    <button class="tab-btn group flex items-center gap-3 w-full rounded-lg bg-white hover:bg-blue-50 text-gray-800 ring-1 ring-black/5 hover:ring-blue-300 transition-all p-3 shadow-sm hover:shadow-md" data-target="lube">
+                                        <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-purple-500 text-white shadow">
+                                            <i class="fa-solid fa-gears"></i>
+                                        </span>
+                                        <span class="text-left">
+                                            <span class="block font-bold">Lube Oil</span>
+                                            <span class="block text-xs text-gray-500">Complex Products</span>
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <div class="tab-contents space-y-10">
+                                    <div id="main" class="tab-panel">
+                                        <div class="grid grid-cols-1 md:grid-cols-[1fr,auto] gap-6 items-center">
+                                            <div>
+                                                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                                    <a href="products-main.html" class="group inline-flex items-center gap-2 hover:text-blue-700 transition-colors cursor-pointer" aria-label="View Main Petroleum Products details">
+                                                        <span>Main Petroleum Products</span>
+                                                        <i class="fa-solid fa-arrow-right text-blue-600 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200"></i>
+                                                    </a>
+                                                </h2>
+                                                <p class="text-gray-600 mb-6">APC produces many of the main petroleum products such as:</p>
+                                                <ul class="link-list grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                                    <li><a href="products-main.html#naphtha" class="link-item">Straight Run Naphtha for Exportation</a></li>
+                                                    <li><a href="products-main.html#turbine-jet-a1" class="link-item">Turbine Jet A-1</a></li>
+                                                    <li><a href="products-main.html#fuel-oil" class="link-item">Fuel Oil</a></li>
+                                                    <li><a href="products-main.html#gas-oil" class="link-item">Gas Oil</a></li>
+                                                    <li><a href="products-main.html#special-gasoil-marine" class="link-item">Special Gasoil (Marine)</a></li>
+                                                    <li><a href="products-main.html#kerosene" class="link-item">Kerosene</a></li>
+                                                    <li><a href="products-main.html#hydrotreated-kerosene" class="link-item">Hydrotreated Kerosene</a></li>
+                                                    <li><a href="products-main.html#jp5" class="link-item">JP5</a></li>
+                                                    <li><a href="products-main.html#lpg-propane" class="link-item">Liquefied Commercial Propane</a></li>
+                                                    <li><a href="products-main.html#lpg-propane-butane" class="link-item">Butane Gas</a></li>
+                                                    <li><a href="products-main.html#gasoline-95" class="link-item">Automotive Gasoline Octane (80)</a></li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="order-first md:order-none">
+                                                <a href="products-main.html" class="block group cursor-pointer" aria-label="Go to Main Petroleum Products page">
+                                                    <img src="images/home/Atmospheric-Distillation_02.png" alt="Main Petroleum Products" class="panel-image w-64 sm:w-80 md:w-72 h-64 object-cover rounded-xl shadow-md mx-auto md:mx-0 transition-shadow group-hover:shadow-lg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="solvents" class="tab-panel hidden">
+                                        <div class="grid grid-cols-1 md:grid-cols-[1fr,auto] gap-6 items-center">
+                                            <div>
+                                                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                                    <a href="products-solvents.html" class="group inline-flex items-center gap-2 hover:text-blue-700 transition-colors cursor-pointer" aria-label="View Petroleum Solvents details">
+                                                        <span>Petroleum Solvents</span>
+                                                        <i class="fa-solid fa-arrow-right text-blue-600 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200"></i>
+                                                    </a>
+                                                </h2>
+                                                <p class="text-gray-600 mb-6">APC produces some petroleum solvents such as:</p>
+                                                <ul class="link-list grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                                    <li><a href="products-solvents.html#petroleum-solvents" class="link-item">Petroleum Solvents</a></li>
+                                                    <li><a href="products-solvents.html#turpentine" class="link-item">Turpentine</a></li>
+                                                    <li><a href="products-solvents.html#commercial-hexane" class="link-item">Commercial Hexane (Food Grade) for Exportation</a></li>
+                                                    <li><a href="products-solvents.html#special-hexane" class="link-item">Special Hexane</a></li>
+                                                    <li><a href="products-solvents.html#solvent-60-80" class="link-item">60/80 Solvent</a></li>
+                                                    <li><a href="products-solvents.html#mexol" class="link-item">Mexol</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-first md:order-none">
+                                                <img src="images/home/chemical.jpg" alt="Petroleum Solvents" class="panel-image w-64 sm:w-80 md:w-72 h-64 object-cover rounded-xl shadow-md mx-auto md:mx-0">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="lube" class="tab-panel hidden">
+                                        <div class="grid grid-cols-1 md:grid-cols-[1fr,auto] gap-6 items-center">
+                                            <div>
+                                                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                                    <a href="products-lube-oil.html" class="group inline-flex items-center gap-2 hover:text-blue-700 transition-colors cursor-pointer" aria-label="View Lube Oil Products details">
+                                                        <span>Lube Oil Products</span>
+                                                        <i class="fa-solid fa-arrow-right text-blue-600 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200"></i>
+                                                    </a>
+                                                </h2>
+                                                <p class="text-gray-600 mb-6">APC produces some lubricating oil Complex products such as:</p>
+                                                <ul class="link-list grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                                    <li><a href="products-lube-oil.html#bright-stock" class="link-item">Bright Stock Oil</a></li>
+                                                    <li><a href="products-lube-oil.html#cylinder-oil-12" class="link-item">Cylinder Oil</a></li>
+                                                    <li><a href="products-lube-oil.html#crystalline-wax" class="link-item">Micro Crystalline Wax Exportation</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-first md:order-none">
+                                                <img src="images/home/Lube-Oile _02.png" alt="Lube Oil Products" class="panel-image w-64 sm:w-80 md:w-72 h-64 object-cover rounded-xl shadow-md mx-auto md:mx-0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Quick links -->
+                    <aside class="lg:col-span-4 xl:col-span-3">
+                        <div class="sticky top-6">
+                            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-5">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white">
+                                        <i class="fa-solid fa-link"></i>
+                                    </span>
+                                    <h2 class="text-lg font-bold text-gray-900">Quick Explore</h2>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-4">Jump to categories and open their details.</p>
+                                <div class="space-y-2">
+                                    <a class="prod-quick-link" href="products-main.html"><i class="fa-solid fa-droplet text-blue-600"></i><span>Main Petroleum</span><i class="fa-solid fa-arrow-right"></i></a>
+                                    <a class="prod-quick-link" href="products-solvents.html"><i class="fa-solid fa-flask text-blue-600"></i><span>Petroleum Solvents</span><i class="fa-solid fa-arrow-right"></i></a>
+                                    <a class="prod-quick-link" href="products-lube-oil.html"><i class="fa-solid fa-gears text-blue-600"></i><span>Lube Oil Products</span><i class="fa-solid fa-arrow-right"></i></a>
+                                    <a class="prod-quick-link" href="products-Bituminous.html"><i class="fa-solid fa-road text-blue-600"></i><span>Bituminous Products</span><i class="fa-solid fa-arrow-right"></i></a>
+                                    <a class="prod-quick-link" href="products-Re-refined.html"><i class="fa-solid fa-recycle text-blue-600"></i><span>Re-refined Spent Oil</span><i class="fa-solid fa-arrow-right"></i></a>
+                                    <a class="prod-quick-link" href="products-For-Sale.html"><i class="fa-solid fa-tags text-blue-600"></i><span>Products For Sale</span><i class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+    <!-- Unique Position Banner -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-white leading-tight">
+                Alexandria Petroleum Co. has a unique position between the international refining companies!
+            </h2>
+        </div>
+    </section>
+
+    <!-- Bottom Products Section: Bituminous / Re-refined / For Sale -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+                <!-- Left: Bottom product tabs/content -->
+                <div class="lg:col-span-8 xl:col-span-9">
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-5 sm:p-6">
+                        <div class="product-tabs" data-group="bottom">
+                            <div class="tab-buttons grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                                <!-- Bituminous -->
+                                <button class="tab-btn group flex items-center gap-3 w-full rounded-lg bg-white hover:bg-blue-50 text-gray-800 ring-1 ring-black/5 hover:ring-blue-300 transition-all p-3 shadow-sm hover:shadow-md active" data-target="bituminous">
+                                    <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-orange-600 to-orange-500 text-white shadow">
+                                        <i class="fa-solid fa-road"></i>
+                                    </span>
+                                    <span class="text-left">
+                                        <span class="block font-bold">Bituminous</span>
+                                        <span class="block text-xs text-gray-500">Products</span>
+                                    </span>
+                                </button>
+                                <!-- Re-refined -->
+                                <button class="tab-btn group flex items-center gap-3 w-full rounded-lg bg-white hover:bg-blue-50 text-gray-800 ring-1 ring-black/5 hover:ring-blue-300 transition-all p-3 shadow-sm hover:shadow-md" data-target="refined">
+                                    <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-emerald-600 to-emerald-500 text-white shadow">
+                                        <i class="fa-solid fa-recycle"></i>
+                                    </span>
+                                    <span class="text-left">
+                                        <span class="block font-bold">Re-refined</span>
+                                        <span class="block text-xs text-gray-500">Spent Oil</span>
+                                    </span>
+                                </button>
+                                <!-- For Sale -->
+                                <button class="tab-btn group flex items-center gap-3 w-full rounded-lg bg-white hover:bg-blue-50 text-gray-800 ring-1 ring-black/5 hover:ring-blue-300 transition-all p-3 shadow-sm hover:shadow-md" data-target="forsale">
+                                    <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-sky-600 to-sky-500 text-white shadow">
+                                        <i class="fa-solid fa-tags"></i>
+                                    </span>
+                                    <span class="text-left">
+                                        <span class="block font-bold">For Sale</span>
+                                        <span class="block text-xs text-gray-500">Other Products</span>
+                                    </span>
+                                </button>
+                            </div>
+
+                            <!-- Panels -->
+                            <div class="tab-contents space-y-10">
+                                <!-- Bituminous Panel -->
+                                <div id="bituminous" class="tab-panel">
+                                    <div class="grid grid-cols-1 md:grid-cols-[1fr,auto] gap-6 items-center">
+                                        <div>
+                                            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                                <a href="products-Bituminous.html" class="group inline-flex items-center gap-2 hover:text-blue-700 transition-colors cursor-pointer" aria-label="View Bituminous Products details">
+                                                    <span>Bituminous Products</span>
+                                                    <i class="fa-solid fa-arrow-right text-blue-600 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200"></i>
+                                                </a>
+                                            </h2>
+                                            <p class="text-gray-600 mb-6">APC produces few of the bituminous products such as:</p>
+                                            <ul class="link-list grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                                <li><a href="products-Bituminous.html#semi-oxidized-80-100" class="link-item">Semi-Oxidized Bitumen 80/100</a></li>
+                                                <li><a href="products-Bituminous.html#oxidized-60-70" class="link-item">Oxidized Bitumen 60/70 Heavy Duty for Exportation</a></li>
+                                                <li><a href="products-Bituminous.html#oxidized-95-25" class="link-item">Oxidized Bitumen (Grade 95/25) for Exportation</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-first md:order-none">
+                                            <img src="images/home/Oxidized-Bitumen_02.png" alt="Bituminous Products" class="panel-image w-64 sm:w-80 md:w-72 h-64 object-cover rounded-xl shadow-md mx-auto md:mx-0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Re-refined Panel -->
+                                <div id="refined" class="tab-panel hidden">
+                                    <div class="grid grid-cols-1 md:grid-cols-[1fr,auto] gap-6 items-center">
+                                        <div>
+                                            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                                <a href="products-Re-refined.html" class="group inline-flex items-center gap-2 hover:text-blue-700 transition-colors cursor-pointer" aria-label="View Re-refined Spent Oil Products details">
+                                                    <span>Re-refined Spent Oil Products</span>
+                                                    <i class="fa-solid fa-arrow-right text-blue-600 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200"></i>
+                                                </a>
+                                            </h2>
+                                            <p class="text-gray-600 mb-6">APC produces some of the Re-refined products such as:</p>
+                                            <ul class="link-list grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                                <li><a href="products-Re-refined.html#used-oil-sample" class="link-item">Used Oil Sample</a></li>
+                                                <li><a href="products-Re-refined.html#used-oil-export" class="link-item">Used Oil for Exportation</a></li>
+                                                <li><a href="products-Re-refined.html#neutral-oil" class="link-item">Neutral Oil</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-first md:order-none">
+                                            <img src="images/home/Re-refining-Spent_02.png" alt="Re-refined Spent Oil Products" class="panel-image w-64 sm:w-80 md:w-72 h-64 object-cover rounded-xl shadow-md mx-auto md:mx-0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- For Sale Panel -->
+                                <div id="forsale" class="tab-panel hidden">
+                                    <div class="grid grid-cols-1 md:grid-cols-[1fr,auto] gap-6 items-center">
+                                        <div>
+                                            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                                <a href="products-For-Sale.html" class="group inline-flex items-center gap-2 hover:text-blue-700 transition-colors cursor-pointer" aria-label="View Products For Sale details">
+                                                    <span>Products For Sale</span>
+                                                    <i class="fa-solid fa-arrow-right text-blue-600 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all duration-200"></i>
+                                                </a>
+                                            </h2>
+                                            <p class="text-gray-600 mb-6">APC produces some other products for sale purposes such as:</p>
+                                            <ul class="link-list grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                                <li><a href="products-For-Sale.html#commercial-hexane" class="link-item">Commercial Hexane</a></li>
+                                                <li><a href="products-For-Sale.html#special-hexane" class="link-item">Special Hexane</a></li>
+                                                <li><a href="products-For-Sale.html#solvent-60-80" class="link-item">60/80 Solvent</a></li>
+                                                <li><a href="products-For-Sale.html#mexsol" class="link-item">Mexsol</a></li>
+                                                <li><a href="products-For-Sale.html#treated-kerosene" class="link-item">Treated Kerosene</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-first md:order-none">
+                                            <img src="images/home/Petroleum Company Exports.png" alt="Products For Sale" class="panel-image w-64 sm:w-80 md:w-72 h-64 object-cover rounded-xl shadow-md mx-auto md:mx-0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Quick links for bottom section -->
+                <aside class="lg:col-span-4 xl:col-span-3">
+                    <div class="sticky top-6">
+                        <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-5">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white">
+                                    <i class="fa-solid fa-link"></i>
+                                </span>
+                                <h2 class="text-lg font-bold text-gray-900">Quick Explore</h2>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-4">Jump to bottom categories and open their details.</p>
+                            <div class="space-y-2">
+                                <a class="prod-quick-link" href="products-Bituminous.html"><i class="fa-solid fa-road text-blue-600"></i><span>Bituminous Products</span><i class="fa-solid fa-arrow-right"></i></a>
+                                <a class="prod-quick-link" href="products-Re-refined.html"><i class="fa-solid fa-recycle text-blue-600"></i><span>Re-refined Spent Oil</span><i class="fa-solid fa-arrow-right"></i></a>
+                                <a class="prod-quick-link" href="products-For-Sale.html"><i class="fa-solid fa-tags text-blue-600"></i><span>Products For Sale</span><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <!-- Brand -->
+                <div>
+                    <a href="#" class="inline-flex items-center text-2xl font-extrabold tracking-tight">
+                        <img src="images/logo.png" alt="Logo" class="w-16 h-16 object-contain" />
+                    </a>
+                    <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
+                        Alexandria Petroleum Company. Supporting the national economy and ensuring the availability of petroleum products for the Egyptian market.
+                    </p>
+                </div>
+
+                <!-- Useful Links -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Useful Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Home</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+                        <li><a href="about.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">About Us</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+                        <li><a href="projects.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Projects</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+                        <li><a href="products.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Products</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+                        <li><a href="services.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Services</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+                        <li><a href="units.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Units</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+                        <li><a href="contact.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Contact</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="md:col-span-2 lg:col-span-2">
+                    <h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-0.5 text-blue-400"></i><span>3 Al Max - Alexandria - Egypt</span></li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone mt-0.5 text-blue-400"></i>
+                            <div class="space-y-1">
+                                <a href="tel:+2034402832" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2832</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                                <a href="tel:+2034402833" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2833</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                                <a href="tel:+2034430123" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0123</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                                <a href="tel:+2034430124" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0124</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3"><i class="fas fa-envelope mt-0.5 text-blue-400"></i><a href="mailto:chairman@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">chairman@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-laptop-code mt-0.5 text-blue-400"></i><div><p>Site Designed By Alexandria Petroleum Co., IT Deptartment.</p><a href="mailto:IT@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">IT@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-6 border-t border-white/10 text-xs text-gray-400 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+                <p>© <span id="year"></span> Alexandria Petroleum Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu-container fixed inset-y-0 right-0 z-50 w-80 max-w-full bg-white shadow-xl">
+        <div class="flex flex-col h-full">
+            <!-- Mobile menu header -->
+            <div class="flex items-center justify-between px-6 py-4 border-b">
+                <a href="#" class="group flex items-center gap-3" aria-label="Alexandria Petroleum Company home">
+                    <img src="images/logo.png" alt="AP Logo" class="h-8 w-8 rounded-full object-cover shadow-sm ring-1 ring-blue-500/20" />
+                    <span class="leading-tight">
+                        <span class="block text-base font-extrabold tracking-tight text-gray-900 group-hover:text-blue-700 transition-colors">Alexandria Petroleum Co.</span>
+                        <span class="block text-[11px] text-gray-500">Refining Excellence</span>
+                    </span>
+                </a>
+                <button class="mobile-menu-close p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu content -->
+            <div class="flex-1 overflow-y-auto px-6 py-4">
+                <div class="space-y-2">
+                    <a href="index.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-home mr-3 text-blue-500"></i> Home</a>
+                    <a href="about.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-info-circle mr-3 text-blue-500"></i> About Us</a>
+                    <a href="projects.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-project-diagram mr-3 text-blue-500"></i> Projects</a>
+                    <a href="products.html" class="block px-3 py-3 rounded-lg text-blue-700 bg-blue-50 font-semibold transition-slow"><i class="fas fa-box-open mr-3 text-blue-500"></i> Products</a>
+                    <a href="services.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-concierge-bell mr-3 text-blue-500"></i> Services</a>
+                    <a href="units.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-building mr-3 text-blue-500"></i> Units</a>
+                    <a href="portfolio.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-briefcase mr-3 text-blue-500"></i> Portfolio</a>
+                    <a href="contact.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow"><i class="fas fa-envelope mr-3 text-blue-500"></i> Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Footer dynamic year
+        (function(){
+            var y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
+    <script src="js/navbar.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
+
+

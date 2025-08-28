@@ -74,7 +74,11 @@
       const progressBar = document.createElement('div');
       progressBar.className = 'scroll-progress__bar';
       progressContainer.appendChild(progressBar);
-      document.body.appendChild(progressContainer);
+      const navEl = document.querySelector('nav');
+      if (navEl) {
+        navEl.appendChild(progressContainer);
+      }
+      
       
       // Position the bar right below the sticky navbar (if present)
       const positionBarBelowNavbar = () => {

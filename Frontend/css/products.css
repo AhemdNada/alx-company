@@ -1,0 +1,86 @@
+/* Products page specific styles */
+
+/* Smooth panel transitions */
+.tab-panel {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
+.tab-panel.hidden {
+    opacity: 0;
+}
+
+/* Link list styling */
+.link-list .link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    color: #1f2937; /* gray-800 */
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+.link-list .link-item:hover {
+    color: #0f172a; /* slate-900 */
+    background: #f8fafc; /* slate-50 */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(2, 6, 23, 0.06);
+}
+
+/* Add a small bullet icon before links */
+.link-list .link-item::before {
+    content: "\f061"; /* fa-arrow-right */
+    font: normal normal normal 14px/1 "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #2563eb; /* blue-600 */
+}
+
+/* Product panel images */
+.panel-image {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    .panel-image {
+        height: 320px;
+    }
+}
+
+/* Quick links (match chemical quick links look) */
+.prod-quick-link {
+    display: grid;
+    grid-template-columns: 1.25rem 1fr 1rem;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(59,130,246,0.15);
+    background: #ffffff;
+    color: #1f2937;
+    transition: background-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.prod-quick-link:hover {
+    background: #f8fafc;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1);
+}
+
+/* Improve contrast for active tab buttons (subtitle becomes light on blue bg) */
+.tab-btn.active .text-gray-500 {
+    color: rgba(255,255,255,0.92) !important;
+}
+
+@media (max-width: 640px) {
+    .panel-image {
+        height: 240px;
+    }
+}
+
+

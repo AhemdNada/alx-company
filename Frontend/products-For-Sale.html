@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products For Sale</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/products-main.css">
+    <link rel="stylesheet" href="css/products-For-Sale.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+<body class="font-sans antialiased bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="block w-16 h-16 overflow-hidden">
+                        <img src="images/logo.png" 
+                             alt="Logo" 
+                             class="w-full h-full object-contain" />
+                    </a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex md:items-center md:flex-1 md:justify-center md:space-x-1">
+                    <a href="index.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Home</a>
+                    <a href="about.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">About Us</a>
+                    <a href="projects.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Projects</a>
+                    <a href="products-main.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Products</a>
+                    <a href="services.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Services</a>
+                    <a href="units.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Units</a>
+                    <a href="portfolio.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Portfolio</a>
+                    <a href="contact.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">Contact</a>
+                </div>
+
+                <!-- Search and action buttons -->
+                <div class="hidden md:flex md:items-center md:space-x-2">
+                    <button class="p-2 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow">
+                        <span class="sr-only">Search</span>
+                        <i class="fas fa-search h-4 w-4"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Page header -->
+        <section class="pt-10 sm:pt-14 pb-10 bg-gradient-to-br from-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-8 sm:mb-10">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                        <div class="text-center sm:text-left">
+                            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+                                <span class="text-blue-600">Products</span> For Sale
+                            </h1>
+                            <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-4 rounded-full mx-auto sm:mx-0"></div>
+                        </div>
+                        <nav aria-label="Breadcrumb">
+                            <ol class="flex items-center text-sm text-gray-500">
+                                <li>
+                                    <a href="index.html" class="text-blue-600 hover:text-blue-700 font-medium">Home</a>
+                                </li>
+                                <li class="px-2 text-gray-400">/</li>
+                                <li>
+                                    <a href="products-main.html" class="text-blue-600 hover:text-blue-700 font-medium">Products</a>
+                                </li>
+                                <li class="px-2 text-gray-400">/</li>
+                                <li class="text-gray-700 font-semibold" aria-current="page">For Sale</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+                    <a class="prod-link" href="#commercial-hexane">
+                        <i class="fa-solid fa-flask-vial text-blue-600"></i>
+                        <span>Commercial Hexane</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a class="prod-link" href="#special-hexane">
+                        <i class="fa-solid fa-flask text-blue-600"></i>
+                        <span>Special Hexane</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a class="prod-link" href="#solvent-60-80">
+                        <i class="fa-solid fa-droplet text-blue-600"></i>
+                        <span>60/80 Solvent</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a class="prod-link" href="#mexsol">
+                        <i class="fa-solid fa-prescription-bottle text-blue-600"></i>
+                        <span>Mexsol</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a class="prod-link" href="#petroleum-solvent-general">
+                        <i class="fa-solid fa-oil-can text-blue-600"></i>
+                        <span>Petroleum Solvent (General Specs)</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a class="prod-link" href="#treated-kerosene">
+                        <i class="fa-solid fa-water text-blue-600"></i>
+                        <span>Treated Kerosene</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a class="prod-link" href="#other-solvents">
+                        <i class="fa-solid fa-ellipsis-h text-blue-600"></i>
+                        <span>Other Solvents</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Commercial Hexane -->
+        <section id="commercial-hexane" class="py-10 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Commercial Hexane</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-3 rounded-full"></div>
+                </div>
+
+                <div class="table-scroll bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+                    <div class="overflow-x-auto">
+                        <table class="prod-table w-full text-sm">
+                            <colgroup>
+                                <col class="col-test" />
+                                <col class="col-method" />
+                                <col class="col-spec" />
+                            </colgroup>
+                            <thead>
+                                <tr class="thead-top">
+                                    <th scope="col" class="th-title" width="45%" rowspan="2">TEST</th>
+                                    <th scope="col" class="th-group" colspan="1">METHOD</th>
+                                    <th scope="col" class="th-title" width="28%" rowspan="2">SPECIFICATION</th>
+                                </tr>
+                                <tr class="thead-sub">
+                                    <th scope="col" width="14%">ASTM / IP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Colour (Saybolt) (Min)</td>
+                                    <td>ASTM 156</td>
+                                    <td>+30</td>
+                                </tr>
+                                <tr>
+                                    <td>Odour</td>
+                                    <td class="method-span">--</td>
+                                    <td>Acceptable</td>
+                                </tr>
+                                <tr>
+                                    <td>Specific Gr @ 15/15 °C</td>
+                                    <td>ASTM 1298</td>
+                                    <td>68</td>
+                                </tr>
+                                <tr>
+                                    <td>I.B.P °C</td>
+                                    <td>ASTM 86</td>
+                                    <td>62</td>
+                                </tr>
+                                <tr>
+                                    <td>Dry Point °C (Max)</td>
+                                    <td class="method-span">--</td>
+                                    <td>70</td>
+                                </tr>
+                                <tr>
+                                    <td>Doctor Test</td>
+                                    <td>ASTM 404</td>
+                                    <td>Negative</td>
+                                </tr>
+                                <tr>
+                                    <td>Sulphur Content PPM</td>
+                                    <td>ASTM 357</td>
+                                    <td>Max 5</td>
+                                </tr>
+                                <tr>
+                                    <td>Aromatic % vol (Max)</td>
+                                    <td>ASTM 2600</td>
+                                    <td>0.03</td>
+                                </tr>
+                                <tr>
+                                    <td>Bromine Number (Max)</td>
+                                    <td class="method-span">--</td>
+                                    <td>0.03</td>
+                                </tr>
+                                <tr>
+                                    <td>Residue on Evaporation (mg/100 ml Max)</td>
+                                    <td>ASTM 1353</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Reaction of Residue</td>
+                                    <td class="method-span">--</td>
+                                    <td>Neutral</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="note-box mt-3">
+                    <span class="note-title">Description:</span>
+                    <ul class="note-list">
+                        <li>Clear colorless mobile highly flammable liquid.</li>
+                        <li>Free from sediment and suspended matter.</li>
+                    </ul>
+                </div>
+
+                <div class="note-box mt-3">
+                    <span class="note-title">Applications:</span>
+                    <ul class="note-list">
+                        <li>Extraction of edible oils</li>
+                        <li>Extraction of essential oils from spices</li>
+                        <li>Perfumes industry</li>
+                        <li>Chemical intermediate</li>
+                        <li>Adhesives</li>
+                        <li>Artificial leather</li>
+                        <li>Leather degreasing</li>
+                        <li>Pharmaceutical products</li>
+                    </ul>
+                </div>
+
+                <div class="note-box mt-3">
+                    <span class="note-title">Note:</span>
+                    <span class="ml-1">Excess can be exported 3000/4000 T/Y.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Hexane -->
+        <section id="special-hexane" class="py-10 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Special Hexane</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-3 rounded-full"></div>
+                </div>
+
+                <div class="table-scroll bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+                    <div class="overflow-x-auto">
+                        <table class="prod-table w-full text-sm">
+                            <colgroup>
+                                <col class="col-test" />
+                                <col class="col-spec" />
+                            </colgroup>
+                            <thead>
+                                <tr class="thead-top">
+                                    <th scope="col" class="th-title" width="45%">TEST</th>
+                                    <th scope="col" class="th-title" width="28%">SPECIFICATION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Colour (Saybolt) (Min)</td>
+                                    <td>+30</td>
+                                </tr>
+                                <tr>
+                                    <td>Specific Gr @ 15/15 °C</td>
+                                    <td>Recorded</td>
+                                </tr>
+                                <tr>
+                                    <td>I.B.P °C</td>
+                                    <td>64</td>
+                                </tr>
+                                <tr>
+                                    <td>Dry Point °C (Max)</td>
+                                    <td>68</td>
+                                </tr>
+                                <tr>
+                                    <td>Doctor Test</td>
+                                    <td>Negative</td>
+                                </tr>
+                                <tr>
+                                    <td>Acidity</td>
+                                    <td>Neutral</td>
+                                </tr>
+                                <tr>
+                                    <td>Aromatic % vol (Max)</td>
+                                    <td>0.03</td>
+                                </tr>
+                                <tr>
+                                    <td>Cyclo Hexane (Max)</td>
+                                    <td>0.195</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="note-box mt-3">
+                    <span class="note-title">Applications:</span>
+                    <ul class="note-list">
+                        <li>Perfumes industry</li>
+                        <li>Chemical intermediate</li>
+                        <li>Pharmaceutical products</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 60/80 Solvent -->
+        <section id="solvent-60-80" class="py-10 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900">60/80 Solvent</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-3 rounded-full"></div>
+                </div>
+
+                <div class="table-scroll bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+                    <div class="overflow-x-auto">
+                        <table class="prod-table w-full text-sm">
+                            <colgroup>
+                                <col class="col-test" />
+                                <col class="col-spec" />
+                            </colgroup>
+                            <thead>
+                                <tr class="thead-top">
+                                    <th scope="col" class="th-title" width="45%">TEST</th>
+                                    <th scope="col" class="th-title" width="28%">SPECIFICATION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Odour</td>
+                                    <td>Acceptable</td>
+                                </tr>
+                                <tr>
+                                    <td>Colour (Saybolt) (Min)</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Specific Gr @ 15 °C</td>
+                                    <td>0.66 - 0.69</td>
+                                </tr>
+                                <tr>
+                                    <td>I.B.P °C (Min)</td>
+                                    <td>55</td>
+                                </tr>
+                                <tr>
+                                    <td>Dry Point °C (Max)</td>
+                                    <td>80</td>
+                                </tr>
+                                <tr>
+                                    <td>Aromatic % (Max)</td>
+                                    <td>--</td>
+                                </tr>
+                                <tr>
+                                    <td>Doctor Test</td>
+                                    <td>Negative</td>
+                                </tr>
+                                <tr>
+                                    <td>Sulphur % wt</td>
+                                    <td>0.01</td>
+                                </tr>
+                                <tr>
+                                    <td>Caution</td>
+                                    <td>Dangerous Fire Hazard</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="note-box mt-3">
+                    <span class="note-title">Uses:</span>
+                    <ul class="note-list">
+                        <li>Fast drying lacquers, rotogravure inks, other fast drying printing inks</li>
+                        <li>Excellent solvent for extraction of oils, perfume, and fats</li>
+                        <li>Rubber industry (cements, tires and tubes)</li>
+                        <li>Textile printing and stains</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mexsol -->
+        <section id="mexsol" class="py-10 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Mexsol</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-3 rounded-full"></div>
+                </div>
+
+                <div class="table-scroll bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+                    <div class="overflow-x-auto">
+                        <table class="prod-table w-full text-sm">
+                            <colgroup>
+                                <col class="col-test" />
+                                <col class="col-spec" />
+                            </colgroup>
+                            <thead>
+                                <tr class="thead-top">
+                                    <th scope="col" class="th-title" width="45%">TEST</th>
+                                    <th scope="col" class="th-title" width="28%">SPECIFICATION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Odour</td>
+                                    <td>Acceptable</td>
+                                </tr>
+                                <tr>
+                                    <td>Colour (Saybolt) (Min)</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Specific Gr @ 15 °C</td>
+                                    <td>0.66 - 0.69</td>
+                                </tr>
+                                <tr>
+                                    <td>I.B.P °C (Min)</td>
+                                    <td>72</td>
+                                </tr>
+                                <tr>
+                                    <td>Dry Point °C (Max)</td>
+                                    <td>115</td>
+                                </tr>
+                                <tr>
+                                    <td>Aromatic % (Max)</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Doctor Test</td>
+                                    <td>Negative</td>
+                                </tr>
+                                <tr>
+                                    <td>Sulphur % wt</td>
+                                    <td>0.01</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="note-box mt-3">
+                    <span class="note-title">Uses:</span>
+                    <ul class="note-list">
+                        <li>Paints and varnishes application</li>
+                        <li>Thinner industry</li>
+                        <li>Rubber industry</li>
+                        <li>Cleaning purposes</li>
+                        <li>Printing and ink manufacture</li>
+                        <li>Leather treatment</li>
+                        <li>Wax extraction</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Petroleum Solvent (General Specs) -->
+        <section id="petroleum-solvent-general" class="py-10 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Petroleum Solvent (General Specs)</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-3 rounded-full"></div>
+                </div>
+
+                <div class="table-scroll bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+                    <div class="overflow-x-auto">
+                        <table class="prod-table w-full text-sm">
+                            <colgroup>
+                                <col class="col-test" />
+                                <col class="col-spec" />
+                            </colgroup>
+                            <thead>
+                                <tr class="thead-top">
+                                    <th scope="col" class="th-title" width="45%">TEST</th>
+                                    <th scope="col" class="th-title" width="28%">SPECIFICATION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Colour (Saybolt)</td>
+                                    <td>+21 Min</td>
+                                </tr>
+                                <tr>
+                                    <td>Distillation at 150 °C % vol (Max)</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <td>Distillation at 190 °C % vol (Min)</td>
+                                    <td>80</td>
+                                </tr>
+                                <tr>
+                                    <td>Distillation at 200 °C % vol (Min)</td>
+                                    <td>90</td>
+                                </tr>
+                                <tr>
+                                    <td>Sulphur Content % wt (Max)</td>
+                                    <td>0.1</td>
+                                </tr>
+                                <tr>
+                                    <td>Flash Point (Abel) °F (Min)</td>
+                                    <td>78</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="note-box mt-3">
+                    <span class="note-title">Applications:</span>
+                    <ul class="note-list">
+                        <li>Surface coatings industry</li>
+                        <li>Thinner industry</li>
+                        <li>Paint removers</li>
+                        <li>Dry cleaning processes</li>
+                        <li>Polishes industry</li>
+                        <li>Rubber industry</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treated Kerosene -->
+        <section id="treated-kerosene" class="py-10 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Treated Kerosene</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-3 rounded-full"></div>
+                </div>
+
+                <div class="table-scroll bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+                    <div class="overflow-x-auto">
+                        <table class="prod-table w-full text-sm">
+                            <colgroup>
+                                <col class="col-test" />
+                                <col class="col-spec" />
+                            </colgroup>
+                            <thead>
+                                <tr class="thead-top">
+                                    <th scope="col" class="th-title" width="45%">TEST</th>
+                                    <th scope="col" class="th-title" width="28%">SPECIFICATION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Density at 15 °C (Max)</td>
+                                    <td>0.783</td>
+                                </tr>
+                                <tr>
+                                    <td>Saybolt Colour (Min)</td>
+                                    <td>+30</td>
+                                </tr>
+                                <tr>
+                                    <td>Flash Point (Closed Pensky-Martens) °C (Min)</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr class="row-section">
+                                    <td>Distillation :</td>
+                                    <td>--</td>
+                                </tr>
+                                <tr>
+                                    <td>I.B.P °C (Min)</td>
+                                    <td>186</td>
+                                </tr>
+                                <tr>
+                                    <td>F.B.P °C (Max)</td>
+                                    <td>214</td>
+                                </tr>
+                                <tr>
+                                    <td>Total Sulphur (wt) (Max)</td>
+                                    <td>0.001</td>
+                                </tr>
+                                <tr>
+                                    <td>Copper Strip Corrosion (3 hrs @ 100 °C) (Max)</td>
+                                    <td>Div. 1</td>
+                                </tr>
+                                <tr>
+                                    <td>Aromatic % volume (Max)</td>
+                                    <td>1.5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="note-box mt-3">
+                    <span class="note-title">Description:</span>
+                    <ul class="note-list">
+                        <li>Kerosene is an odorless modern product</li>
+                        <li>Does not contain sulfuric materials</li>
+                        <li>Boiling range: 186 °C - 214 °C</li>
+                        <li>Odourless, good color, comparatively high flash point (50 °C min)</li>
+                        <li>Low aromatic content (1.5 % vol)</li>
+                        <li>Total sulphur not greater than 0.001 % wt</li>
+                    </ul>
+                </div>
+
+                <div class="note-box mt-3">
+                    <span class="note-title">Applications:</span>
+                    <ul class="note-list">
+                        <li>Preparation of aerosols for pesticides (carrier for active ingredients)</li>
+                        <li>Heating</li>
+                        <li>Leather industry: used for degreasing skin</li>
+                        <li>Many additional uses</li>
+                    </ul>
+                    <p class="text-sm mt-2 text-amber-900">Emulsifiable oils can be diluted with water for public health and general agriculture purposes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Solvents -->
+        <section id="other-solvents" class="py-10 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Other Solvents</h2>
+                    <p class="text-sm text-gray-600">Alexandria Petroleum Co. can produce a wide range of other aliphatic solvents according to customers' requirements and market demand, such as: Alex 2</p>
+                    <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-3 rounded-full"></div>
+                </div>
+
+                <div class="table-scroll bg-white rounded-xl shadow-lg border border-gray-100 p-4">
+                    <div class="overflow-x-auto">
+                        <table class="prod-table w-full text-sm">
+                            <colgroup>
+                                <col class="col-test" />
+                                <col class="col-spec" />
+                            </colgroup>
+                            <thead>
+                                <tr class="thead-top">
+                                    <th scope="col" class="th-title" width="45%">TEST</th>
+                                    <th scope="col" class="th-title" width="28%">SPECIFICATION</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>I.B.P</td>
+                                    <td>140</td>
+                                </tr>
+                                <tr>
+                                    <td>F.B.P</td>
+                                    <td>190</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="note-box mt-3">
+                    <span class="note-title">Uses:</span>
+                    <span class="ml-1">For blending</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <!-- Brand -->
+                <div>
+                    <a href="#" class="inline-flex items-center text-2xl font-extrabold tracking-tight">
+                        <img src="images/logo.png" 
+                             alt="Logo" 
+                             class="w-16 h-16 object-contain" />
+                    </a>
+                    <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
+                        Alexandria Petroleum Company. Supporting the national economy and ensuring the availability of petroleum products for the Egyptian market.
+                    </p>
+                </div>
+
+                <!-- Useful Links -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Useful Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Home</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">About Us</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Projects</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Products</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Services</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Units</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Contact</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="md:col-span-2 lg:col-span-2">
+                    <h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-0.5 text-blue-400"></i>
+                            <span>3 Al Max - Alexandria - Egypt</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone mt-0.5 text-blue-400"></i>
+                            <div class="space-y-1">
+                                <a href="tel:+2034402832" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2832</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                                <a href="tel:+2034402833" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2833</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                                <a href="tel:+2034430123" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0123</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                                <a href="tel:+2034430124" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0124</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-0.5 text-blue-400"></i>
+                            <a href="mailto:chairman@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">chairman@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-laptop-code mt-0.5 text-blue-400"></i>
+                            <div>
+                                <p>Site Designed By Alexandria Petroleum Co., IT Deptartment.</p>
+                                <a href="mailto:IT@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">IT@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-6 border-t border-white/10 text-xs text-gray-400 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+                <p>&copy; <span id="year"></span> Alexandria Petroleum Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Footer dynamic year
+        (function(){
+            var y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
+
+    <!-- Mobile menu overlay and container (for navbar.js) -->
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu-container fixed inset-y-0 right-0 z-50 w-80 max-w-full bg-white shadow-xl">
+        <div class="flex flex-col h-full">
+            <div class="flex items-center justify-between px-6 py-4 border-b">
+                <a href="#" class="group flex items-center gap-3" aria-label="Alexandria Petroleum Company home">
+                    <img src="images/logo.png" 
+                         alt="AP Logo" 
+                         class="h-8 w-8 rounded-full object-cover shadow-sm ring-1 ring-blue-500/20" />
+
+                    <span class="leading-tight">
+                        <span class="block text-base font-extrabold tracking-tight text-gray-900 group-hover:text-blue-700 transition-colors">Alexandria Petroleum Co.</span>
+                        <span class="block text-[11px] text-gray-500">Refining Excellence</span>
+                    </span>
+                </a>
+                <button class="mobile-menu-close p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="flex-1 overflow-y-auto px-6 py-4">
+                <div class="space-y-2">
+                    <a href="index.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-home mr-3 text-blue-500"></i> Home
+                    </a>
+                    <a href="about.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-info-circle mr-3 text-blue-500"></i> About Us
+                    </a>
+                    <a href="projects.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-project-diagram mr-3 text-blue-500"></i> Projects
+                    </a>
+                    <a href="products-main.html" class="block px-3 py-3 rounded-lg text-blue-700 bg-blue-50 font-semibold transition-slow">
+                        <i class="fas fa-box-open mr-3 text-blue-500"></i> Products
+                    </a>
+                    <a href="services.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-concierge-bell mr-3 text-blue-500"></i> Services
+                    </a>
+                    <a href="units.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-building mr-3 text-blue-500"></i> Units
+                    </a>
+                    <a href="portfolio.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-briefcase mr-3 text-blue-500"></i> Portfolio
+                    </a>
+                    <a href="contact.html" class="block px-3 py-3 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-slow">
+                        <i class="fas fa-envelope mr-3 text-blue-500"></i> Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/products-For-Sale.js"></script>
+</body>
+</html>
+
