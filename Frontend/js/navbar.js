@@ -55,7 +55,9 @@
   menuEvents.forEach(({ el, type, handler, name }) => {
     if (el) {
       el.addEventListener(type, (e) => {
-        if (type === 'click') e.preventDefault();
+        // منع السلوك الافتراضي لجميع العناصر لمنع scroll تلقائي
+        e.preventDefault();
+        e.stopPropagation();
         handler();
       });
       console.log(`Mobile menu ${name} event listener added`);
@@ -63,7 +65,7 @@
       console.error(`Mobile menu ${name} not found`);
     }
   });
-
+  
   // ===============================
   // Close menu when clicking any link inside it
   // ===============================

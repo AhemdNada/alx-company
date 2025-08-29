@@ -109,9 +109,9 @@
 }
 .mobile-menu-close {
     padding: 0.4rem;
-    border-radius: 50%; /* زرار دائري */
-    color: #fff; /* لون الأيقونة أبيض */
-    background: linear-gradient(135deg, #1e3a8a, #2563eb); /* تدرج أزرق */
+    border-radius: 50%; 
+    color: #fff; 
+    background: linear-gradient(135deg, #1e3a8a, #2563eb); 
     border: none;
     cursor: pointer;
     transition: background 0.25s ease, box-shadow 0.25s ease;
@@ -121,18 +121,18 @@
     justify-content: center;
     min-width: 2rem;
     min-height: 2rem;
-    font-size: 1rem; /* حجم الأيقونة */
-    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3); /* ظل خفيف */
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3); 
     
 }
 
 .mobile-menu-close:hover {
-    background: linear-gradient(135deg, #2563eb, #3b82f6); /* أزرق أفتح */
+    background: linear-gradient(135deg, #2563eb, #3b82f6); 
     box-shadow: 0 4px 8px rgba(37, 99, 235, 0.35);
 }
 
 .mobile-menu-close:active {
-    background: linear-gradient(135deg, #1e40af, #1d4ed8); /* أزرق أغمق */
+    background: linear-gradient(135deg, #1e40af, #1d4ed8);
 }
 
 /* Mobile menu content */
@@ -280,6 +280,5 @@
 /* Ensure body doesn't scroll when menu is open */
 body.menu-open {
     overflow: hidden;
-    position: fixed;
-    width: 100%;
+    /* Removed position: fixed to prevent automatic scroll to top */
 }
