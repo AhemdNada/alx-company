@@ -581,6 +581,11 @@
 	async function init(){
 		initTabs();
 		await Promise.all([loadRates(), loadChairmen(), loadNews(), loadTicker()]);
+		
+		// Initialize contacts if the function exists
+		if (window.initContacts) {
+			window.initContacts();
+		}
 	}
 	if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

@@ -6,10 +6,11 @@ const path = require('path');
 const { getPool } = require('./db');
 const { broadcast } = require('./sse');
 const NodeCache = require('node-cache');
+const contactRoutes = require('./routes/contact');
+const logger = require('./services/logger');
 
 const router = Router();
-// In-memory cache for lightweight low-latency responses
-// TTL 60s, checkperiod 120s. Adjust as needed or swap with Redis in prod.
+
 const newsCache = new NodeCache({ stdTTL: 60, checkperiod: 120 });
 
 function validate(req, res, next) {
@@ -28,6 +29,34 @@ function normalizeDescription(desc) {
   if (typeof desc === 'object') return desc;
   return null;
 }
+
+// Contact routes
+router.use('/contact', contactRoutes);
+
+// Admin Contact Statistics Endpoint
+router.get('/admin/contact-stats', async (req, res) => {
+  try {
+    const pool = await getPool();
+    const [[stats]] = await pool.query(`
+      SELECT 
+        COUNT(*) AS total,
+        SUM(CASE WHEN is_replied = 0 THEN 1 ELSE 0 END) AS unreplied,
+        SUM(CASE WHEN DATE(created_at) = CURDATE() THEN 1 ELSE 0 END) AS today
+      FROM contacts
+    `);
+    
+    res.json({
+      total: stats.total,
+      unreplied: stats.unreplied,
+      today: stats.today
+    });
+  } catch (error) {
+    logger.error('Failed to get admin contact stats:', error);
+    res.status(500).json({ 
+      error: 'Failed to retrieve contact statistics' 
+    });
+  }
+});
 
 // Sharing Rates
 router.get('/sharing-rates', async (req, res) => {

@@ -9,6 +9,7 @@ DROP TABLE IF EXISTS `news_images`;
 DROP TABLE IF EXISTS `news`;
 DROP TABLE IF EXISTS `chairmen`;
 DROP TABLE IF EXISTS `sharing_rates`;
+DROP TABLE IF EXISTS `contacts`;
 
 -- Sharing Rates
 CREATE TABLE `sharing_rates` (
@@ -71,9 +72,26 @@ CREATE TABLE `news_ticker` (
   KEY `idx_news_ticker_created_at` (`created_at`)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- Contacts
+CREATE TABLE `contacts` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `subject` VARCHAR(255) NOT NULL,
+  `message` TEXT NOT NULL,
+  `is_replied` TINYINT(1) NOT NULL DEFAULT 0,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  CONSTRAINT `pk_contacts` PRIMARY KEY (`id`),
+  KEY `idx_contacts_created_at` (`created_at`),
+  KEY `idx_contacts_email` (`email`),
+  KEY `idx_contacts_is_replied` (`is_replied`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 SELECT * FROM sharing_rates;
 SELECT * FROM chairmen;
 SELECT * FROM news;
 SELECT * FROM news_images;
 SELECT * FROM news_ticker;
+SELECT * FROM contacts;

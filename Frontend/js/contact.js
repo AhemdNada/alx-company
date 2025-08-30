@@ -21,6 +21,9 @@
     el.classList.remove('alert-success', 'alert-error');
   }
 
+  // API base URL - works when frontend is served by backend on port 4000
+  const API_BASE = ((window && window.API_BASE) ? window.API_BASE : '/api').replace(/\/$/, '');
+
   onReady(() => {
     const form = document.getElementById('contactForm');
     if (!form) return;
@@ -56,11 +59,12 @@
       const emailInvalid = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal);
       const subjectEmpty = !subjectInput.value.trim();
       const messageEmpty = !messageInput.value.trim();
+      const messageTooShort = messageInput.value.trim().length < 10;
 
       const a = showFieldError(nameInput, errorName, nameEmpty);
       const b = showFieldError(emailInput, errorEmail, !emailVal || emailInvalid);
       const c = showFieldError(subjectInput, errorSubject, subjectEmpty);
-      const d = showFieldError(messageInput, errorMessage, messageEmpty);
+      const d = showFieldError(messageInput, errorMessage, messageEmpty || messageTooShort);
 
       return !(a || b || c || d);
     }
@@ -86,11 +90,37 @@
       }
 
       try {
-        // Placeholder: simulate send. Replace with real endpoint later.
-        await new Promise((r) => setTimeout(r, 900));
-        form.reset();
-        setAlert(formAlert, 'success', 'Thank you! Your message has been sent successfully.');
+        const formData = {
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          subject: subjectInput.value.trim(),
+          message: messageInput.value.trim()
+        };
+
+        const response = await fetch(`${API_BASE}/contact/submit`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          form.reset();
+          setAlert(formAlert, 'success', result.message || 'Thank you! Your message has been sent successfully.');
+        } else {
+          // Handle validation errors
+          if (result.errors && Array.isArray(result.errors)) {
+            const errorMessages = result.errors.map(err => `${err.field}: ${err.message}`).join(', ');
+            setAlert(formAlert, 'error', `Please fix the following errors: ${errorMessages}`);
+          } else {
+            setAlert(formAlert, 'error', result.message || 'Sorry, something went wrong. Please try again later.');
+          }
+        }
       } catch (err) {
+        console.error('Contact form submission error:', err);
         setAlert(formAlert, 'error', 'Sorry, something went wrong. Please try again later.');
       } finally {
         submitBtn.disabled = false;

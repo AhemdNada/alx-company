@@ -22,6 +22,7 @@
                     <div class="tabs mb-4">
                         <button class="tab-btn active" data-tab="about"><i class="fa-solid fa-circle-info"></i><span>About</span></button>
                         <button class="tab-btn" data-tab="news"><i class="fa-solid fa-newspaper"></i><span>News</span></button>
+                        <button class="tab-btn" data-tab="contacts"><i class="fa-solid fa-envelope"></i><span>Contacts</span></button>
                     </div>
                     <div class="tab-panel" data-tab="about">
                         <!-- Inner tabs for About -->
@@ -108,6 +109,70 @@
                                     <tbody id="tickerBody" class="divide-y divide-slate-100 dark:divide-slate-700/60 text-sm"></tbody>
                                 </table>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Contacts Panel -->
+                    <div class="tab-panel hidden" data-tab="contacts">
+                        <!-- Stats Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-4 text-white">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-blue-100 text-sm">Total Messages</p>
+                                        <p class="text-2xl font-bold" id="totalContacts">-</p>
+                                    </div>
+                                    <i class="fa-solid fa-envelope text-2xl opacity-80"></i>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-4 text-white">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-orange-100 text-sm">Unreplied</p>
+                                        <p class="text-2xl font-bold" id="unrepliedContacts">-</p>
+                                    </div>
+                                    <i class="fa-solid fa-clock text-2xl opacity-80"></i>
+                                </div>
+                            </div>
+                            <div class="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-4 text-white">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-green-100 text-sm">Today</p>
+                                        <p class="text-2xl font-bold" id="todayContacts">-</p>
+                                    </div>
+                                    <i class="fa-solid fa-calendar-day text-2xl opacity-80"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Search and Filters -->
+                        <div class="flex flex-col sm:flex-row gap-4 mb-4">
+                            <div class="flex-1">
+                                <input id="contactSearch" type="text" placeholder="Search by name, email, or subject..." class="w-full rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-4 py-2 text-sm outline-none">
+                            </div>
+                            <select id="contactFilter" class="rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-4 py-2 text-sm outline-none">
+                                <option value="">All Messages</option>
+                                <option value="false">Unreplied Only</option>
+                                <option value="true">Replied Only</option>
+                            </select>
+                        </div>
+
+                        <!-- Contacts Table -->
+                        <div class="overflow-x-auto rounded-xl border border-slate-200/70 dark:border-slate-700/60">
+                            <table class="w-full text-left align-middle">
+                                <thead class="text-sm text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900/40">
+                                    <tr>
+                                        <th class="py-3 pr-4">From</th>
+                                        <th class="py-3 pr-4">Subject</th>
+                                        <th class="py-3 pr-4">Date</th>
+                                        <th class="py-3 pr-4">Status</th>
+                                        <th class="py-3 pr-4 w-40">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="contactsBody" class="divide-y divide-slate-100 dark:divide-slate-700/60 text-sm">
+                                    <!-- Rendered by JS -->
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -270,7 +335,28 @@
         </div>
     </div>
 
+    <!-- Contact Detail Modal -->
+    <div id="contactModal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/50" data-close="contactModal"></div>
+        <div class="relative z-10 min-h-full flex items-center justify-center p-4">
+            <div class="w-full max-w-2xl rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/70 dark:border-slate-700/60 shadow-xl p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 id="contactModalTitle" class="text-lg font-semibold">Contact Message</h3>
+                    <button class="text-slate-500 hover:text-slate-700 dark:text-slate-400" data-close="contactModal"><i class="fa-solid fa-xmark text-xl"></i></button>
+                </div>
+                <div id="contactModalContent" class="space-y-4">
+                    <!-- Content will be populated by JS -->
+                </div>
+                <div class="flex items-center justify-end gap-3 pt-4 border-t border-slate-200/70 dark:border-slate-700/60">
+                    <button type="button" class="quick-action" data-close="contactModal">Close</button>
+                    <button type="button" id="toggleRepliedBtn" class="btn-primary">Mark as Replied</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="js/admin.js"></script>
+    <script src="js/admin-contacts.js"></script>
 </body>
 </html>
 

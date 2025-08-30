@@ -1,0 +1,97 @@
+{"level":"error","message":"Failed to initialize mail service: nodemailer.createTransporter is not a function","service":"apc-backend","stack":"TypeError: nodemailer.createTransporter is not a function\n    at MailService.init (C:\\coding\\pc\\backend\\src\\services\\mailService.js:28:39)\n    at new MailService (C:\\coding\\pc\\backend\\src\\services\\mailService.js:8:10)\n    at Object.<anonymous> (C:\\coding\\pc\\backend\\src\\services\\mailService.js:157:18)\n    at Module._compile (node:internal/modules/cjs/loader:1562:14)\n    at Object..js (node:internal/modules/cjs/loader:1699:10)\n    at Module.load (node:internal/modules/cjs/loader:1313:32)\n    at Function._load (node:internal/modules/cjs/loader:1123:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:217:24)\n    at Module.require (node:internal/modules/cjs/loader:1335:12)","timestamp":"2025-08-30 04:42:24"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-08-30 04:42:24"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-08-30 04:42:24"}
+{"level":"info","message":"Mail service initialized with Gmail","service":"apc-backend","timestamp":"2025-08-30 04:43:36"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-08-30 04:43:36"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-08-30 04:43:36"}
+{"contactId":1,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-30 04:44:33"}
+{"contactId":1,"email":"ahmednadaahmed44@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-30 04:44:33"}
+{"contactId":1,"level":"info","message":"Contact notification email sent successfully","messageId":"<b0769673-db3b-cd9d-7723-a956b3d69cc3@gmail.com>","service":"apc-backend","timestamp":"2025-08-30 04:44:36"}
+{"contactId":1,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 04:47:06"}
+{"contactId":1,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 04:47:10"}
+{"contactId":1,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 04:47:17"}
+{"contactId":1,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 04:47:19"}
+{"contactId":1,"isReplied":false,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 04:47:21"}
+{"contactId":1,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 04:47:23"}
+{"contactId":1,"isReplied":false,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 04:47:27"}
+{"contactId":1,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 04:47:29"}
+{"contactId":1,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 05:03:23"}
+{"contactId":1,"isReplied":false,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 05:03:25"}
+{"contactId":1,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 05:03:33"}
+{"contactId":2,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-30 05:05:33"}
+{"contactId":2,"email":"ahmednadaahmed56@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-30 05:05:33"}
+{"contactId":2,"level":"info","message":"Contact notification email sent successfully","messageId":"<1620a32d-15b4-95b7-a43f-8175a1e8d4df@gmail.com>","service":"apc-backend","timestamp":"2025-08-30 05:05:36"}
+{"contactId":2,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 06:23:03"}
+{"contactId":3,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-30 06:24:43"}
+{"contactId":3,"email":"ahmednadaahmed50@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-30 06:24:43"}
+{"contactId":3,"level":"info","message":"Contact notification email sent successfully","messageId":"<a86450d7-3930-8043-7b4b-d24531cb8820@gmail.com>","service":"apc-backend","timestamp":"2025-08-30 06:24:45"}
+{"contactId":4,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-30 06:24:49"}
+{"contactId":4,"email":"ahmednadaahmed50@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-30 06:24:49"}
+{"contactId":4,"level":"info","message":"Contact notification email sent successfully","messageId":"<a5c0f438-c6bf-c398-7b54-b57fe3421602@gmail.com>","service":"apc-backend","timestamp":"2025-08-30 06:24:50"}
+{"contactId":5,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-30 06:24:53"}
+{"contactId":5,"email":"ahmednadaahmed50@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-30 06:24:53"}
+{"contactId":5,"level":"info","message":"Contact notification email sent successfully","messageId":"<bf8a66ec-827f-c399-1692-c6603c2a8e2e@gmail.com>","service":"apc-backend","timestamp":"2025-08-30 06:24:55"}
+{"contactId":6,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-30 06:26:19"}
+{"contactId":6,"email":"ahmednadaahmed50@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-30 06:26:19"}
+{"contactId":6,"level":"info","message":"Contact notification email sent successfully","messageId":"<043d7021-787b-ea42-751c-9c1936ecd13b@gmail.com>","service":"apc-backend","timestamp":"2025-08-30 06:26:22"}
+{"contactId":7,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-30 06:26:29"}
+{"contactId":7,"email":"ahmednadaahmed50@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-30 06:26:29"}
+{"contactId":7,"level":"info","message":"Contact notification email sent successfully","messageId":"<4ade466e-4a0d-95b8-0115-5de86cebe111@gmail.com>","service":"apc-backend","timestamp":"2025-08-30 06:26:30"}
+{"contactId":8,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-30 06:26:34"}
+{"contactId":8,"email":"ahmednadaahmed50@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-30 06:26:34"}
+{"contactId":8,"level":"info","message":"Contact notification email sent successfully","messageId":"<0db911a8-382b-c0f7-239d-ffa6beb80be7@gmail.com>","service":"apc-backend","timestamp":"2025-08-30 06:26:36"}
+{"level":"info","message":"Mail service initialized with Gmail","service":"apc-backend","timestamp":"2025-08-30 06:45:00"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-08-30 06:45:00"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-08-30 06:45:00"}
+{"level":"info","message":"Mail service initialized with Gmail","service":"apc-backend","timestamp":"2025-08-30 07:06:02"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-08-30 07:06:02"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-08-30 07:06:02"}
+{"level":"info","message":"Mail service initialized with Gmail","service":"apc-backend","timestamp":"2025-08-30 07:08:07"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-08-30 07:08:07"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-08-30 07:08:07"}
+{"level":"info","message":"Mail service initialized with Gmail","service":"apc-backend","timestamp":"2025-08-30 07:16:32"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-08-30 07:16:32"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-08-30 07:16:32"}
+{"contactId":9,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-30 07:17:44"}
+{"contactId":9,"email":"ahmednadaahmed23@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-30 07:17:44"}
+{"contactId":9,"level":"info","message":"Contact notification email sent successfully","messageId":"<f0c421da-9355-6a06-34a6-b034051b0db1@gmail.com>","service":"apc-backend","timestamp":"2025-08-30 07:17:47"}
+{"contactId":8,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:23:14"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:27:52"}
+{"contactId":2,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:27:53"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:27:54"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:27:55"}
+{"contactId":2,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:27:55"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:27:56"}
+{"contactId":2,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:27:56"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:28:01"}
+{"contactId":2,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:28:01"}
+{"contactId":2,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:28:02"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:28:13"}
+{"contactId":7,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:28:47"}
+{"contactId":6,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:28:48"}
+{"contactId":5,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:28:49"}
+{"contactId":4,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:28:49"}
+{"contactId":3,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:28:51"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:28:55"}
+{"contactId":9,"isReplied":false,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:29:01"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:29:05"}
+{"contactId":9,"isReplied":false,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:29:07"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:29:09"}
+{"contactId":9,"isReplied":false,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:29:10"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:29:12"}
+{"contactId":9,"isReplied":false,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:29:14"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:29:16"}
+{"contactId":9,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:29:17"}
+{"contactId":9,"isReplied":false,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-08-30 07:29:19"}
+{"contactId":10,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:41"}
+{"contactId":10,"email":"abdalla20@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:41"}
+{"contactId":10,"level":"info","message":"Contact notification email sent successfully","messageId":"<cd106edc-0cb0-a139-e24c-3c7a276733af@gmail.com>","service":"apc-backend","timestamp":"2025-08-30 07:31:44"}
+{"contactId":10,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:49"}
+{"contactId":9,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:50"}
+{"contactId":8,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:51"}
+{"contactId":6,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:52"}
+{"contactId":7,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:53"}
+{"contactId":4,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:53"}
+{"contactId":5,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:54"}
+{"contactId":3,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:55"}
+{"contactId":2,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:55"}
