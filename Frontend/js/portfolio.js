@@ -301,13 +301,19 @@ class PortfolioManager {
 
         this.currentFilter = 'all';
         this.modal = null;
+        this.isTouchDevice = this.detectTouchDevice();
         this.init();
+    }
+
+    detectTouchDevice() {
+        return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     }
 
     init() {
         this.renderPortfolio();
         this.setupFilterButtons();
         this.setupModal();
+        this.setupTouchEvents();
     }
 
     renderPortfolio() {
@@ -345,16 +351,73 @@ class PortfolioManager {
             </div>
         `;
 
+        // Add event listeners
         const viewLargerBtn = div.querySelector('.view-larger');
         if (viewLargerBtn) {
-            ['click', 'touchstart'].forEach(evt => {
-                viewLargerBtn.addEventListener(evt, (e) => {
-                    e.preventDefault();
-                    this.openModal(item.image, `${item.title} - ${item.description}`);
-                });
+            viewLargerBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.openModal(item.image, `${item.title} - ${item.description}`);
             });
         }
 
+        // Add touch events for mobile
+        if (this.isTouchDevice) {
+            this.addTouchEvents(div, item);
+        }
+
+        return div;
+    }
+
+    addTouchEvents(portfolioItem, item) {
+        let touchStartTime = 0;
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        portfolioItem.addEventListener('touchstart', (e) => {
+            touchStartTime = Date.now();
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            
+            // Add touch-active class for visual feedback
+            portfolioItem.classList.add('touch-active');
+        }, { passive: true });
+
+        portfolioItem.addEventListener('touchend', (e) => {
+            const touchEndTime = Date.now();
+            const touchDuration = touchEndTime - touchStartTime;
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            
+            const deltaX = Math.abs(touchEndX - touchStartX);
+            const deltaY = Math.abs(touchEndY - touchStartY);
+            
+            // Remove touch-active class
+            portfolioItem.classList.remove('touch-active');
+            
+            // Check if it's a tap (not a scroll)
+            if (touchDuration < 300 && deltaX < 10 && deltaY < 10) {
+                e.preventDefault();
+                
+                // Check if touch was on a button
+                const target = e.target.closest('.portfolio-btn');
+                if (target) {
+                    if (target.classList.contains('view-larger')) {
+                        this.openModal(item.image, `${item.title} - ${item.description}`);
+                    } else if (target.tagName === 'A') {
+                        // Let the link work normally
+                        return;
+                    }
+                } else {
+                    // If not on a button, open modal
+                    this.openModal(item.image, `${item.title} - ${item.description}`);
+                }
+            }
+        });
+
+        portfolioItem.addEventListener('touchcancel', () => {
+            portfolioItem.classList.remove('touch-active');
+        });
     }
 
     setupFilterButtons() {
@@ -397,6 +460,11 @@ class PortfolioManager {
         });
     }
 
+    setupTouchEvents() {
+        // Add global touch event handling for better mobile experience
+        document.addEventListener('touchstart', () => {}, { passive: true });
+    }
+
     setupModal() {
         this.modal = new ImageModal({
             modalId: 'imageModal',
@@ -409,6 +477,13 @@ class PortfolioManager {
     openModal(imageSrc, caption) {
         if (this.modal) {
             this.modal.openModal(imageSrc, caption);
+            
+            // Prevent body scrolling on mobile
+            if (this.isTouchDevice) {
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+                document.body.style.top = `-${window.scrollY}px`;
+            }
         }
     }
 }
@@ -467,6 +542,7 @@ class ImageModal {
 
     openModal(imageSrc, caption) {
         this.lastFocusedElement = document.activeElement;
+        this.scrollY = window.scrollY;
 
         this.modalImage.src = imageSrc;
         this.modalCaption.textContent = caption;
@@ -491,6 +567,14 @@ class ImageModal {
         setTimeout(() => {
             this.modal.style.display = 'none';
             document.body.style.overflow = '';
+
+            // Restore body position on mobile
+            if (document.body.style.position === 'fixed') {
+                document.body.style.position = '';
+                document.body.style.width = '';
+                document.body.style.top = '';
+                window.scrollTo(0, this.scrollY || 0);
+            }
 
             if (this.lastFocusedElement) {
                 this.lastFocusedElement.focus();

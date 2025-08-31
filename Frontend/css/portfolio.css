@@ -13,6 +13,9 @@
     backdrop-filter: blur(4px);
     opacity: 0;
     transition: opacity 0.3s ease;
+    /* Prevent touch scrolling on modal */
+    touch-action: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .modal.show {
@@ -30,6 +33,8 @@
     transition: transform 0.3s ease;
     border-radius: 8px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    /* Ensure image is touch-friendly */
+    touch-action: manipulation;
 }
 
 .modal.show .modal-content {
@@ -53,6 +58,9 @@
     justify-content: center;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
+    /* Make close button touch-friendly */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .close-modal:hover,
@@ -86,6 +94,7 @@
     /* Ensure proper clipping */
     transform: translateZ(0);
     backface-visibility: hidden;
+    cursor: pointer;
 }
 
 .portfolio-item:hover {
@@ -126,7 +135,9 @@
     overflow: hidden;
 }
 
-.portfolio-item:hover .portfolio-overlay {
+.portfolio-item:hover .portfolio-overlay,
+.portfolio-item:active .portfolio-overlay,
+.portfolio-item.touch-active .portfolio-overlay {
     opacity: 1;
 }
 
@@ -162,9 +173,13 @@
     text-decoration: none;
     transition: all 0.3s ease;
     backdrop-filter: blur(4px);
+    border: none;
+    cursor: pointer;
 }
 
-.portfolio-btn:hover {
+.portfolio-btn:hover,
+.portfolio-btn:active,
+.portfolio-btn:focus {
     background: white;
     color: #1d4ed8;
     transform: scale(1.1);
@@ -175,7 +190,9 @@
     color: white;
 }
 
-.portfolio-btn.view-larger:hover {
+.portfolio-btn.view-larger:hover,
+.portfolio-btn.view-larger:active,
+.portfolio-btn.view-larger:focus {
     background: #3b82f6;
 }
 
@@ -226,8 +243,36 @@
     }
 }
 
-/* Responsive Adjustments */
+/* Mobile-specific styles for touch devices */
 @media (max-width: 768px) {
+    .portfolio-item {
+        /* Always show overlay on mobile for better UX */
+        cursor: pointer;
+    }
+    
+    .portfolio-overlay {
+        /* Show overlay by default on mobile */
+        opacity: 0.9;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
+        /* Ensure overlay is always visible */
+        pointer-events: auto;
+    }
+    
+    .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+    }
+    
+    /* Ensure buttons are always clickable */
+    .portfolio-actions {
+        pointer-events: auto;
+        z-index: 10;
+    }
+    
+    .portfolio-btn {
+        pointer-events: auto;
+        z-index: 11;
+    }
+    
     .portfolio-item img {
         height: 240px;
         border-radius: 12px 12px 0 0;
@@ -251,6 +296,9 @@
     .portfolio-btn {
         width: 36px;
         height: 36px;
+        /* Make buttons more touch-friendly */
+        min-width: 44px;
+        min-height: 44px;
     }
     
     .close-modal {
@@ -267,6 +315,7 @@
     }
 }
 
+/* Additional mobile-specific styles for very small screens */
 @media (max-width: 640px) {
     .portfolio-item img {
         height: 200px;
@@ -278,6 +327,10 @@
     .portfolio-overlay {
         padding: 12px;
         border-radius: 12px;
+        /* Ensure overlay is visible on small screens */
+        opacity: 0.95;
+        /* Make sure overlay is always on top */
+        z-index: 5;
     }
     
     .portfolio-title {
@@ -291,11 +344,39 @@
     
     .portfolio-actions {
         gap: 6px;
+        /* Ensure actions are always clickable */
+        position: relative;
+        z-index: 10;
     }
     
     .portfolio-btn {
         width: 32px;
         height: 32px;
+        /* Ensure touch-friendly size */
+        min-width: 44px;
+        min-height: 44px;
+        /* Ensure buttons are clickable */
+        position: relative;
+        z-index: 11;
+    }
+}
+
+/* Touch device specific styles */
+@media (hover: none) and (pointer: coarse) {
+    .portfolio-overlay {
+        /* Always show overlay on touch devices */
+        opacity: 0.9 !important;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)) !important;
+    }
+    
+    .portfolio-item:hover .portfolio-overlay {
+        opacity: 1 !important;
+    }
+    
+    .portfolio-btn {
+        /* Ensure buttons are touch-friendly */
+        min-width: 44px !important;
+        min-height: 44px !important;
     }
 }
 
