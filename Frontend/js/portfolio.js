@@ -345,92 +345,16 @@ class PortfolioManager {
             </div>
         `;
 
-        // Add event listeners
         const viewLargerBtn = div.querySelector('.view-larger');
         if (viewLargerBtn) {
-            viewLargerBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                this.openModal(item.image, `${item.title} - ${item.description}`);
+            ['click', 'touchstart'].forEach(evt => {
+                viewLargerBtn.addEventListener(evt, (e) => {
+                    e.preventDefault();
+                    this.openModal(item.image, `${item.title} - ${item.description}`);
+                });
             });
         }
 
-        // Add touch/mobile support
-        this.addTouchSupport(div);
-
-        return div;
-    }
-
-    addTouchSupport(portfolioItem) {
-        let isOverlayVisible = false;
-
-        // Simple click/touch handler
-        portfolioItem.addEventListener('click', (e) => {
-            console.log('Portfolio item clicked!'); // Debug log
-            
-            // Don't trigger if clicking on buttons
-            if (e.target.closest('.portfolio-btn')) {
-                console.log('Button clicked, ignoring'); // Debug log
-                return;
-            }
-
-            const overlay = portfolioItem.querySelector('.portfolio-overlay');
-            if (overlay) {
-                isOverlayVisible = !isOverlayVisible;
-                console.log('Overlay visibility:', isOverlayVisible); // Debug log
-                
-                if (isOverlayVisible) {
-                    portfolioItem.classList.add('touch-active');
-                    overlay.style.opacity = '1';
-                    console.log('Showing overlay'); // Debug log
-                } else {
-                    portfolioItem.classList.remove('touch-active');
-                    overlay.style.opacity = '0';
-                    console.log('Hiding overlay'); // Debug log
-                }
-            } else {
-                console.log('No overlay found!'); // Debug log
-            }
-        });
-
-        // Touch events for better mobile support
-        portfolioItem.addEventListener('touchstart', (e) => {
-            console.log('Touch start'); // Debug log
-            // Add visual feedback
-            portfolioItem.style.transform = 'scale(0.98)';
-        }, { passive: true });
-
-        portfolioItem.addEventListener('touchend', (e) => {
-            console.log('Touch end'); // Debug log
-            // Remove visual feedback
-            portfolioItem.style.transform = '';
-        }, { passive: true });
-
-        // Hide overlay when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!portfolioItem.contains(e.target)) {
-                const overlay = portfolioItem.querySelector('.portfolio-overlay');
-                if (overlay && isOverlayVisible) {
-                    portfolioItem.classList.remove('touch-active');
-                    overlay.style.opacity = '0';
-                    isOverlayVisible = false;
-                    console.log('Hiding overlay (outside click)'); // Debug log
-                }
-            }
-        });
-
-        // Hide overlay on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && isOverlayVisible) {
-                const overlay = portfolioItem.querySelector('.portfolio-overlay');
-                if (overlay) {
-                    portfolioItem.classList.remove('touch-active');
-                    overlay.style.opacity = '0';
-                    isOverlayVisible = false;
-                    console.log('Hiding overlay (escape key)'); // Debug log
-                }
-            }
-        });
     }
 
     setupFilterButtons() {
