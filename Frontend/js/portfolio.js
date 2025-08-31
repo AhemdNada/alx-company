@@ -362,72 +362,72 @@ class PortfolioManager {
     }
 
     addTouchSupport(portfolioItem) {
-        let touchStartTime = 0;
-        let touchEndTime = 0;
-        let isTouchActive = false;
+        let isOverlayVisible = false;
 
-        // Touch start
-        portfolioItem.addEventListener('touchstart', (e) => {
-            touchStartTime = new Date().getTime();
-            isTouchActive = true;
-            
-            // Add active class immediately for visual feedback
-            portfolioItem.classList.add('touch-active');
-        }, { passive: true });
-
-        // Touch end
-        portfolioItem.addEventListener('touchend', (e) => {
-            touchEndTime = new Date().getTime();
-            const touchDuration = touchEndTime - touchStartTime;
-            
-            // Only trigger if it's a quick tap (less than 300ms)
-            if (touchDuration < 300 && isTouchActive) {
-                // Prevent default to avoid any unwanted behavior
-                e.preventDefault();
-                
-                // Toggle the overlay visibility
-                const overlay = portfolioItem.querySelector('.portfolio-overlay');
-                if (overlay) {
-                    const isVisible = overlay.style.opacity === '1' || portfolioItem.classList.contains('touch-active');
-                    
-                    if (isVisible) {
-                        portfolioItem.classList.remove('touch-active');
-                        overlay.style.opacity = '0';
-                    } else {
-                        portfolioItem.classList.add('touch-active');
-                        overlay.style.opacity = '1';
-                    }
-                }
-            }
-            
-            isTouchActive = false;
-        }, { passive: false });
-
-        // Touch cancel
-        portfolioItem.addEventListener('touchcancel', () => {
-            isTouchActive = false;
-            portfolioItem.classList.remove('touch-active');
-        }, { passive: true });
-
-        // Click event for non-touch devices (fallback)
+        // Simple click/touch handler
         portfolioItem.addEventListener('click', (e) => {
-            // Only handle if it's not a touch device and not clicking on buttons
-            if (!('ontouchstart' in window) && !e.target.closest('.portfolio-btn')) {
-                const overlay = portfolioItem.querySelector('.portfolio-overlay');
-                if (overlay) {
-                    const isVisible = overlay.style.opacity === '1';
-                    overlay.style.opacity = isVisible ? '0' : '1';
+            console.log('Portfolio item clicked!'); // Debug log
+            
+            // Don't trigger if clicking on buttons
+            if (e.target.closest('.portfolio-btn')) {
+                console.log('Button clicked, ignoring'); // Debug log
+                return;
+            }
+
+            const overlay = portfolioItem.querySelector('.portfolio-overlay');
+            if (overlay) {
+                isOverlayVisible = !isOverlayVisible;
+                console.log('Overlay visibility:', isOverlayVisible); // Debug log
+                
+                if (isOverlayVisible) {
+                    portfolioItem.classList.add('touch-active');
+                    overlay.style.opacity = '1';
+                    console.log('Showing overlay'); // Debug log
+                } else {
+                    portfolioItem.classList.remove('touch-active');
+                    overlay.style.opacity = '0';
+                    console.log('Hiding overlay'); // Debug log
                 }
+            } else {
+                console.log('No overlay found!'); // Debug log
             }
         });
+
+        // Touch events for better mobile support
+        portfolioItem.addEventListener('touchstart', (e) => {
+            console.log('Touch start'); // Debug log
+            // Add visual feedback
+            portfolioItem.style.transform = 'scale(0.98)';
+        }, { passive: true });
+
+        portfolioItem.addEventListener('touchend', (e) => {
+            console.log('Touch end'); // Debug log
+            // Remove visual feedback
+            portfolioItem.style.transform = '';
+        }, { passive: true });
 
         // Hide overlay when clicking outside
         document.addEventListener('click', (e) => {
             if (!portfolioItem.contains(e.target)) {
-                portfolioItem.classList.remove('touch-active');
+                const overlay = portfolioItem.querySelector('.portfolio-overlay');
+                if (overlay && isOverlayVisible) {
+                    portfolioItem.classList.remove('touch-active');
+                    overlay.style.opacity = '0';
+                    isOverlayVisible = false;
+                    console.log('Hiding overlay (outside click)'); // Debug log
+                }
+            }
+        });
+
+        // Hide overlay on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isOverlayVisible) {
                 const overlay = portfolioItem.querySelector('.portfolio-overlay');
                 if (overlay) {
+                    portfolioItem.classList.remove('touch-active');
                     overlay.style.opacity = '0';
+                    isOverlayVisible = false;
+                    console.log('Hiding overlay (escape key)'); // Debug log
                 }
             }
         });

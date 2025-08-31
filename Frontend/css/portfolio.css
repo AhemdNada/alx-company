@@ -134,25 +134,36 @@
 @media (max-width: 768px) {
     .portfolio-item {
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
     }
     
     .portfolio-item.touch-active .portfolio-overlay {
-        opacity: 1;
+        opacity: 1 !important;
     }
     
     .portfolio-item.touch-active {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        transform: translateY(-4px) !important;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15) !important;
     }
     
     /* Remove hover effects on mobile */
     .portfolio-item:hover {
-        transform: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: none !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
     }
     
     .portfolio-item:hover .portfolio-overlay {
-        opacity: 0;
+        opacity: 0 !important;
+    }
+    
+    /* Ensure overlay is visible when touch-active */
+    .portfolio-overlay {
+        pointer-events: auto;
+    }
+    
+    .portfolio-item.touch-active .portfolio-overlay {
+        pointer-events: auto;
     }
 }
 
@@ -277,6 +288,8 @@
     .portfolio-btn {
         width: 36px;
         height: 36px;
+        min-width: 44px;
+        min-height: 44px;
     }
     
     .close-modal {
@@ -290,16 +303,6 @@
     .modal-caption {
         font-size: 16px;
         padding: 15px 0;
-    }
-    
-    /* Enhanced touch interaction */
-    .portfolio-item {
-        -webkit-tap-highlight-color: transparent;
-        user-select: none;
-    }
-    
-    .portfolio-item:active {
-        transform: scale(0.98);
     }
 }
 
@@ -332,10 +335,6 @@
     .portfolio-btn {
         width: 32px;
         height: 32px;
-    }
-    
-    /* Better touch targets for small screens */
-    .portfolio-btn {
         min-width: 44px;
         min-height: 44px;
     }
