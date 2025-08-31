@@ -361,6 +361,25 @@ class PortfolioManager {
             });
         }
 
+        // Add event listeners for link buttons
+        const linkButtons = div.querySelectorAll('.portfolio-btn[href]');
+        linkButtons.forEach(linkBtn => {
+            linkBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const href = linkBtn.getAttribute('href');
+                if (href) {
+                    // Add visual feedback
+                    linkBtn.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        linkBtn.style.transform = '';
+                        window.location.href = href;
+                    }, 150);
+                }
+            });
+        });
+
         // Add touch events for mobile
         if (this.isTouchDevice) {
             this.addTouchEvents(div, item);
@@ -405,8 +424,14 @@ class PortfolioManager {
                     if (target.classList.contains('view-larger')) {
                         this.openModal(item.image, `${item.title} - ${item.description}`);
                     } else if (target.tagName === 'A') {
-                        // Let the link work normally
-                        return;
+                        // Handle link button click
+                        const href = target.getAttribute('href');
+                        if (href) {
+                            // Add a small delay to ensure touch feedback is visible
+                            setTimeout(() => {
+                                window.location.href = href;
+                            }, 100);
+                        }
                     }
                 } else {
                     // If not on a button, open modal
@@ -417,6 +442,35 @@ class PortfolioManager {
 
         portfolioItem.addEventListener('touchcancel', () => {
             portfolioItem.classList.remove('touch-active');
+        });
+
+        // Add specific touch events for link buttons
+        const linkButtons = portfolioItem.querySelectorAll('.portfolio-btn[href]');
+        linkButtons.forEach(linkBtn => {
+            linkBtn.addEventListener('touchstart', (e) => {
+                e.stopPropagation();
+                linkBtn.classList.add('touch-active');
+            }, { passive: true });
+
+            linkBtn.addEventListener('touchend', (e) => {
+                e.stopPropagation();
+                linkBtn.classList.remove('touch-active');
+                
+                const href = linkBtn.getAttribute('href');
+                if (href) {
+                    // Add visual feedback before navigation
+                    linkBtn.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        linkBtn.style.transform = '';
+                        window.location.href = href;
+                    }, 150);
+                }
+            });
+
+            linkBtn.addEventListener('touchcancel', (e) => {
+                e.stopPropagation();
+                linkBtn.classList.remove('touch-active');
+            });
         });
     }
 

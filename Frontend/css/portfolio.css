@@ -175,11 +175,15 @@
     backdrop-filter: blur(4px);
     border: none;
     cursor: pointer;
+    /* Ensure buttons are touch-friendly */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .portfolio-btn:hover,
 .portfolio-btn:active,
-.portfolio-btn:focus {
+.portfolio-btn:focus,
+.portfolio-btn.touch-active {
     background: white;
     color: #1d4ed8;
     transform: scale(1.1);
@@ -192,8 +196,23 @@
 
 .portfolio-btn.view-larger:hover,
 .portfolio-btn.view-larger:active,
-.portfolio-btn.view-larger:focus {
+.portfolio-btn.view-larger:focus,
+.portfolio-btn.view-larger.touch-active {
     background: #3b82f6;
+}
+
+/* Link button specific styles */
+.portfolio-btn[href] {
+    background: rgba(34, 197, 94, 0.9);
+    color: white;
+}
+
+.portfolio-btn[href]:hover,
+.portfolio-btn[href]:active,
+.portfolio-btn[href]:focus,
+.portfolio-btn[href].touch-active {
+    background: #22c55e;
+    transform: scale(1.1);
 }
 
 /* Filter Button Styles */
@@ -377,6 +396,19 @@
         /* Ensure buttons are touch-friendly */
         min-width: 44px !important;
         min-height: 44px !important;
+    }
+    
+    /* Make link buttons more prominent on touch devices */
+    .portfolio-btn[href] {
+        background: rgba(34, 197, 94, 0.95) !important;
+        color: white !important;
+        box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3) !important;
+    }
+    
+    .portfolio-btn[href].touch-active {
+        background: #22c55e !important;
+        transform: scale(0.95) !important;
+        box-shadow: 0 1px 4px rgba(34, 197, 94, 0.5) !important;
     }
 }
 
