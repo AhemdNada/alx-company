@@ -95,3 +95,6 @@
 {"contactId":5,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:54"}
 {"contactId":3,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:55"}
 {"contactId":2,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-08-30 07:31:55"}
+{"contactId":11,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-31 05:40:30"}
+{"contactId":11,"email":"ahmednadaahmed50@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-31 05:40:31"}
+{"contactId":11,"level":"info","message":"Contact notification email sent successfully","messageId":"<5a1a3790-3757-ad2e-1c85-5f29464667a7@gmail.com>","service":"apc-backend","timestamp":"2025-08-31 05:40:34"}
