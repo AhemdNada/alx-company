@@ -350,11 +350,87 @@ class PortfolioManager {
         if (viewLargerBtn) {
             viewLargerBtn.addEventListener('click', (e) => {
                 e.preventDefault();
+                e.stopPropagation();
                 this.openModal(item.image, `${item.title} - ${item.description}`);
             });
         }
 
+        // Add touch/mobile support
+        this.addTouchSupport(div);
+
         return div;
+    }
+
+    addTouchSupport(portfolioItem) {
+        let touchStartTime = 0;
+        let touchEndTime = 0;
+        let isTouchActive = false;
+
+        // Touch start
+        portfolioItem.addEventListener('touchstart', (e) => {
+            touchStartTime = new Date().getTime();
+            isTouchActive = true;
+            
+            // Add active class immediately for visual feedback
+            portfolioItem.classList.add('touch-active');
+        }, { passive: true });
+
+        // Touch end
+        portfolioItem.addEventListener('touchend', (e) => {
+            touchEndTime = new Date().getTime();
+            const touchDuration = touchEndTime - touchStartTime;
+            
+            // Only trigger if it's a quick tap (less than 300ms)
+            if (touchDuration < 300 && isTouchActive) {
+                // Prevent default to avoid any unwanted behavior
+                e.preventDefault();
+                
+                // Toggle the overlay visibility
+                const overlay = portfolioItem.querySelector('.portfolio-overlay');
+                if (overlay) {
+                    const isVisible = overlay.style.opacity === '1' || portfolioItem.classList.contains('touch-active');
+                    
+                    if (isVisible) {
+                        portfolioItem.classList.remove('touch-active');
+                        overlay.style.opacity = '0';
+                    } else {
+                        portfolioItem.classList.add('touch-active');
+                        overlay.style.opacity = '1';
+                    }
+                }
+            }
+            
+            isTouchActive = false;
+        }, { passive: false });
+
+        // Touch cancel
+        portfolioItem.addEventListener('touchcancel', () => {
+            isTouchActive = false;
+            portfolioItem.classList.remove('touch-active');
+        }, { passive: true });
+
+        // Click event for non-touch devices (fallback)
+        portfolioItem.addEventListener('click', (e) => {
+            // Only handle if it's not a touch device and not clicking on buttons
+            if (!('ontouchstart' in window) && !e.target.closest('.portfolio-btn')) {
+                const overlay = portfolioItem.querySelector('.portfolio-overlay');
+                if (overlay) {
+                    const isVisible = overlay.style.opacity === '1';
+                    overlay.style.opacity = isVisible ? '0' : '1';
+                }
+            }
+        });
+
+        // Hide overlay when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!portfolioItem.contains(e.target)) {
+                portfolioItem.classList.remove('touch-active');
+                const overlay = portfolioItem.querySelector('.portfolio-overlay');
+                if (overlay) {
+                    overlay.style.opacity = '0';
+                }
+            }
+        });
     }
 
     setupFilterButtons() {

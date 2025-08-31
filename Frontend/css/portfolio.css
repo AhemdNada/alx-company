@@ -130,6 +130,32 @@
     opacity: 1;
 }
 
+/* Mobile touch-friendly styles */
+@media (max-width: 768px) {
+    .portfolio-item {
+        cursor: pointer;
+    }
+    
+    .portfolio-item.touch-active .portfolio-overlay {
+        opacity: 1;
+    }
+    
+    .portfolio-item.touch-active {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Remove hover effects on mobile */
+    .portfolio-item:hover {
+        transform: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .portfolio-item:hover .portfolio-overlay {
+        opacity: 0;
+    }
+}
+
 .portfolio-title {
     color: white;
     font-size: 1.25rem;
@@ -265,6 +291,16 @@
         font-size: 16px;
         padding: 15px 0;
     }
+    
+    /* Enhanced touch interaction */
+    .portfolio-item {
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+    }
+    
+    .portfolio-item:active {
+        transform: scale(0.98);
+    }
 }
 
 @media (max-width: 640px) {
@@ -296,6 +332,12 @@
     .portfolio-btn {
         width: 32px;
         height: 32px;
+    }
+    
+    /* Better touch targets for small screens */
+    .portfolio-btn {
+        min-width: 44px;
+        min-height: 44px;
     }
 }
 
