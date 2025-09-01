@@ -578,9 +578,340 @@
 		});
 	}
 
+	// ------------ Projects (CRUD) ------------
+	let editingProjectId = null;
+	let pendingProjectFiles = [];
+	function renderProjectRows(rows){
+		const tbody = document.getElementById('projectsBody');
+		if (!tbody) return;
+		tbody.innerHTML = '';
+		if (!rows || !rows.length){
+			const tr = document.createElement('tr');
+			tr.innerHTML = '<td colspan="5" class="py-6 text-center text-slate-500 dark:text-slate-400">No projects yet. Click Add to create one.</td>';
+			tbody.appendChild(tr);
+			return;
+		}
+		
+		const categoryLabels = {
+			'major_projects': 'MAJOR PROJECTS',
+			'replacement_renovation': 'REPLACEMENT RENOVATION & UNIT DEVELOPMENT',
+			'geographical_region': 'GEOGRAPHICAL REGION'
+		};
+		
+		rows.forEach((item) => {
+			const tr = document.createElement('tr');
+			tr.innerHTML = `
+				<td class="py-3 pr-4">${item.title || ''}</td>
+				<td class="py-3 pr-4"><span class="px-2 py-1 text-xs font-medium rounded-full ${item.category === 'major_projects' ? 'bg-blue-100 text-blue-800' : item.category === 'replacement_renovation' ? 'bg-green-100 text-green-800' : 'bg-purple-100 text-purple-800'}">${categoryLabels[item.category] || item.category}</span></td>
+				<td class="py-3 pr-4">${item.coverImage ? '<img src="'+item.coverImage+'" class="h-10 w-16 object-cover rounded" />' : '-'}</td>
+				<td class="py-3 pr-4">${item.detailsCount || 0} details</td>
+				<td class="py-3 pr-4">
+					<div class="flex items-center gap-2">
+						<button type="button" class="quick-action" data-action="edit-project" data-id="${item.id}"><i class="fa-solid fa-pen"></i>Edit</button>
+						<button type="button" class="quick-action" data-action="delete-project" data-id="${item.id}"><i class="fa-solid fa-trash"></i>Delete</button>
+						<a class="quick-action" href="/projects-details.html?id=${item.id}" target="_blank"><i class="fa-solid fa-up-right-from-square"></i>View</a>
+					</div>
+				</td>`;
+			tbody.appendChild(tr);
+		});
+	}
+
+	async function loadProjects(){
+		const res = await fetch(API + '/projects');
+		if (!res.ok){ alert('Failed to load projects'); return; }
+		const rows = await res.json();
+		
+		// Load details count for each project
+		const projectsWithDetails = await Promise.all(rows.map(async (project) => {
+			try {
+				const detailsRes = await fetch(API + '/projects/' + project.id);
+				if (detailsRes.ok) {
+					const projectData = await detailsRes.json();
+					return {
+						...project,
+						detailsCount: projectData.details ? projectData.details.length : 0
+					};
+				}
+			} catch (e) {
+				// Ignore errors for details count
+			}
+			return { ...project, detailsCount: 0 };
+		}));
+		
+		renderProjectRows(projectsWithDetails);
+	}
+
+	function clearProjectModal(){
+		editingProjectId = null;
+		pendingProjectFiles = [];
+		document.getElementById('projectModalTitle').textContent = 'Add Project';
+		document.getElementById('projectId').value = '';
+		document.getElementById('projectTitle').value = '';
+		document.getElementById('projectCategory').value = 'major_projects';
+		document.getElementById('projectImagesFiles').value = '';
+		const preview = document.getElementById('projectImagesPreview'); if (preview) preview.innerHTML = '';
+		const urlsWrap = document.getElementById('projectImageUrls');
+		urlsWrap.innerHTML = '<input type="url" class="w-full rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-4 py-2 text-sm outline-none" placeholder="https://...">';
+		const blocks = document.getElementById('projectDescriptionBlocks');
+		blocks.innerHTML = '';
+		const details = document.getElementById('projectDetailsList');
+		details.innerHTML = '';
+		document.getElementById('existingProjectImagesWrap').classList.add('hidden');
+		document.getElementById('existingProjectImagesList').innerHTML='';
+	}
+
+	function createDescriptionBlock(title, paragraphs){
+		const div = document.createElement('div');
+		div.className = 'rounded-xl border border-slate-200/70 dark:border-slate-700/60 p-3';
+		div.setAttribute('data-type', 'description');
+		div.innerHTML = `
+			<div class="flex items-center justify-between mb-2">
+				<div class="text-xs uppercase tracking-wide text-slate-500">Description</div>
+				<div class="flex gap-2">
+					<button type="button" class="chip" data-action="add-paragraph"><i class="fa-solid fa-plus"></i><span>Add Paragraph</span></button>
+					<button type="button" class="chip" data-action="remove-block"><i class="fa-solid fa-xmark"></i><span>Remove</span></button>
+				</div>
+			</div>
+			<input type="text" class="w-full rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-3 py-2 text-sm outline-none mb-3" placeholder="Description title" value="${title || ''}">
+			<div class="space-y-2" data-role="paragraphs"></div>
+		`;
+		const paragraphsWrap = div.querySelector('[data-role="paragraphs"]');
+		function addParagraph(text){
+			const row = document.createElement('div');
+			row.className = 'flex gap-2';
+			row.innerHTML = `
+				<textarea class="flex-1 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-3 py-2 text-sm outline-none" rows="3" placeholder="Paragraph text">${text || ''}</textarea>
+				<button type="button" class="chip" data-action="remove-paragraph"><i class="fa-solid fa-trash"></i></button>
+			`;
+			paragraphsWrap.appendChild(row);
+		}
+		(paragraphs && paragraphs.length ? paragraphs : ['']).forEach(addParagraph);
+		return div;
+	}
+
+	function createDetailBlock(key, value){
+		const div = document.createElement('div');
+		div.className = 'flex gap-2 items-start';
+		div.innerHTML = `
+			<input type="text" class="flex-1 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-3 py-2 text-sm outline-none" placeholder="Detail key (e.g. Project Number)" value="${key || ''}">
+			<input type="text" class="flex-1 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-3 py-2 text-sm outline-none" placeholder="Detail value" value="${value || ''}">
+			<button type="button" class="chip" data-action="remove-detail"><i class="fa-solid fa-trash"></i></button>
+		`;
+		return div;
+	}
+
+	function openProjectModalForAdd(){
+		clearProjectModal();
+		openModal('projectModal');
+	}
+
+	async function openProjectModalForEdit(id){
+		clearProjectModal();
+		editingProjectId = id;
+		document.getElementById('projectModalTitle').textContent = 'Edit Project';
+		const res = await fetch(API + '/projects/' + id);
+		if (!res.ok){ alert('Failed to load'); return; }
+		const item = await res.json();
+		document.getElementById('projectId').value = item.id;
+		document.getElementById('projectTitle').value = item.title || '';
+		document.getElementById('projectCategory').value = item.category || 'major_projects';
+		// description blocks
+		const blocks = document.getElementById('projectDescriptionBlocks');
+		(blocks.innerHTML = '');
+		if (Array.isArray(item.description)){
+			item.description.forEach((b) => {
+				if (b && b.type === 'description') blocks.appendChild(createDescriptionBlock(b.title || '', Array.isArray(b.paragraphs) ? b.paragraphs : []));
+			});
+		}
+		// existing images
+		const existingWrap = document.getElementById('existingProjectImagesWrap');
+		const existingList = document.getElementById('existingProjectImagesList');
+		if (item.images && item.images.length){
+			existingWrap.classList.remove('hidden');
+			existingList.innerHTML = '';
+			item.images.forEach((img) => {
+				const c = document.createElement('label');
+				c.className = 'block rounded-xl border border-slate-200/70 dark:border-slate-700/60 overflow-hidden';
+				c.innerHTML = `
+					<img src="${img.imageUrl}" class="w-full aspect-video object-cover">
+					<div class="flex items-center gap-2 p-2 text-sm">
+						<input type="checkbox" class="h-4 w-4" data-role="keep-image" checked>
+						<span class="truncate" title="${img.imageUrl}">Keep</span>
+						<input type="hidden" data-role="image-url" value="${img.imageUrl}">
+					</div>`;
+				existingList.appendChild(c);
+			});
+		}
+		// details
+		const details = document.getElementById('projectDetailsList');
+		if (item.details && item.details.length){
+			item.details.forEach((detail) => {
+				details.appendChild(createDetailBlock(detail.key || '', detail.value || ''));
+			});
+		}
+		openModal('projectModal');
+	}
+
+	function serializeProjectDescription(){
+		const out = [];
+		const blocks = Array.from(document.querySelectorAll('#projectDescriptionBlocks > div[data-type]'));
+		blocks.forEach((b) => {
+			const type = b.getAttribute('data-type');
+			if (type === 'description'){
+				const title = (b.querySelector('input[type="text"]')?.value || '').trim();
+				const paragraphs = Array.from(b.querySelectorAll('[data-role="paragraphs"] textarea')).map(p => p.value.trim()).filter(Boolean);
+				if (title && paragraphs.length) out.push({ type: 'description', title, paragraphs });
+			}
+		});
+		return out;
+	}
+
+	function serializeProjectDetails(){
+		const out = [];
+		const details = Array.from(document.querySelectorAll('#projectDetailsList > div'));
+		details.forEach((d) => {
+			const inputs = d.querySelectorAll('input[type="text"]');
+			if (inputs.length >= 2){
+				const key = (inputs[0].value || '').trim();
+				const value = (inputs[1].value || '').trim();
+				if (key && value) out.push({ key, value });
+			}
+		});
+		return out;
+	}
+
+	async function handleProjectSubmit(e){
+		e.preventDefault();
+		const title = (document.getElementById('projectTitle').value || '').trim();
+		if (!title) return alert('Title is required');
+		const category = document.getElementById('projectCategory').value;
+		const desc = serializeProjectDescription();
+		const details = serializeProjectDetails();
+		const form = new FormData();
+		form.append('title', title);
+		form.append('category', category);
+		form.append('descriptionJson', JSON.stringify(desc));
+		form.append('detailsJson', JSON.stringify(details));
+		const fileEl = document.getElementById('projectImagesFiles');
+		const filesToSend = pendingProjectFiles.length ? pendingProjectFiles : Array.from((fileEl && fileEl.files) ? fileEl.files : []);
+		if (filesToSend.length){ for (const f of filesToSend) form.append('imageFiles', f); }
+		// urls
+		Array.from(document.querySelectorAll('#projectImageUrls input[type="url"]')).forEach(u => { const v = (u.value||'').trim(); if (v) form.append('imageUrls[]', v); });
+		// existing keep (for edit)
+		if (editingProjectId != null){
+			const keep = [];
+			Array.from(document.querySelectorAll('#existingProjectImagesList [data-role="keep-image"]')).forEach(chk => {
+				if (chk.checked){
+					const url = chk.parentElement?.querySelector('[data-role="image-url"]').value || '';
+					if (url) keep.push(url);
+				}
+			});
+			form.append('existingImageUrlsJson', JSON.stringify(keep));
+		}
+		let resp;
+		if (editingProjectId == null){
+			resp = await fetch(API + '/projects', { method: 'POST', body: form });
+		} else {
+			resp = await fetch(API + '/projects/' + editingProjectId, { method: 'PUT', body: form });
+		}
+		if (!resp.ok){ alert('Failed to save'); return; }
+		closeModal('projectModal');
+		await loadProjects();
+	}
+
+	// Events for dynamic blocks (delegation)
+	document.addEventListener('click', (e) => {
+		const btn = e.target.closest('[data-action]');
+		if (!btn) return;
+		const action = btn.getAttribute('data-action');
+		if (action === 'remove-block'){
+			const block = btn.closest('div[data-type]');
+			block && block.remove();
+		} else if (action === 'add-paragraph'){
+			const block = btn.closest('div[data-type="description"]');
+			const paragraphsWrap = block && block.querySelector('[data-role="paragraphs"]');
+			if (paragraphsWrap){
+				const row = document.createElement('div');
+				row.className = 'flex gap-2';
+				row.innerHTML = `<textarea class="flex-1 rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-3 py-2 text-sm outline-none" rows="3" placeholder="Paragraph text"></textarea><button type=\"button\" class=\"chip\" data-action=\"remove-paragraph\"><i class=\"fa-solid fa-trash\"></i></button>`;
+				paragraphsWrap.appendChild(row);
+			}
+		} else if (action === 'remove-paragraph'){
+			const row = btn.closest('.flex.gap-2');
+			row && row.remove();
+		} else if (action === 'remove-detail'){
+			const row = btn.closest('.flex.gap-2');
+			row && row.remove();
+		}
+	});
+
+	// Wire up project buttons
+	const addProjectBtn = document.getElementById('addProjectBtn'); if (addProjectBtn) addProjectBtn.addEventListener('click', openProjectModalForAdd);
+	const addProjectDescBlockBtn = document.getElementById('addProjectDescBlockBtn'); if (addProjectDescBlockBtn) addProjectDescBlockBtn.addEventListener('click', () => { document.getElementById('projectDescriptionBlocks').appendChild(createDescriptionBlock('', [''])); });
+	const addProjectImageUrlBtn = document.getElementById('addProjectImageUrlBtn'); if (addProjectImageUrlBtn) addProjectImageUrlBtn.addEventListener('click', () => { const wrap = document.getElementById('projectImageUrls'); const input = document.createElement('input'); input.type='url'; input.placeholder='https://...'; input.className='w-full rounded-xl bg-slate-100 dark:bg-slate-800/80 border border-transparent focus:border-blue-400 focus:ring-2 focus:ring-blue-200/60 dark:focus:ring-blue-500/30 px-4 py-2 text-sm outline-none'; wrap.appendChild(input); });
+	const addProjectDetailBtn = document.getElementById('addProjectDetailBtn'); if (addProjectDetailBtn) addProjectDetailBtn.addEventListener('click', () => { document.getElementById('projectDetailsList').appendChild(createDetailBlock('', '')); });
+	const projectForm = document.getElementById('projectForm'); if (projectForm) projectForm.addEventListener('submit', handleProjectSubmit);
+
+	// Quick thumbnails preview for multiple selection
+	const projectImagesFiles = document.getElementById('projectImagesFiles');
+	function refreshProjectFilesPreview(){
+		const preview = document.getElementById('projectImagesPreview');
+		if (!preview) return;
+		preview.innerHTML = '';
+		pendingProjectFiles.forEach((f, idx) => {
+			try {
+				const url = URL.createObjectURL(f);
+				const wrap = document.createElement('div');
+				wrap.className = 'relative group';
+				wrap.innerHTML = `<img src="${url}" alt="${f.name}" class="w-full aspect-video object-cover rounded"><button type="button" class="absolute top-1 right-1 opacity-0 group-hover:opacity-100 transition bg-white/90 text-red-600 border border-red-200 rounded-md px-2 py-1 text-xs" data-action="remove-pending-project-file" data-index="${idx}"><i class="fa-solid fa-xmark"></i></button>`;
+				preview.appendChild(wrap);
+			} catch {}
+		});
+	}
+	if (projectImagesFiles){
+		projectImagesFiles.addEventListener('change', () => {
+			const newly = Array.from(projectImagesFiles.files || []);
+			newly.forEach(f => {
+				if (!pendingProjectFiles.some(e => filesAreSame(e, f))) pendingProjectFiles.push(f);
+			});
+			projectImagesFiles.value = '';
+			refreshProjectFilesPreview();
+		});
+		document.addEventListener('click', (e) => {
+			const btn = e.target.closest('[data-action="remove-pending-project-file"]');
+			if (!btn) return;
+			const idx = Number(btn.getAttribute('data-index'));
+			if (!Number.isNaN(idx) && idx >= 0 && idx < pendingProjectFiles.length){
+				pendingProjectFiles.splice(idx, 1);
+				refreshProjectFilesPreview();
+			}
+		});
+	}
+
+	// Delegation for project actions
+	const projectsBodyEl = document.getElementById('projectsBody');
+	if (projectsBodyEl){
+		projectsBodyEl.addEventListener('click', async (e) => {
+			const btn = e.target.closest('[data-action]');
+			if (!btn) return;
+			const action = btn.getAttribute('data-action');
+			const idAttr = btn.getAttribute('data-id');
+			const id = idAttr ? Number(idAttr) : null;
+			if (action === 'edit-project' && id != null){
+				openProjectModalForEdit(id);
+			} else if (action === 'delete-project' && id != null){
+				if (confirm('Delete this project?')){
+					const resp = await fetch(API + '/projects/' + id, { method: 'DELETE' });
+					if (!resp.ok){ alert('Failed to delete'); return; }
+					await loadProjects();
+				}
+			}
+		});
+	}
+
 	async function init(){
 		initTabs();
-		await Promise.all([loadRates(), loadChairmen(), loadNews(), loadTicker()]);
+		await Promise.all([loadRates(), loadChairmen(), loadNews(), loadTicker(), loadProjects()]);
 		
 		// Initialize contacts if the function exists
 		if (window.initContacts) {

@@ -540,141 +540,23 @@
 
             <!-- Filter Buttons -->
             <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button class="filter-btn active px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-blue-700 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                <button class="filter-btn active px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-blue-700 transform hover:-translate-y-1 shadow-lg hover:shadow-xl" data-filter="all">
                     ALL
                 </button>
-                <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl" data-filter="major_projects">
                     MAJOR PROJECTS
                 </button>
-                <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl" data-filter="replacement_renovation">
                     REPLACEMENT RENOVATION & UNIT DEVELOPMENT
                 </button>
-                <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+                <button class="filter-btn px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg transition-all duration-300 hover:bg-blue-600 hover:text-white transform hover:-translate-y-1 shadow-lg hover:shadow-xl" data-filter="geographical_region">
                     GEOGRAPHICAL REGION
                 </button>
             </div>
 
             <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1: New Distillation Unit -->
-                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                            alt="New Distillation Unit" 
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="text-xl font-bold mb-2">New Distillation Unit</h3>
-                            <p class="text-sm text-gray-200 leading-relaxed">
-                                Advanced atmospheric distillation unit with 2.5 million tons annual capacity, featuring cutting-edge technology for enhanced efficiency and environmental compliance.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white">
-                        <h4 class="text-lg font-bold text-gray-800 mb-2">Atmospheric Distillation Unit</h4>
-                        <p class="text-gray-600 text-sm">Capacity: 2.5M tons/year | Status: Completed 2023</p>
-                    </div>
-                </div>
-
-                <!-- Project 2: Vapour Recovery System -->
-                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                            alt="Vapour Recovery System" 
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="text-xl font-bold mb-2">Vapour Recovery System</h3>
-                            <p class="text-sm text-gray-200 leading-relaxed">
-                                State-of-the-art vapour recovery system designed to capture and process hydrocarbon vapors, reducing emissions and improving environmental sustainability.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white">
-                        <h4 class="text-lg font-bold text-gray-800 mb-2">Environmental Protection</h4>
-                        <p class="text-gray-600 text-sm">Efficiency: 95% | Status: Operational 2023</p>
-                    </div>
-                </div>
-
-                <!-- Project 3: Solvent Production Complex -->
-                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                            alt="Solvent Production Complex" 
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="text-xl font-bold mb-2">Solvent Production Complex</h3>
-                            <p class="text-sm text-gray-200 leading-relaxed">
-                                Comprehensive solvent production facility including hexane and sulpholane units, with advanced hydrotreating capabilities for high-purity products.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white">
-                        <h4 class="text-lg font-bold text-gray-800 mb-2">Chemical Processing</h4>
-                        <p class="text-gray-600 text-sm">Products: Hexane, Sulpholane | Status: Active</p>
-                    </div>
-                </div>
-
-                <!-- Project 4: Lube Oil Refinery -->
-                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                            alt="Lube Oil Refinery" 
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="text-xl font-bold mb-2">Lube Oil Refinery</h3>
-                            <p class="text-sm text-gray-200 leading-relaxed">
-                                Modern lubricating oil production facility with food-grade wax capabilities, featuring advanced processing units and quality control systems.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white">
-                        <h4 class="text-lg font-bold text-gray-800 mb-2">Lubricant Production</h4>
-                        <p class="text-gray-600 text-sm">Capacity: 500K tons/year | Status: Operational</p>
-                    </div>
-                </div>
-
-                <!-- Project 5: Waste Oil Recycling -->
-                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                            alt="Waste Oil Recycling" 
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="text-xl font-bold mb-2">Waste Oil Recycling</h3>
-                            <p class="text-sm text-gray-200 leading-relaxed">
-                                Environmentally conscious waste oil re-refining facility processing 30,000 tons annually, contributing to circular economy and sustainability goals.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white">
-                        <h4 class="text-lg font-bold text-gray-800 mb-2">Environmental Initiative</h4>
-                        <p class="text-gray-600 text-sm">Capacity: 30K tons/year | Status: Active since 1997</p>
-                    </div>
-                </div>
-
-                <!-- Project 6: Bitumen Production -->
-                <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                            alt="Bitumen Production" 
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                            <h3 class="text-xl font-bold mb-2">Bitumen Production</h3>
-                            <p class="text-sm text-gray-200 leading-relaxed">
-                                Specialized oxidized bitumen production unit with automated packaging systems, delivering high-quality products for construction and industrial applications.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-white">
-                        <h4 class="text-lg font-bold text-gray-800 mb-2">Construction Materials</h4>
-                        <p class="text-gray-600 text-sm">Product: Blown Bitumen | Status: Operational 1997</p>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="home-projects-grid">
+                <!-- Projects will be loaded dynamically -->
             </div>
 
             <!-- Investments Projects Section -->

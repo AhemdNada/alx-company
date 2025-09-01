@@ -1,0 +1,32 @@
+{
+  "name": "alexandria-petroleum-company",
+  "version": "1.0.0",
+  "description": "Alexandria Petroleum Company - Project Management System",
+  "main": "Backend/src/server.js",
+  "scripts": {
+    "start": "cd Backend && npm start",
+    "dev": "cd Backend && npm run dev",
+    "install-backend": "cd Backend && npm install",
+    "install-all": "npm run install-backend",
+    "setup": "npm run install-all && echo 'Setup complete! Please configure your .env file and database.'"
+  },
+  "keywords": [
+    "petroleum",
+    "company",
+    "projects",
+    "management",
+    "alexandria",
+    "egypt"
+  ],
+  "author": "Alexandria Petroleum Company IT Department",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "internal"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

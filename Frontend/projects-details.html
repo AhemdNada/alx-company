@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details — Alexandria Petroleum Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/projects-details.css">
+    <link rel="icon" href="images/logo.png">
+    <meta name="description" content="Alexandria Petroleum Company — Project Details">
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="block w-16 h-16 overflow-hidden">
+                            <img src="images/logo.png" 
+                                alt="Logo" 
+                                class="w-full h-full object-contain" />
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-xl font-bold text-center">
+                                <span class="text-red-600">ALX-</span><span class="text-gray-800">PC.COM</span>
+                            </div>
+                            <div class="w-full h-0.5 bg-red-600 my-1"></div>
+                            <div class="text-xs text-gray-600 font-medium uppercase tracking-wide">
+                                Alexandria Petroleum Company
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex md:items-center md:flex-1 md:justify-center md:space-x-1">
+                    <a href="index.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow ">
+                        Home
+                    </a>
+                    <a href="about.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        About Us
+                    </a>
+                    <a href="projects.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow active">
+                        Projects
+                    </a>
+                    <a href="products.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Products
+                    </a>
+                    <a href="services.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Services
+                    </a>
+                    <a href="units.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Units
+                    </a>
+                    <a href="portfolio.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Portfolio
+                    </a>
+                    <a href="contact.html" class="nav-link px-4 py-2 text-gray-700 hover:text-blue-600 text-sm font-medium relative transition-slow">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Search and action buttons -->
+                <div class="hidden md:flex md:items-center md:space-x-2">
+                    <button class="p-2 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow">
+                        <span class="sr-only">Search</span>
+                        <i class="fas fa-search h-4 w-4"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Details Content -->
+    <main class="bg-gray-50">
+        <!-- Loading State -->
+        <div id="loadingState" class="min-h-screen flex items-center justify-center">
+            <div class="text-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+                <p class="mt-4 text-gray-600">Loading project details...</p>
+            </div>
+        </div>
+
+        <!-- Project Content -->
+        <div id="projectContent" class="hidden">
+            <!-- Project Title Section -->
+            <section class="bg-white border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <div class="text-center mb-4">
+                        <nav aria-label="Breadcrumb">
+                            <ol class="flex items-center justify-center text-sm text-gray-500 mb-2">
+                                <li><a href="index.html" class="text-blue-600 hover:text-blue-700 font-medium">Home</a></li>
+                                <li class="px-2 text-gray-400">/</li>
+                                <li><a href="projects.html" class="text-blue-600 hover:text-blue-700 font-medium">Projects</a></li>
+                                <li class="px-2 text-gray-400">/</li>
+                                <li class="text-gray-700 font-semibold" aria-current="page" id="projectTitle">Project Details</li>
+                            </ol>
+                        </nav>
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-800" id="projectTitleMain">Project Title</h1>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Main Project Content -->
+            <section class="py-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                         <!-- Top Section: Images Left, Description Right -->
+                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+                         <!-- Left Column - Images -->
+                         <div class="space-y-6">
+                             <!-- Main Image -->
+                             <div class="relative">
+                                 <img id="mainImage" src="" alt="Project Image" class="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-lg">
+                                 <div class="absolute top-4 left-4">
+                                     <span class="bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                         <i class="fas fa-image mr-1"></i>
+                                         <span id="imageCounter">1</span> of <span id="totalImages">1</span>
+                                     </span>
+                                 </div>
+                             </div>
+                             
+                             <!-- Image Gallery with Navigation -->
+                             <div class="relative">
+                                 <button id="prevImageBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-2 bg-blue-600 text-white p-2 rounded-full shadow-lg z-10">
+                                     <i class="fas fa-chevron-left"></i>
+                                 </button>
+                                 <div id="imageGallery" class="grid grid-cols-4 gap-3 px-8">
+                                     <!-- Thumbnail images will be loaded here -->
+                                 </div>
+                                 <button id="nextImageBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-2 bg-blue-600 text-white p-2 rounded-full shadow-lg z-10">
+                                     <i class="fas fa-chevron-right"></i>
+                                 </button>
+                             </div>
+                             
+                             <!-- Left Column Descriptions -->
+                             <div id="leftColumnDescriptions" class="space-y-6">
+                                 <!-- Some descriptions will be loaded here -->
+                             </div>
+                         </div>
+
+                         <!-- Right Column - Project Description -->
+                         <div class="space-y-8">
+                             <!-- Project Descriptions -->
+                             <div id="projectDescriptions" class="space-y-6">
+                                 <!-- Descriptions will be loaded here -->
+                             </div>
+                         </div>
+                     </div>
+
+                    <!-- Bottom Section: Project Details Table -->
+                    <div id="projectDetailsSection" class="hidden">
+                        <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                            <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                                <h3 class="text-lg font-semibold text-gray-800 flex items-center">
+                                    <i class="fas fa-info-circle mr-2 text-blue-600"></i>
+                                    Project Details
+                                </h3>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full">
+                                    <tbody id="projectDetailsTable" class="divide-y divide-gray-200">
+                                        <!-- Project details will be loaded here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="hidden min-h-screen flex items-center justify-center">
+            <div class="text-center">
+                <i class="fas fa-exclamation-triangle text-4xl text-red-500 mb-4"></i>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Project Not Found</h2>
+                <p class="text-gray-600 mb-6">The project you're looking for doesn't exist or has been removed.</p>
+                <a href="projects.html" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Back to Projects
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <!-- Brand -->
+                <div>
+                    <a href="#" class="inline-flex items-center text-2xl font-extrabold tracking-tight">
+                        <img src="images/logo.png" 
+                             alt="Logo" 
+                             class="w-16 h-16 object-contain" />
+                    </a>
+                    <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
+                        Alexandria Petroleum Company. Supporting the national economy and ensuring the availability of petroleum products for the Egyptian market.
+                    </p>
+                </div>
+
+                <!-- Useful Links -->
+                <div>
+                    <h3 class="text-white font-semibold text-lg mb-4">Useful Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li>
+                            <a href="index.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Home</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">About Us</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="projects.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Projects</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Products</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Services</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="units.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Units</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                                <span class="relative">Contact</span>
+                                <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="md:col-span-2 lg:col-span-2">
+                    <h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt mt-0.5 text-blue-400"></i>
+                            <span>3 Al Max - Alexandria - Egypt</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-phone mt-0.5 text-blue-400"></i>
+                            <div class="space-y-1">
+                                <a href="tel:+2034402832" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2832</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                                <a href="tel:+2034402833" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2833</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                                <a href="tel:+2034430123" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0123</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                                <a href="tel:+2034430124" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0124</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope mt-0.5 text-blue-400"></i>
+                            <a href="mailto:chairman@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">chairman@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-laptop-code mt-0.5 text-blue-400"></i>
+                            <div>
+                                <p>Site Designed By Alexandria Petroleum Co., IT Deptartment.</p>
+                                <a href="mailto:IT@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">IT@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-6 border-t border-white/10 text-xs text-gray-400 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+                <p>© <span id="year"></span> Alexandria Petroleum Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu-container">
+        <div class="flex flex-col h-full">
+            <!-- Mobile menu header -->
+            <div class="mobile-menu-header">
+                <a href="index.html" class="logo-link" aria-label="Alexandria Petroleum Company home">
+                    <div class="block w-16 h-16 overflow-hidden">
+                        <img src="images/logo.png" 
+                            alt="Logo" 
+                            class="w-full h-full object-contain" />
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="text-xl font-bold text-center">
+                            <span class="text-red-600">ALX-</span><span class="text-gray-800">PC.COM</span>
+                        </div>
+                        <div class="w-full h-0.5 bg-red-600 my-1"></div>
+                        <div class="text-xs text-gray-600 font-medium uppercase tracking-wide whitespace-nowrap">
+                            Alexandria Petroleum Company
+                        </div>
+                    </div>
+                </a>
+                <button class="mobile-menu-close">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile menu content -->
+            <div class="mobile-menu-content">
+                <div class="menu-items">
+                    <a href="index.html" class="menu-link">
+                        <i class="fas fa-home menu-icon"></i> Home
+                    </a>
+                    <a href="about.html" class="menu-link">
+                        <i class="fas fa-info-circle menu-icon"></i> About Us
+                    </a>
+                    <a href="projects.html" class="menu-link active">
+                        <i class="fas fa-project-diagram menu-icon"></i> Projects
+                    </a>
+                    <a href="products.html" class="menu-link">
+                        <i class="fas fa-box-open menu-icon"></i> Products
+                    </a>
+                    <a href="services.html" class="menu-link">
+                        <i class="fas fa-concierge-bell menu-icon"></i> Services
+                    </a>
+                    <a href="units.html" class="menu-link">
+                        <i class="fas fa-building menu-icon"></i> Units
+                    </a>
+                    <a href="portfolio.html" class="menu-link">
+                        <i class="fas fa-briefcase menu-icon"></i> Portfolio
+                    </a>
+                    <a href="contact.html" class="menu-link">
+                        <i class="fas fa-envelope menu-icon"></i> Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            var y = document.getElementById('year');
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
+    <script src="js/navbar.js"></script>
+    <script src="js/projects-details.js"></script>
+</body>
+</html>

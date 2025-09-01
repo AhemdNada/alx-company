@@ -4,6 +4,9 @@ CREATE DATABASE IF NOT EXISTS `apc` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicod
 USE `apc`;
 
 -- Clean reset (tables)
+DROP TABLE IF EXISTS `project_details`;
+DROP TABLE IF EXISTS `project_images`;
+DROP TABLE IF EXISTS `projects`;
 DROP TABLE IF EXISTS `news_ticker`;
 DROP TABLE IF EXISTS `news_images`;
 DROP TABLE IF EXISTS `news`;
@@ -88,6 +91,41 @@ CREATE TABLE `contacts` (
   KEY `idx_contacts_is_replied` (`is_replied`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- Projects
+CREATE TABLE `projects` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(255) NOT NULL,
+  `description` JSON NULL,
+  `category` ENUM('major_projects', 'replacement_renovation', 'geographical_region') NOT NULL DEFAULT 'major_projects',
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  CONSTRAINT `pk_projects` PRIMARY KEY (`id`),
+  KEY `idx_projects_created_at` (`created_at`),
+  KEY `idx_projects_category` (`category`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE `project_images` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `project_id` INT NOT NULL,
+  `image_url` TEXT NOT NULL,
+  `is_cover` TINYINT(1) NOT NULL DEFAULT 0,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT `pk_project_images` PRIMARY KEY (`id`),
+  KEY `idx_project_images_project_id` (`project_id`),
+  CONSTRAINT `fk_project_images_project` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE `project_details` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `project_id` INT NOT NULL,
+  `detail_key` VARCHAR(100) NOT NULL,
+  `detail_value` VARCHAR(255) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT `pk_project_details` PRIMARY KEY (`id`),
+  KEY `idx_project_details_project_id` (`project_id`),
+  CONSTRAINT `fk_project_details_project` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 SELECT * FROM sharing_rates;
 SELECT * FROM chairmen;
@@ -95,3 +133,6 @@ SELECT * FROM news;
 SELECT * FROM news_images;
 SELECT * FROM news_ticker;
 SELECT * FROM contacts;
+SELECT * FROM projects;
+SELECT * FROM project_images;
+SELECT * FROM project_details;

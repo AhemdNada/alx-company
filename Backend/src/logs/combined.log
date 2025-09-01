@@ -98,3 +98,83 @@
 {"contactId":11,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-08-31 05:40:30"}
 {"contactId":11,"email":"ahmednadaahmed50@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-08-31 05:40:31"}
 {"contactId":11,"level":"info","message":"Contact notification email sent successfully","messageId":"<5a1a3790-3757-ad2e-1c85-5f29464667a7@gmail.com>","service":"apc-backend","timestamp":"2025-08-31 05:40:34"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 03:18:03"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 03:18:03"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 03:18:03"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 04:07:25"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 04:07:25"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 04:07:25"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 04:07:49"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 04:07:49"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 04:07:49"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 04:08:38"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 04:08:38"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 04:08:38"}
+{"level":"info","message":"Mail service initialized with Gmail","service":"apc-backend","timestamp":"2025-09-01 04:16:51"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 04:16:51"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 04:16:51"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 04:18:02"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 04:18:02"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 04:18:03"}
+{"level":"info","message":"Mail service initialized with Gmail","service":"apc-backend","timestamp":"2025-09-01 04:23:22"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 04:23:22"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 04:23:22"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 04:24:27"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 04:24:27"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 04:24:27"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 04:41:37"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 04:41:37"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 04:41:37"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 04:43:39"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 04:43:39"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 04:43:39"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 06:50:12"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 06:51:44"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 06:51:45"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 06:51:45"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-01 06:57:25"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-01 06:57:25"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-01 06:57:25"}
+{"contactId":12,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:06:58"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:06:58"}
+{"contactId":12,"email":"ahmednadaahmed@gmail.com","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:06:58"}
+{"contactId":13,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:07:29"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:07:29"}
+{"contactId":13,"email":"ahemdnada@gmail.xom","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:07:29"}
+{"contactId":14,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:07:41"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:07:41"}
+{"contactId":14,"email":"shxhhcufujs@gmail.com","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:07:41"}
+{"contactId":15,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:07:52"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:07:52"}
+{"contactId":15,"email":"ahmednucaj@gmail.xom","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:07:52"}
+{"contactId":16,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:08:03"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:08:03"}
+{"contactId":16,"email":"nshfjdkxjcifj@gmail.com","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:08:03"}
+{"contactId":17,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:08:22"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:08:22"}
+{"contactId":17,"email":"dncjjejcjcj@gmail.com","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:08:22"}
+{"contactId":18,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:08:33"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:08:33"}
+{"contactId":18,"email":"dhhxjh@gmail.com","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:08:33"}
+{"contactId":19,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:08:52"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:08:52"}
+{"contactId":19,"email":"dhfjfuud@gmail.com","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:08:52"}
+{"contactId":20,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:09:02"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:09:02"}
+{"contactId":20,"email":"fhhdhdjdj@gmail.com","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:09:02"}
+{"contactId":21,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:09:09"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:09:09"}
+{"contactId":21,"email":"dhfjjaa@gmail.com","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:09:09"}
+{"contactId":22,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-01 07:09:18"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-01 07:09:18"}
+{"contactId":22,"email":"bxsjhdhfh@gmail.com","ip":"41.40.98.33","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-01 07:09:18"}
+{"contactId":22,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:38"}
+{"contactId":21,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:39"}
+{"contactId":20,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:39"}
+{"contactId":19,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:39"}
+{"contactId":18,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:40"}
+{"contactId":17,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:40"}
+{"contactId":16,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:40"}
+{"contactId":15,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:41"}
+{"contactId":14,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:41"}
+{"contactId":13,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:42"}

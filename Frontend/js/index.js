@@ -352,20 +352,115 @@
       });
     });
 
-    // Projects filter buttons (UI active state only for now)
+    // Projects functionality
+    const API = ((window && window.API_BASE) ? window.API_BASE : '/api').replace(/\/$/, '');
+    let homeProjects = [];
+    let filteredHomeProjects = [];
+
+    // Load projects for home page
+    async function loadHomeProjects(category = 'all') {
+      try {
+        const url = category === 'all' ? API + '/projects' : API + '/projects?category=' + category;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Failed to load projects');
+        homeProjects = await res.json();
+        filteredHomeProjects = [...homeProjects];
+        renderHomeProjects();
+      } catch (error) {
+        console.error('Error loading home projects:', error);
+        const grid = document.getElementById('home-projects-grid');
+        if (grid) {
+          grid.innerHTML = '<div class="col-span-full text-center text-gray-500 py-12">Failed to load projects</div>';
+        }
+      }
+    }
+
+    // Render projects for home page
+    function renderHomeProjects() {
+      const grid = document.getElementById('home-projects-grid');
+      if (!grid) return;
+
+      if (!filteredHomeProjects.length) {
+        grid.innerHTML = '<div class="col-span-full text-center text-gray-500 py-12">No projects found</div>';
+        return;
+      }
+
+      grid.innerHTML = filteredHomeProjects.map(project => {
+        const coverImage = project.coverImage || 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2070&q=80';
+        const description = project.description && project.description.length > 0 && project.description[0].paragraphs && project.description[0].paragraphs.length > 0 
+          ? project.description[0].paragraphs[0] 
+          : '';
+        
+        const categoryLabels = {
+          'major_projects': 'MAJOR PROJECTS',
+          'replacement_renovation': 'REPLACEMENT RENOVATION & UNIT DEVELOPMENT',
+          'geographical_region': 'GEOGRAPHICAL REGION'
+        };
+        
+        const categoryBadge = project.category ? `
+          <div class="absolute top-4 right-4">
+            <span class="px-2 py-1 text-xs font-medium rounded-full ${project.category === 'major_projects' ? 'bg-blue-600 text-white' : project.category === 'replacement_renovation' ? 'bg-green-600 text-white' : 'bg-purple-600 text-white'}">
+              ${categoryLabels[project.category] || project.category}
+            </span>
+          </div>
+        ` : '';
+        
+        return `
+          <div class="project-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer" data-id="${project.id}">
+            <div class="relative h-64 overflow-hidden">
+              <img src="${coverImage}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                <p class="text-sm text-gray-200 leading-relaxed">
+                  ${description}
+                </p>
+              </div>
+              ${categoryBadge}
+            </div>
+            
+          </div>
+        `;
+      }).join('');
+
+      // Add click handlers for home projects
+      document.querySelectorAll('#home-projects-grid .project-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const projectId = card.getAttribute('data-id');
+          window.location.href = `/projects-details.html?id=${projectId}`;
+        });
+      });
+    }
+
+    // Apply filter for home projects
+    function applyHomeFilter(filter) {
+      loadHomeProjects(filter);
+    }
+
+    // Projects filter buttons
     const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
     if (filterButtons.length > 0) {
       filterButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          
           filterButtons.forEach((b) => {
             b.classList.remove('active', 'bg-blue-600', 'text-white');
             b.classList.add('bg-gray-200', 'text-gray-700');
           });
           btn.classList.add('active', 'bg-blue-600', 'text-white');
           btn.classList.remove('bg-gray-200', 'text-gray-700');
+          
+          // Apply filter
+          if (filter) {
+            applyHomeFilter(filter);
+          }
         });
       });
     }
+
+    // Load projects on page load
+    loadHomeProjects();
   });
 })();
 // end investments tabs, faq accordion, and project filter buttons

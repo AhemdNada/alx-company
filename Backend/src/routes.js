@@ -481,6 +481,262 @@ router.delete('/news/:id', param('id').isInt({ min: 1 }), validate, async (req, 
   res.status(204).end();
 });
 
+// Projects
+router.get('/projects', async (req, res) => {
+  const pool = await getPool();
+  const { category } = req.query;
+  
+  let query = `
+    SELECT p.id, p.title, p.category, p.created_at AS createdAt, p.updated_at AS updatedAt,
+            (SELECT pi.image_url FROM project_images pi WHERE pi.project_id=p.id AND pi.is_cover=1 ORDER BY pi.id ASC LIMIT 1) AS coverImage
+     FROM projects p
+  `;
+  
+  const params = [];
+  if (category && category !== 'all') {
+    query += ' WHERE p.category = ?';
+    params.push(category);
+  }
+  
+  query += ' ORDER BY p.created_at DESC, p.id DESC';
+  
+  const [rows] = await pool.query(query, params);
+  res.json(rows);
+});
+
+router.get('/projects/:id', param('id').isInt({ min: 1 }), validate, async (req, res) => {
+  const pool = await getPool();
+  const { id } = req.params;
+  const cacheKey = `project:${id}`;
+  const cached = newsCache.get(cacheKey);
+  if (cached) {
+    return res.json(cached);
+  }
+  const [[item]] = await pool.query(
+    'SELECT id, title, description, category, created_at AS createdAt, updated_at AS updatedAt FROM projects WHERE id=?',
+    [id]
+  );
+  if (!item) return res.status(404).json({ error: 'Not found' });
+  const [images] = await pool.query('SELECT id, image_url AS imageUrl, is_cover AS isCover FROM project_images WHERE project_id=? ORDER BY is_cover DESC, id ASC', [id]);
+  const [details] = await pool.query('SELECT detail_key AS `key`, detail_value AS value FROM project_details WHERE project_id=? ORDER BY id ASC', [id]);
+  const description = normalizeDescription(item.description);
+  const payload = {
+    id: item.id,
+    title: item.title,
+    category: item.category,
+    createdAt: item.createdAt,
+    updatedAt: item.updatedAt,
+    description,
+    images,
+    details
+  };
+  newsCache.set(cacheKey, payload);
+  res.json(payload);
+});
+
+router.post(
+  '/projects',
+  uploadMany.array('imageFiles', 20),
+  body('title').isString().trim().isLength({ min: 1, max: 255 }),
+  body('category').isIn(['major_projects', 'replacement_renovation', 'geographical_region']),
+  body('descriptionJson').optional({ nullable: true }).isString(),
+  body('detailsJson').optional({ nullable: true }).isString(),
+  validate,
+  async (req, res) => {
+    const pool = await getPool();
+    const { title, category } = req.body;
+    let description = null;
+    if (req.body.descriptionJson) {
+      try {
+        const parsed = JSON.parse(req.body.descriptionJson);
+        if (!Array.isArray(parsed)) throw new Error('Description must be an array');
+        description = JSON.stringify(parsed);
+      } catch (e) {
+        return res.status(400).json({ error: 'Invalid descriptionJson' });
+      }
+    }
+
+    const [result] = await pool.query(
+      'INSERT INTO projects (title, description, category) VALUES (?, ?, ?)',
+      [title, description, category]
+    );
+    const projectId = result.insertId;
+
+    // Build images from uploads and URLs
+    const imageUrls = [];
+    if (req.files && req.files.length) {
+      for (const f of req.files) imageUrls.push(`/uploads/${f.filename}`);
+    }
+    const rawUrls = req.body['imageUrls[]'] || req.body.imageUrls || req.body.imageUrl;
+    if (rawUrls) {
+      const urls = Array.isArray(rawUrls) ? rawUrls : [rawUrls];
+      for (const u of urls) {
+        const url = (u || '').toString().trim();
+        if (url) imageUrls.push(url);
+      }
+    }
+    if (imageUrls.length) {
+      const values = imageUrls.map((u, index) => [projectId, u, index === 0 ? 1 : 0]); // First image as cover
+      await pool.query('INSERT INTO project_images (project_id, image_url, is_cover) VALUES ? ', [values]);
+    }
+
+    // Add project details
+    if (req.body.detailsJson) {
+      try {
+        const details = JSON.parse(req.body.detailsJson);
+        if (Array.isArray(details)) {
+          for (const detail of details) {
+            if (detail.key && detail.value) {
+              await pool.query('INSERT INTO project_details (project_id, detail_key, detail_value) VALUES (?, ?, ?)', 
+                [projectId, detail.key, detail.value]);
+            }
+          }
+        }
+      } catch (e) {
+        // Continue without details if invalid
+      }
+    }
+
+    const [images] = await pool.query('SELECT id, image_url AS imageUrl, is_cover AS isCover FROM project_images WHERE project_id=? ORDER BY is_cover DESC, id ASC', [projectId]);
+    const [details] = await pool.query('SELECT detail_key AS `key`, detail_value AS value FROM project_details WHERE project_id=? ORDER BY id ASC', [projectId]);
+    const item = {
+      id: projectId,
+      title,
+      description: normalizeDescription(description),
+      images,
+      details
+    };
+    broadcast('projects:update', { type: 'created', item });
+    // populate cache immediately
+    newsCache.set(`project:${projectId}`, item);
+    res.status(201).json(item);
+  }
+);
+
+router.put(
+  '/projects/:id',
+  uploadMany.array('imageFiles', 20),
+  param('id').isInt({ min: 1 }),
+  body('title').isString().trim().isLength({ min: 1, max: 255 }),
+  body('category').isIn(['major_projects', 'replacement_renovation', 'geographical_region']),
+  body('descriptionJson').optional({ nullable: true }).isString(),
+  body('detailsJson').optional({ nullable: true }).isString(),
+  body('existingImageUrlsJson').optional({ nullable: true }).isString(),
+  validate,
+  async (req, res) => {
+    const pool = await getPool();
+    const { id } = req.params;
+    const { title, category } = req.body;
+    let description = null;
+    if (req.body.descriptionJson) {
+      try {
+        const parsed = JSON.parse(req.body.descriptionJson);
+        if (!Array.isArray(parsed)) throw new Error('Description must be an array');
+        description = JSON.stringify(parsed);
+      } catch (e) {
+        return res.status(400).json({ error: 'Invalid descriptionJson' });
+      }
+    }
+
+    // Update main project record
+    await pool.query(
+      'UPDATE projects SET title=?, description=' + (description === null ? 'description' : '?') + ', category=? WHERE id=?',
+      description === null ? [title, category, id] : [title, description, category, id]
+    );
+
+    // Manage images: keep some, add new
+    const [existing] = await pool.query('SELECT id, image_url, is_cover FROM project_images WHERE project_id=?', [id]);
+    let keepSet = new Set(existing.map((r) => r.image_url));
+    if (req.body.existingImageUrlsJson) {
+      try {
+        const keep = JSON.parse(req.body.existingImageUrlsJson);
+        if (Array.isArray(keep)) keepSet = new Set(keep.map((u) => (u || '').toString().trim()).filter(Boolean));
+      } catch {}
+    }
+    // Delete ones not kept
+    for (const row of existing) {
+      if (!keepSet.has(row.image_url)) {
+        // remove local file if under uploads
+        if (row.image_url && row.image_url.startsWith('/uploads/')) {
+          const abs = path.resolve(__dirname, '..', row.image_url.replace(/^\//, ''));
+          fs.existsSync(abs) && fs.unlink(abs, () => {});
+        }
+        await pool.query('DELETE FROM project_images WHERE id=?', [row.id]);
+      }
+    }
+    // Add new ones
+    const imageUrls = [];
+    if (req.files && req.files.length) {
+      for (const f of req.files) imageUrls.push(`/uploads/${f.filename}`);
+    }
+    const rawUrls = req.body['imageUrls[]'] || req.body.imageUrls || req.body.imageUrl;
+    if (rawUrls) {
+      const urls = Array.isArray(rawUrls) ? rawUrls : [rawUrls];
+      for (const u of urls) {
+        const url = (u || '').toString().trim();
+        if (url) imageUrls.push(url);
+      }
+    }
+    if (imageUrls.length) {
+      const values = imageUrls.map((u) => [id, u, 0]); // New images not cover by default
+      await pool.query('INSERT INTO project_images (project_id, image_url, is_cover) VALUES ? ', [values]);
+    }
+
+    // Update project details
+    await pool.query('DELETE FROM project_details WHERE project_id=?', [id]);
+    if (req.body.detailsJson) {
+      try {
+        const details = JSON.parse(req.body.detailsJson);
+        if (Array.isArray(details)) {
+          for (const detail of details) {
+            if (detail.key && detail.value) {
+              await pool.query('INSERT INTO project_details (project_id, detail_key, detail_value) VALUES (?, ?, ?)', 
+                [id, detail.key, detail.value]);
+            }
+          }
+        }
+      } catch (e) {
+        // Continue without details if invalid
+      }
+    }
+
+    const [[projectRow]] = await pool.query(
+      'SELECT id, title, description FROM projects WHERE id=?',
+      [id]
+    );
+    const [images] = await pool.query('SELECT id, image_url AS imageUrl, is_cover AS isCover FROM project_images WHERE project_id=? ORDER BY is_cover DESC, id ASC', [id]);
+    const [details] = await pool.query('SELECT detail_key AS `key`, detail_value AS value FROM project_details WHERE project_id=? ORDER BY id ASC', [id]);
+    const item = {
+      id: Number(id),
+      title: projectRow.title,
+      description: normalizeDescription(projectRow.description),
+      images,
+      details
+    };
+    broadcast('projects:update', { type: 'updated', item });
+    // invalidate + set fresh cache
+    newsCache.set(`project:${id}`, item);
+    res.json(item);
+  }
+);
+
+router.delete('/projects/:id', param('id').isInt({ min: 1 }), validate, async (req, res) => {
+  const pool = await getPool();
+  const { id } = req.params;
+  // remove local image files
+  const [images] = await pool.query('SELECT image_url FROM project_images WHERE project_id=?', [id]);
+  for (const row of images) {
+    if (row.image_url && row.image_url.startsWith('/uploads/')) {
+      const abs = path.resolve(__dirname, '..', row.image_url.replace(/^\//, ''));
+      fs.existsSync(abs) && fs.unlink(abs, () => {});
+    }
+  }
+  await pool.query('DELETE FROM projects WHERE id=?', [id]);
+  broadcast('projects:update', { type: 'deleted', id: Number(id) });
+  newsCache.del(`project:${id}`);
+  res.status(204).end();
+});
+
 module.exports = router;
 
 
