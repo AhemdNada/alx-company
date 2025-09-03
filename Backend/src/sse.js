@@ -14,7 +14,7 @@ function sseHandler(req, res) {
 function broadcast(event, data) {
   const payload = `event: ${event}\n` + `data: ${JSON.stringify(data)}\n\n`;
   for (const c of clients) {
-    try { c.res.write(payload); } catch (e) { /* ignore */ }
+    try { c.res.write(payload); } catch (e) { }
   }
 }
 

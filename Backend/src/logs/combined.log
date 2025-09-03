@@ -178,3 +178,16 @@
 {"contactId":15,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:41"}
 {"contactId":14,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:41"}
 {"contactId":13,"level":"info","message":"Contact deleted successfully","service":"apc-backend","timestamp":"2025-09-01 10:11:42"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-02 01:31:27"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-02 01:31:27"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-02 01:31:27"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-02 18:45:40"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-02 18:45:40"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-02 18:45:40"}
+{"contactId":12,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-09-03 00:14:52"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-03 02:18:19"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-03 02:18:19"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-03 02:18:19"}
+{"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-03 02:25:41"}
+{"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-03 02:25:41"}
+{"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-03 02:25:41"}
