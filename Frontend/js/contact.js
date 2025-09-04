@@ -21,7 +21,7 @@
     el.classList.remove('alert-success', 'alert-error');
   }
 
-  // API base URL - works when frontend is served by backend on port 4000
+  // API 
   const API_BASE = ((window && window.API_BASE) ? window.API_BASE : '/api').replace(/\/$/, '');
 
   onReady(() => {

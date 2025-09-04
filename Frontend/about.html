@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/about.css">
 </head>
 <body class="font-sans antialiased">
+    <!-- Start Nav Bar -->
   <nav class="bg-white shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90" role="navigation" aria-label="Main navigation">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-20 items-center">
@@ -90,8 +91,9 @@
           </div>
       </div>
   </nav>
-
+  <!-- End Nav Bar -->
   <main>
+    <!-- Start Page Header -->
       <section class="relative bg-gradient-to-br from-blue-50 to-white" aria-labelledby="page-heading">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
               <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
@@ -99,6 +101,8 @@
                       <h1 id="page-heading" class="text-3xl md:text-5xl font-extrabold text-gray-800">
                           About <span class="text-blue-600">Us</span>
                       </h1>
+                      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-4 rounded-full"></div>
+
                       <p class="mt-3 text-gray-600 max-w-2xl">Learn about APC: who we are, our sharing rates, and our role in supporting the national economy.</p>
                   </div>
                   <nav aria-label="Breadcrumb">
@@ -111,7 +115,8 @@
               </div>
           </div>
       </section>
-
+      <!-- End Page Header -->
+      <!-- Start Who We Are -->
       <section class="py-12 bg-white" aria-labelledby="who-we-are-heading">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
@@ -151,7 +156,8 @@
               </div>
           </div>
       </section>
-
+      <!-- End Who We Are -->
+      <!-- Start Sharing Rates -->
       <section class="py-12 bg-gray-50" aria-labelledby="sharing-rates-heading">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div class="md:flex md:items-end md:justify-between gap-6">
@@ -163,7 +169,8 @@
               <div id="sharing-grid" class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-6"></div>
           </div>
       </section>
-
+      <!-- End Sharing Rates -->
+      <!-- Start Our Role -->
       <section class="py-12 bg-white" id="our-role" aria-labelledby="our-role-heading">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div class="text-center md:text-left">
@@ -200,7 +207,8 @@
               </div>
           </div>
       </section>
-
+      <!-- End Our Role -->
+      <!-- Start History -->
       <section class="py-12 bg-gray-50" aria-labelledby="history-heading">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div class="text-center md:text-left">
@@ -317,7 +325,8 @@
               </div>
           </div>
       </section>
-
+      <!-- End History -->
+      <!-- Start ISO Certifications -->
       <section class="py-12 bg-white" id="iso-certifications" aria-labelledby="iso-heading">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div class="text-center md:text-left">
@@ -504,7 +513,8 @@
               </div>
           </div>
       </section>
-
+      <!-- End ISO Certifications -->
+      <!-- Start Our Chairmen -->
       <section class="py-12 bg-gray-50" aria-labelledby="chairmen-heading">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div class="text-center md:text-left">
@@ -524,7 +534,8 @@
               </div>
           </div>
       </section>
-
+      <!-- End Our Chairmen -->
+      <!-- Start Environmental Management -->
       <section class="py-12 bg-white" id="environmental-managment" aria-labelledby="environmental-heading">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div class="text-center md:text-left">
@@ -560,131 +571,126 @@
               </div>
           </div>
       </section>
+      <!-- End Environmental Management -->
+      <!-- Start FAQs -->
+      <section class="py-12 bg-gray-50" aria-labelledby="faq-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center md:text-left">
+                <h2 id="faq-heading" class="text-3xl md:text-4xl font-extrabold text-gray-800">FAQs — Used Lubricating Oil</h2>
+            </div>
 
- <!-- Section: FAQs (Used Lubricating Oil) -->
- <section class="py-12 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center md:text-left">
-      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800">FAQs — Used Lubricating Oil</h1>
-    </div>
+            <div class="mt-8 space-y-4">
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center" aria-expanded="false" aria-controls="faq-answer-1">
+                        <span class="font-semibold text-gray-800">What is used lubricating oil?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-answer-1" class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed space-y-3">
+                            <p>Lubricants are generally produced from the basestocks refined from the heavy fractions of crude oil or other hydrocarbons, to which various additives are blended.</p>
+                            <p>Lubricants are used for a wide range of applications, including: engine and transmission lubricants fluids, metal, working fluids, insulating and process fluids and greases.</p>
+                            <p>During service in these applications, part or all of the lubricant may be consumed in the process, The balance tends to become contaminated with substances such as water, metal particles, rust, dirt, carbon and lead, and with other by-products of the combustion or the industrial process.</p>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="mt-8 space-y-4">
-      <!-- FAQ 1 -->
-      <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
-        <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center">
-          <span class="font-semibold text-gray-800">What is used lubricating oil?</span>
-          <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-          <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed space-y-3">
-            <p>Lubricants are generally produced from the basestocks refined from the heavy fractions of crude oil or other hydrocarbons, to which various additives are blended.</p>
-            <p>Lubricants are used for a wide range of applications, including: engine and transmission lubricants fluids, metal, working fluids, insulating and process fluids and greases.</p>
-            <p>During service in theses applications, part or all of the lubricant may be consumed in the process, The balance tends to become contaminated with substances such as water, metal particles, rust, dirt, carbon and lead, and with other by-products of the combustion or the industrial process.</p>
-          </div>
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center" aria-expanded="false" aria-controls="faq-answer-2">
+                        <span class="font-semibold text-gray-800">Why recycle used lubricating oil?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-answer-2" class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed space-y-3">
+                            <p>Used lubricating oil has an inherent value. To save scarce resources, this inherent value should be recovered, where this is economically justified. This allows recycling of the used lubricating oil back to lubricants, or their conversion into products such as furnace fuels, power station start-up fuels, and diesel fuel extenders.</p>
+                            <p>On the other hand, dumping of used lubricating oil, or any other environmentally unsound disposal practice, can lead to the contamination of soil, air and groundwater.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center" aria-expanded="false" aria-controls="faq-answer-3">
+                        <span class="font-semibold text-gray-800">Facts about used oil</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-answer-3" class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>The damage used oil causes comes from mismanagement.</li>
+                                <li>Re-refining used oil takes only about one-third the energy of refining crude oil to lubricant quality.</li>
+                                <li>One gallon of used oil used as fuel contains about 140,000 Btu of energy.</li>
+                                <li>A gallon of used oil from a single oil change can ruin a million gallons of fresh water - a year's supply for 50 people.</li>
+                                <li>Concentrations of 50 to 100 parts per million (ppm) of used oil can foul sewage treatment processes.</li>
+                                <li>Films of oil on the surface of water prevent the replenishment of dissolved oxygen, impair photosynthetic processes, and block sunlight.</li>
+                                <li>Oil dumped onto land reduces soil productivity.</li>
+                                <li>Toxic effects of used oil on freshwater and marine organisms vary, but significant long-term effects have been found at concentrations of 310 ppm in several freshwater fish species and as low as 1 ppm in marine life forms.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center" aria-expanded="false" aria-controls="faq-answer-4">
+                        <span class="font-semibold text-gray-800">What should lubricant users do with their used lubricating oil?</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-answer-4" class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed space-y-3">
+                            <p>Lubricating oil users should ensure that any used oil generated by their operations is stored securely and safely, and collected on a regular basis. Long term storage is discouraged. In addition:</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Consideration should be given to bunding systems, impervious storage compounds, and sheltered or weatherproof storage.</li>
+                                <li>Different types of used oil should be segregated when they are stored. The mixing of used oil with other contaminants can create fire and health hazards, and should be avoided.</li>
+                                <li>Users should organise for the collection of the used oil by a collector that is licensed, or otherwise authorised to collect and transport used oil.</li>
+                                <li>Users should specify that such a collector transports the used oil to a licensed facility, such as a recycling plant, or other facility lawfully entitled to receive it.</li>
+                                <li>Householders with small amount of used lubricating oil should check with their local councils as to which waste transfer centers accept used oil, or whether there are other collection points or services are available in their areas.</li>
+                            </ul>
+                            <p>In particular, the following disposal processes should be avoided:</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Uncontrolled dumping (outside authorised dumping facilities) on land, or into sewage systems or waterways.</li>
+                                <li>Dumping in household waste disposal wheelie bins.</li>
+                                <li>Unauthorised use as a dust suppressant.</li>
+                                <li>Use as a low-temperature burner fuel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center" aria-expanded="false" aria-controls="faq-answer-5">
+                        <span class="font-semibold text-gray-800">Re-refining of used oil</span>
+                        <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-answer-5" class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed space-y-3">
+                            <p>The problem of re-refining used oil lies in the process of collecting it from its different resources, which in turn guarantee the availability of the feed necessarily for units operations. The oil sector has made good steps to collect the used oil which can be summarized as follows:</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Cooperation Petroleum Company and Misr Petroleum Company are charged of collecting used oil from distributing companies.</li>
+                                <li>Establishing Petrotrade Company to collect used oil from all resources so as to increase the amount of collected oil.</li>
+                                <li>Obliging service stations to establish land tanks for collecting used oil.</li>
+                                <li>Distributing companies have established central collection tanks in the governments for collecting used oil to be supplied to Alexandria Petroleum Company.</li>
+                                <li>Conviction of dealing with used oil in faulty ways and not delivering them to the authorized parties, this is in the light of the Environmental Law 4/1994, which has listed lubricating used oil among the hazardous material which is banned to be used unless there is license from the specialized administrative party, after the approval of the Environmental affair Organization.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- FAQ 2 -->
-      <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
-        <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center">
-          <span class="font-semibold text-gray-800">Why recycle used lubricating oil?</span>
-          <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-          <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed space-y-3">
-            <p>Used lubricating oil has an inherent value. To save scarce resources, this inherent value shoud be recoverd, where this is economically justified. This allowes recycling of the used lubricating oil back to lubricants, or their conversion into products such as furance fuels, power station start-up fuels, and diesel fuel extenders.</p>
-            <p>On the other hand, dumping of used lubricating oil, or any other enviromentally unsound disposal practice, can lead of the contamination of soil, air and groundwater.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 3 -->
-      <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
-        <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center">
-          <span class="font-semibold text-gray-800">Facts about used oil</span>
-          <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-          <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed">
-            <ul class="list-disc list-inside space-y-2">
-              <li>The damage used oil causes comes from mismanagement.</li>
-              <li>Re-refining used oil takes only about one-third the energy of refining crude oil to lubricant quality.</li>
-              <li>One gallon of used oil used as fuel contains about 140.000 Btu of energy.</li>
-              <li>A gallon of used oil from a single oil change can ruin a million gallons of fresh water - a year's supply for 50 people.</li>
-              <li>Concentrations of 50 to 100 parts per million (ppm) of used oil can foul sewage treatment processes.</li>
-              <li>Films of oil on the surface of water prevent the replenishment of dissolved oxygen, impair photosynthetic processes, and block sunlight.</li>
-              <li>Oil dumped onto land reduces soil productivity.</li>
-              <li>Toxic effects of used oil on freshwater and marine organisms vary, but significant longterm effects have been found at concentrations of 310 ppm in several freshwater fish species and as low as 1 ppm in marinelife forms.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 4 -->
-      <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
-        <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center">
-          <span class="font-semibold text-gray-800">What shoud lubricant users do with their used lubricating oil ?</span>
-          <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-          <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed space-y-3">
-            <p>Lubricating oil users shoud ensure that any used oil generated by their operations is stord securely and safely, and collected on a regular basis. Long term storage is discouraged. In addition:</p>
-            <ul class="list-disc list-inside space-y-2">
-              <li>Consideration shoud be given to bunding systems, impervious storage compounds, and sheltered or weatherproof storage.</li>
-              <li>Different types of used oil shoud be segregated when they are stored. The mixing of used oil with other cotaminants can create fire and health hazards, and shoud be avoided.</li>
-              <li>Users shoud organise for the collection of the used oil by a collector that is licensed, or otherwise authorised to collect and transport used oil.</li>
-              <li>Users shoud specify that such a collector transports the used oil to a licensed facility, such as a recycling plant, or other facility lawfully entitled to receive it.</li>
-              <li>Householders with small amount of used lubricating oil shoud check with their local councils as to which waste transfer centers accept used oil, or whether there are other collection points or services are available in their areas.</li>
-            </ul>
-            <p>In particular, the following disposal processed shoud be avoided:</p>
-            <ul class="list-disc list-inside space-y-2">
-              <li>Uncontrolled dumping (outside authorised dumping facilities) on land, or into sewage systems or waterways.</li>
-              <li>Dumping in household waste disposal wheelie bins.</li>
-              <li>Unauthorised use a dust suppressant.</li>
-              <li>Use as a low-temperature burner fuel</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 5 -->
-      <div class="faq-item bg-white rounded-lg shadow-md overflow-hidden">
-        <button class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-300 flex justify-between items-center">
-          <span class="font-semibold text-gray-800">Re-refining of used oil</span>
-          <svg class="faq-icon w-5 h-5 text-gray-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-          <div class="px-6 py-4 bg-white text-gray-600 leading-relaxed space-y-3">
-            <p>The problem of re-refining used oil lies in the process of collecting it from its diferent resources, which in turn guarantee the availability of the feed necessarily for units operations. The oil sector has made good steps to collect the used oil which can be summarized as follows:</p>
-            <ul class="list-disc list-inside space-y-2">
-              <li>Cooperation Petroleum Company and Misr Petroleum Company are charged of collecting used oil from distributing companies.</li>
-              <li>Establishing Petrotrade Company to collect used oil from all resources so as to increase the amount of collected oil.</li>
-              <li>Obliging service stations to establish land tanks for collecting used oil.</li>
-              <li>Distributing companies have established central collection tanks in the governments for collecting used oil to be supplied to Alexandria Petroleum Company.</li>
-              <li>Conviction of dealing with used oil in faulty ways and not delivering them to the authorized parties, this is in the light of the Enviromental Law 4/1994, which has listed lubricating used oil among the hazardous material which is banned to be used unless there is license from the specialized administrative party, after the approval of the Enviromental affair Organization.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+    </section>
+    <!-- End FAQs -->
+    <!-- Start Footer -->
   <footer class="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
-        <!-- Brand -->
+        
         <div>
           <a href="#" class="inline-flex items-center text-2xl font-extrabold tracking-tight">
             <img src="images/logo.png" alt="Logo" class="w-16 h-16 object-contain" />
@@ -694,7 +700,7 @@
           </p>
         </div>
 
-        <!-- Useful Links -->
+        
         <div>
           <h3 class="text-white font-semibold text-lg mb-4">Useful Links</h3>
           <ul class="space-y-3 text-sm">
@@ -703,12 +709,12 @@
             <li><a href="projects.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Projects</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
             <li><a href="products.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Products</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
             <li><a href="services.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Services</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Units</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Contact</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li><a href="units.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Units</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li><a href="contact.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Contact</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
           </ul>
         </div>
 
-        <!-- Contact -->
+        
         <div class="md:col-span-2 lg:col-span-2">
           <h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
           <ul class="space-y-3 text-sm">
@@ -737,8 +743,8 @@
       </div>
     </div>
   </footer>
-
-  <!-- Mobile menu overlay -->
+  <!-- End Footer -->
+  <!-- Mobile overlay -->
   <div class="mobile-menu-overlay"></div>
 
   <!-- Mobile menu -->

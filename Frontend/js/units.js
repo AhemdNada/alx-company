@@ -1,4 +1,4 @@
-// Units Page Modal Functionality
+// Modal
 class ImageModal {
     constructor({
         modalId = 'imageModal',
@@ -13,7 +13,7 @@ class ImageModal {
         this.closeBtn = this.modal?.querySelector(closeSelector);
         this.triggerSelector = triggerSelector;
 
-        // Bind handlers (so we can remove them later if needed)
+        
         this.handleKeyDown = this.handleKeyDown.bind(this);
         this.handleModalClick = this.handleModalClick.bind(this);
 
@@ -27,7 +27,7 @@ class ImageModal {
         this.addModalListeners();
         this.addKeyboardListener();
 
-        // Accessibility attributes
+        // Accessibility 
         this.modal.setAttribute('role', 'dialog');
         this.modal.setAttribute('aria-hidden', 'true');
     }
@@ -78,15 +78,15 @@ class ImageModal {
         this.modal.style.display = 'block';
         this.modal.setAttribute('aria-hidden', 'false');
 
-        // Trigger animation
+       
         requestAnimationFrame(() => {
             this.modal.classList.add('show');
         });
 
-        // Prevent body scroll
+        
         document.body.style.overflow = 'hidden';
 
-        // Move focus to modal for accessibility
+       
         this.modal.focus();
     }
 
@@ -94,14 +94,14 @@ class ImageModal {
         this.modal.classList.remove('show');
         this.modal.setAttribute('aria-hidden', 'true');
 
-        // Get CSS transition duration dynamically
+        
         const duration = parseFloat(getComputedStyle(this.modal).transitionDuration) * 1000 || 300;
 
         setTimeout(() => {
             this.modal.style.display = 'none';
             document.body.style.overflow = '';
 
-            // Restore focus to last focused element
+            
             if (this.lastFocusedElement) {
                 this.lastFocusedElement.focus();
             }
@@ -115,7 +115,7 @@ class ImageModal {
     }
 }
 
-// Initialize modal when DOM is loaded
+
 document.addEventListener('DOMContentLoaded', () => {
     new ImageModal();
 });

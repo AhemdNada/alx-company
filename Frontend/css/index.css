@@ -262,13 +262,29 @@
         padding: 1rem;
     }
     
+    .unit-card .flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .unit-card .flex-shrink-0 {
+        margin-bottom: 1rem;
+        margin-right: 0;
+        align-self: center;
+    }
+    
     .unit-card .w-16.h-16 {
-        width: 3rem;
-        height: 3rem;
+        width: 4rem;
+        height: 4rem;
     }
     
     .unit-card h3 {
         font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .unit-card p {
+        text-align: center;
     }
 }
 
@@ -280,6 +296,18 @@
     
     .unit-card .flex-shrink-0 {
         margin-bottom: 1rem;
+        margin-right: 0;
+        align-self: center;
+    }
+    
+    .unit-card .w-16.h-16 {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    
+    .unit-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
     }
 }
 /* End Unit Cards */

@@ -1,4 +1,4 @@
-// Projects page filtering + hover interactions
+//filtering 
 (function(){
   const API = ((window && window.API_BASE) ? window.API_BASE : '/api').replace(/\/$/, '');
   let projects = [];
@@ -28,7 +28,7 @@
     }
 
     grid.innerHTML = filteredProjects.map(project => {
-      const coverImage = project.coverImage || 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2070&q=80';
+      const coverImage = project.coverImage || 'https://static.thenounproject.com/png/loading-error-icon-482114-512.png';
       const description = project.description && project.description.length > 0 && project.description[0].paragraphs && project.description[0].paragraphs.length > 0 
         ? project.description[0].paragraphs[0] 
         : '';
@@ -62,7 +62,7 @@
       `;
     }).join('');
 
-    // Add click handlers
+    // click handlers
     document.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('click', () => {
         const projectId = card.getAttribute('data-id');
@@ -88,7 +88,7 @@
   });
   }
 
-  // Initialize
+  
   loadProjects();
 })();
 

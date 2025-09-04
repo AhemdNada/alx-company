@@ -1,4 +1,4 @@
-/* Modal Styles */
+/* Modal Style */
 .modal {
     display: none;
     position: fixed;
@@ -73,7 +73,7 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* View larger button styles */
+/* View larger button  */
 .view-larger-btn {
     cursor: pointer;
     transition: all 0.3s ease;
@@ -84,7 +84,7 @@
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-/* Unit card styles to ensure buttons stay at bottom */
+
 .unit-card {
     display: flex;
     flex-direction: column;
@@ -106,7 +106,7 @@
     margin-top: auto !important;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .modal-content {
         max-width: 95%;
