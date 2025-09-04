@@ -1,9 +1,9 @@
-// Gas Sector sliders
+// sliders
 (function(){
   function attachSlider(trackId, prevId, nextId, dotsId){
     var track = document.getElementById(trackId);
     if (!track) return;
-    var container = track.parentElement; // viewport with overflow-hidden & slider-draggable
+    var container = track.parentElement; 
     var slides = Array.prototype.slice.call(track.children);
     var total = slides.length;
     var index = 0;
@@ -32,7 +32,7 @@
     if (nextBtn) nextBtn.addEventListener('click', function(){ next(); });
     if (dotsWrap) dots.forEach(function(d, i){ d.addEventListener('click', function(){ goTo(i); }); });
 
-    // swipe/drag with real-time dragging
+    // swipe/drag
     var startX=0, down=false, startTransform=0;
     function onPointerDown(e){
       down = true;
@@ -84,7 +84,7 @@
   attachSlider('gc5-slider','gc5-prev','gc5-next','gc5-dots');
   attachSlider('gc6-slider','gc6-prev','gc6-next','gc6-dots');
 
-  // Smooth scroll for in-page quick links (fallback if CSS not supported)
+
   document.querySelectorAll('a[data-scroll]')
     .forEach(function(a){ a.addEventListener('click', function(e){ var href=a.getAttribute('href')||''; if(href.charAt(0) !== '#') return; e.preventDefault(); var el=document.getElementById(href.slice(1)); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); }); });
 })();

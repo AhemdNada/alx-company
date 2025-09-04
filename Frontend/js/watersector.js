@@ -1,4 +1,3 @@
-// Water Sector sliders & smooth scroll
 (function(){
   function attachSlider(trackId, prevId, nextId, dotsId){
     var track = document.getElementById(trackId);

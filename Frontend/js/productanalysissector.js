@@ -1,9 +1,8 @@
-// Products Analysis Sector sliders & smooth scroll
 (function(){
   function attachSlider(trackId, prevId, nextId, dotsId){
     var track = document.getElementById(trackId);
     if (!track) return;
-    var container = track.parentElement; // viewport
+    var container = track.parentElement; 
     var total = track.children.length;
     var index = 0;
     var prevBtn = document.getElementById(prevId);

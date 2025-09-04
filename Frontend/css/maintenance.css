@@ -1,5 +1,5 @@
-/* Page specific styles for maintenance cards and sliders */
-.service-card { /* now styled via Tailwind classes in markup; keep only shared slider styles here */ }
+
+.service-card { }
 .card-media { position: relative; overflow: hidden; }
 .card-slider {
   position: relative;
@@ -56,6 +56,5 @@
 .card-list { list-style: disc; padding-left: 1.25rem; color: #4b5563; }
 .card-list li { margin-bottom: 0.4rem; }
 
-/* Responsive */
-/* heights managed by Tailwind utility classes on container */
+
 

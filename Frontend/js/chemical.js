@@ -1,5 +1,5 @@
 
-// Tab interactions for Chemical Laboratories page
+// Tab interactions 
 (function () {
     function onReady(fn) {
         if (document.readyState === 'loading') {
@@ -43,7 +43,7 @@
             });
         });
 
-        // Hash-based deep linking (?tab=research or #research)
+        
         const params = new URLSearchParams(window.location.search);
         const queryTab = params.get('tab');
         const hashTab = window.location.hash?.replace('#', '');

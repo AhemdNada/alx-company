@@ -3,25 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maintenance Services</title>
+  <title>Maintenance Services | Alexandria Petroleum Company</title>
+  <meta name="description" content="Maintenance services at Alexandria Petroleum Company: machining, metal working, heat exchangers, piping fabrication, sheet metal working, and valves testing & maintenance.">
+  <meta name="keywords" content="Alexandria Petroleum Company maintenance, machining, metal working, heat exchanger, piping fabrication, valves maintenance, Egypt petroleum">
+  <meta name="author" content="Alexandria Petroleum Company">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Maintenance Services | Alexandria Petroleum Company">
+  <meta property="og:description" content="Explore APC's maintenance services: machining, metal working, heat exchangers, piping, sheet metal, and valves maintenance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alx-pc.com/maintenance.html">
+  <meta property="og:image" content="https://alx-pc.com/images/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maintenance Services | Alexandria Petroleum Company">
+  <meta name="twitter:description" content="Comprehensive maintenance services across machining, piping, exchangers, and more.">
+
+  <link rel="canonical" href="https://alx-pc.com/maintenance.html">
+  <link rel="icon" href="images/logo.png" />
+
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/maintenance.css">
-  <link rel="icon" href="images/logo.png" />
 </head>
 <body class="font-sans antialiased bg-gray-50 text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90">
+    <!-- Start Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90" role="navigation" aria-label="Main navigation">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-20 items-center">
               <!-- Logo -->
               <div class="flex-shrink-0 flex items-center">
-                  <a href="index.html" class="flex items-center space-x-3">
+                  <a href="index.html" class="flex items-center space-x-3" aria-label="Alexandria Petroleum Company home">
                       <div class="block w-16 h-16 overflow-hidden">
                           <img src="images/logo.png" 
-                              alt="Logo" 
-                              class="w-full h-full object-contain" />
+                              alt="Alexandria Petroleum Company Logo" 
+                              class="w-full h-full object-contain" loading="lazy" />
                       </div>
                       <div class="flex flex-col">
                           <div class="text-xl font-bold text-center">
@@ -64,30 +86,31 @@
 
               <!-- Search and action buttons -->
               <div class="hidden md:flex md:items-center md:space-x-2">
-                  <button class="p-2 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow">
+                  <button class="p-2 rounded-full text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow" aria-label="Search">
                       <span class="sr-only">Search</span>
-                      <i class="fas fa-search h-4 w-4"></i>
+                      <i class="fas fa-search h-4 w-4" aria-hidden="true"></i>
                   </button>
               </div>
 
               <!-- Mobile menu button -->
               <div class="md:hidden flex items-center">
-                  <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow" aria-expanded="false">
+                  <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-blue-600 hover:bg-gray-100 focus:outline-none transition-slow" aria-expanded="false" aria-label="Open main menu">
                       <span class="sr-only">Open main menu</span>
-                      <i class="fas fa-bars text-xl"></i>
+                      <i class="fas fa-bars text-xl" aria-hidden="true"></i>
                   </button>
               </div>
           </div>
       </div>
   </nav>
+  <!-- End Navigation -->
 
-  <!-- Page Header (aligned with chemical.html style) -->
-  <section class="pt-10 sm:pt-14 pb-10 bg-gradient-to-br from-gray-50 to-white">
+  <!-- Start Page Header -->
+  <section class="pt-10 sm:pt-14 pb-10 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="maintenance-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-8 sm:mb-10">
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div class="text-center sm:text-left">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+            <h1 id="maintenance-heading" class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
               <span class="text-blue-600">Maintenance</span> Services
             </h1>
             <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-300 mt-4 rounded-full mx-auto sm:mx-0"></div>
@@ -97,7 +120,7 @@
               <li>
                 <a href="services.html" class="text-blue-600 hover:text-blue-700 font-medium">Services</a>
               </li>
-              <li class="px-2 text-gray-400">/</li>
+              <li class="px-2 text-gray-400" aria-hidden="true">/</li>
               <li class="text-gray-700 font-semibold" aria-current="page">Maintenance</li>
             </ol>
           </nav>
@@ -105,29 +128,30 @@
       </div>
     </div>
   </section>
+  <!-- End Page Header -->
 
   <main>
-    <!-- Section 1: What We Offer -->
-    <section class="py-16 bg-white">
+    <!-- Start Section: What We Offer -->
+    <section class="py-16 bg-white" aria-labelledby="offer-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h1 class="text-3xl md:text-4xl font-bold">What We Offer</h1>
+          <h2 id="offer-heading" class="text-3xl md:text-4xl font-bold">What We Offer</h2>
           <p class="text-gray-600 mt-3">There are six different kinds of maintenance services that we offer as follows</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Card 1: Machining Work -->
-          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full">
+          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full" aria-labelledby="card1-title">
             <div class="relative overflow-hidden h-56 md:h-72">
-              <div class="card-slider h-full" data-autoplay="5000">
-                <div class="slide active"><img src="images/services/maintenance/1_01.jpg" alt="Machining Work - maintenance"></div>
-                <div class="slide"><img src="images/services/maintenance/1_02.jpg" alt="Machining Work - 1"></div>
-                <div class="slide"><img src="images/services/maintenance/1_03.jpg" alt="Machining Work - 2"></div>
-                <div class="slide"><img src="images/services/maintenance/1_04.jpg" alt="Machining Work - 3"></div>
-                <div class="slide"><img src="images/services/maintenance/1_05.jpg" alt="Machining Work - 4"></div>
+              <div class="card-slider h-full" data-autoplay="5000" role="region" aria-label="Machining Work gallery">
+                <div class="slide active"><img src="images/services/maintenance/1_01.jpg" alt="Machining Work - maintenance" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/1_02.jpg" alt="Machining Work - 1" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/1_03.jpg" alt="Machining Work - 2" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/1_04.jpg" alt="Machining Work - 3" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/1_05.jpg" alt="Machining Work - 4" loading="lazy"></div>
                 <div class="dots" aria-label="Machining Work image navigation"></div>
               </div>
-              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm">Machining Work</span>
+              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm" id="card1-title">Machining Work</span>
             </div>
             <div class="p-4">
               <p class="font-bold text-gray-800 mb-3">Engineering service sector has the capability to Fabricate.</p>
@@ -142,16 +166,16 @@
           </article>
 
           <!-- Card 2: Metal Working -->
-          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full">
+          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full" aria-labelledby="card2-title">
             <div class="relative overflow-hidden h-56 md:h-72">
-              <div class="card-slider h-full" data-autoplay="5000">
-                <div class="slide active"><img src="images/services/maintenance/2_01.jpg" alt="Metal Working - 1"></div>
-                <div class="slide"><img src="images/services/maintenance/2_02.jpg" alt="Metal Working - 2"></div>
-                <div class="slide"><img src="images/services/maintenance/2_03.jpg" alt="Metal Working - 3"></div>
-                <div class="slide"><img src="images/services/maintenance/2_04.jpg" alt="Metal Working - 4"></div>
+              <div class="card-slider h-full" data-autoplay="5000" role="region" aria-label="Metal Working gallery">
+                <div class="slide active"><img src="images/services/maintenance/2_01.jpg" alt="Metal Working - 1" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/2_02.jpg" alt="Metal Working - 2" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/2_03.jpg" alt="Metal Working - 3" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/2_04.jpg" alt="Metal Working - 4" loading="lazy"></div>
                 <div class="dots" aria-label="Metal Working image navigation"></div>
               </div>
-              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm">Metal Working</span>
+              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm" id="card2-title">Metal Working</span>
             </div>
             <div class="p-4">
               <ul class="card-list text-sm leading-relaxed">
@@ -165,17 +189,17 @@
           </article>
 
           <!-- Card 3: Heat Exchanger -->
-          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full">
+          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full" aria-labelledby="card3-title">
             <div class="relative overflow-hidden h-56 md:h-72">
-              <div class="card-slider h-full" data-autoplay="5000">
-                <div class="slide active"><img src="images/services/maintenance/3_01.jpg" alt="Heat Exchanger - 1"></div>
-                <div class="slide"><img src="images/services/maintenance/3_02.jpg" alt="Heat Exchanger - 2"></div>
-                <div class="slide"><img src="images/services/maintenance/3_03.jpg" alt="Heat Exchanger - 3"></div>
-                <div class="slide"><img src="images/services/maintenance/3_04.jpg" alt="Heat Exchanger - 4"></div>
-                <div class="slide"><img src="images/services/maintenance/3_05.jpg" alt="Heat Exchanger - 5"></div>
+              <div class="card-slider h-full" data-autoplay="5000" role="region" aria-label="Heat Exchanger gallery">
+                <div class="slide active"><img src="images/services/maintenance/3_01.jpg" alt="Heat Exchanger - 1" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/3_02.jpg" alt="Heat Exchanger - 2" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/3_03.jpg" alt="Heat Exchanger - 3" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/3_04.jpg" alt="Heat Exchanger - 4" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/3_05.jpg" alt="Heat Exchanger - 5" loading="lazy"></div>
                 <div class="dots" aria-label="Heat Exchanger image navigation"></div>
               </div>
-              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm">Heat Exchanger</span>
+              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm" id="card3-title">Heat Exchanger</span>
             </div>
             <div class="p-4">
               <ul class="card-list text-sm leading-relaxed">
@@ -187,25 +211,26 @@
         </div>
       </div>
     </section>
+    <!-- End Section: What We Offer -->
 
-    <!-- Section 2: More Services -->
-    <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <!-- Start Section: More Services -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="more-services-heading">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-          <h2 class="text-2xl md:text-3xl font-bold">More Maintenance Services</h2>
+          <h2 id="more-services-heading" class="text-2xl md:text-3xl font-bold">More Maintenance Services</h2>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Card 4: Piping Fabrication -->
-          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full">
+          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full" aria-labelledby="card4-title">
             <div class="relative overflow-hidden h-56 md:h-72">
-              <div class="card-slider h-full" data-autoplay="5000">
-                <div class="slide active"><img src="images/services/maintenance/4_01.jpg" alt="Piping Fabrication - 1"></div>
-                <div class="slide"><img src="images/services/maintenance/4_02.jpg" alt="Piping Fabrication - 2"></div>
-                <div class="slide"><img src="images/services/maintenance/4_03.jpg" alt="Piping Fabrication - 3"></div>
+              <div class="card-slider h-full" data-autoplay="5000" role="region" aria-label="Piping Fabrication gallery">
+                <div class="slide active"><img src="images/services/maintenance/4_01.jpg" alt="Piping Fabrication - 1" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/4_02.jpg" alt="Piping Fabrication - 2" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/4_03.jpg" alt="Piping Fabrication - 3" loading="lazy"></div>
                 <div class="dots" aria-label="Piping Fabrication image navigation"></div>
               </div>
-              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm">Piping Fabrication</span>
+              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm" id="card4-title">Piping Fabrication</span>
             </div>
             <div class="p-4">
               <ul class="card-list text-sm leading-relaxed">
@@ -218,15 +243,15 @@
           </article>
 
           <!-- Card 5: Sheet Metal Working -->
-          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full">
+          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full" aria-labelledby="card5-title">
             <div class="relative overflow-hidden h-56 md:h-72">
-              <div class="card-slider h-full" data-autoplay="5000">
-                <div class="slide active"><img src="images/services/maintenance/5_01.jpg" alt="Sheet Metal Working - 1"></div>
-                <div class="slide"><img src="images/services/maintenance/5_02.jpg" alt="Sheet Metal Working - 2"></div>
-                <div class="slide"><img src="images/services/maintenance/5_03.jpg" alt="Sheet Metal Working - 3"></div>
+              <div class="card-slider h-full" data-autoplay="5000" role="region" aria-label="Sheet Metal Working gallery">
+                <div class="slide active"><img src="images/services/maintenance/5_01.jpg" alt="Sheet Metal Working - 1" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/5_02.jpg" alt="Sheet Metal Working - 2" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/5_03.jpg" alt="Sheet Metal Working - 3" loading="lazy"></div>
                 <div class="dots" aria-label="Sheet Metal Working image navigation"></div>
               </div>
-              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm">Sheet Metal Working</span>
+              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm" id="card5-title">Sheet Metal Working</span>
             </div>
             <div class="p-4">
               <p class="text-sm text-gray-700 leading-relaxed">Fabrication of Sheet metal working such as (distillation tower trays with different diameter and size &amp; filters &amp; boilers expansion joints).</p>
@@ -234,16 +259,16 @@
           </article>
 
           <!-- Card 6: Valves Test & Maintenance -->
-          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full">
+          <article class="service-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md ring-1 ring-black/5 transition-all flex flex-col h-full" aria-labelledby="card6-title">
             <div class="relative overflow-hidden h-56 md:h-72">
-              <div class="card-slider h-full" data-autoplay="5000">
-                <div class="slide active"><img src="images/services/maintenance/6_01.jpg" alt="Valves - 1"></div>
-                <div class="slide"><img src="images/services/maintenance/6_02.jpg" alt="Valves - 2"></div>
-                <div class="slide"><img src="images/services/maintenance/6_03.jpg" alt="Valves - 3"></div>
-                <div class="slide"><img src="images/services/maintenance/6_04.jpg" alt="Valves - 4"></div>
+              <div class="card-slider h-full" data-autoplay="5000" role="region" aria-label="Valves Test and Maintenance gallery">
+                <div class="slide active"><img src="images/services/maintenance/6_01.jpg" alt="Valves - 1" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/6_02.jpg" alt="Valves - 2" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/6_03.jpg" alt="Valves - 3" loading="lazy"></div>
+                <div class="slide"><img src="images/services/maintenance/6_04.jpg" alt="Valves - 4" loading="lazy"></div>
                 <div class="dots" aria-label="Valves image navigation"></div>
               </div>
-              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm">Valves Test &amp; Maintenance</span>
+              <span class="absolute top-3 left-3 inline-flex items-center px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-semibold shadow ring-1 ring-black/10 backdrop-blur-sm" id="card6-title">Valves Test &amp; Maintenance</span>
             </div>
             <div class="p-4">
               <ul class="card-list text-sm leading-relaxed">
@@ -256,15 +281,17 @@
         </div>
       </div>
     </section>
+    <!-- End Section: More Services -->
   </main>
-  <!-- Footer -->
+
+  <!-- Start Footer -->
   <footer class="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
         <!-- Brand -->
         <div>
           <a href="#" class="inline-flex items-center text-2xl font-extrabold tracking-tight">
-            <img src="images/logo.png" alt="Logo" class="w-16 h-16 object-contain" />
+            <img src="images/logo.png" alt="Alexandria Petroleum Company Logo" class="w-16 h-16 object-contain" loading="lazy" />
           </a>
           <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
             Alexandria Petroleum Company. Supporting the national economy and ensuring the availability of petroleum products for the Egyptian market.
@@ -279,17 +306,17 @@
             <li><a href="projects.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Projects</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
             <li><a href="projects.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Products</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
             <li><a href="services.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Services</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Units</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="#" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Contact</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li><a href="units.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Units</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li><a href="contact.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Contact</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
           </ul>
         </div>
         <!-- Contact -->
         <div class="md:col-span-2 lg:col-span-2">
           <h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
           <ul class="space-y-3 text-sm">
-            <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-0.5 text-blue-400"></i><span>3 Al Max - Alexandria - Egypt</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-0.5 text-blue-400" aria-hidden="true"></i><span>3 Al Max - Alexandria - Egypt</span></li>
             <li class="flex items-start gap-3">
-              <i class="fas fa-phone mt-0.5 text-blue-400"></i>
+              <i class="fas fa-phone mt-0.5 text-blue-400" aria-hidden="true"></i>
               <div class="space-y-1">
                 <a href="tel:+2034402832" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2832</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
                 <a href="tel:+2034402833" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2833</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
@@ -297,8 +324,8 @@
                 <a href="tel:+2034430124" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0124</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
               </div>
             </li>
-            <li class="flex items-start gap-3"><i class="fas fa-envelope mt-0.5 text-blue-400"></i><a href="mailto:chairman@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">chairman@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li class="flex items-start gap-3"><i class="fas fa-laptop-code mt-0.5 text-blue-400"></i>
+            <li class="flex items-start gap-3"><i class="fas fa-envelope mt-0.5 text-blue-400" aria-hidden="true"></i><a href="mailto:chairman@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">chairman@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
+            <li class="flex items-start gap-3"><i class="fas fa-laptop-code mt-0.5 text-blue-400" aria-hidden="true"></i>
               <div>
                 <p>Site Designed By Alexandria Petroleum Co., IT Deptartment.</p>
                 <a href="mailto:IT@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">IT@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
@@ -312,21 +339,22 @@
       </div>
     </div>
   </footer>
+  <!-- End Footer -->
 
+  <!-- Start Mobile menu overlay -->
+  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+  <!-- End Mobile menu overlay -->
 
-  <!-- Mobile menu overlay -->
-  <div class="mobile-menu-overlay"></div>
-
-  <!-- Mobile menu -->
-  <div class="mobile-menu-container">
+  <!-- Start Mobile menu -->
+  <div class="mobile-menu-container" role="dialog" aria-modal="true" aria-label="Mobile navigation">
       <div class="flex flex-col h-full">
           <!-- Mobile menu header -->
           <div class="mobile-menu-header">
               <a href="index.html" class="logo-link" aria-label="Alexandria Petroleum Company home">
                   <div class="block w-16 h-16 overflow-hidden">
                       <img src="images/logo.png" 
-                          alt="Logo" 
-                          class="w-full h-full object-contain" />
+                          alt="Alexandria Petroleum Company Logo" 
+                          class="w-full h-full object-contain" loading="lazy" />
                   </div>
                       <div class="flex flex-col">
                           <div class="text-xl font-bold text-center">
@@ -339,8 +367,8 @@
                           
                       </div>
               </a>
-              <button class="mobile-menu-close">
-                  <i class="fas fa-times text-xl"></i>
+              <button class="mobile-menu-close" aria-label="Close mobile menu">
+                  <i class="fas fa-times text-xl" aria-hidden="true"></i>
               </button>
           </div>
           
@@ -348,34 +376,34 @@
           <div class="mobile-menu-content">
               <div class="menu-items">
                   <a href="index.html" class="menu-link active">
-                      <i class="fas fa-home menu-icon"></i> Home
+                      <i class="fas fa-home menu-icon" aria-hidden="true"></i> Home
                   </a>
                   <a href="about.html" class="menu-link">
-                      <i class="fas fa-info-circle menu-icon"></i> About Us
+                      <i class="fas fa-info-circle menu-icon" aria-hidden="true"></i> About Us
                   </a>
                   <a href="projects.html" class="menu-link">
-                      <i class="fas fa-project-diagram menu-icon"></i> Projects
+                      <i class="fas fa-project-diagram menu-icon" aria-hidden="true"></i> Projects
                   </a>
                   <a href="products.html" class="menu-link">
-                      <i class="fas fa-box-open menu-icon"></i> Products
+                      <i class="fas fa-box-open menu-icon" aria-hidden="true"></i> Products
                   </a>
                   <a href="services.html" class="menu-link">
-                      <i class="fas fa-concierge-bell menu-icon"></i> Services
+                      <i class="fas fa-concierge-bell menu-icon" aria-hidden="true"></i> Services
                   </a>
                   <a href="units.html" class="menu-link">
-                      <i class="fas fa-building menu-icon"></i> Units
+                      <i class="fas fa-building menu-icon" aria-hidden="true"></i> Units
                   </a>
                   <a href="portfolio.html" class="menu-link">
-                      <i class="fas fa-briefcase menu-icon"></i> Portfolio
+                      <i class="fas fa-briefcase menu-icon" aria-hidden="true"></i> Portfolio
                   </a>
                   <a href="contact.html" class="menu-link">
-                      <i class="fas fa-envelope menu-icon"></i> Contact
+                      <i class="fas fa-envelope menu-icon" aria-hidden="true"></i> Contact
                   </a>
               </div>
           </div>
       </div>
   </div>
-
+  <!-- End Mobile menu -->
 
   <script>
     (function(){
@@ -387,5 +415,3 @@
   <script src="js/maintenance.js"></script>
 </body>
 </html>
-
-

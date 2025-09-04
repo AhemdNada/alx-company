@@ -1,9 +1,9 @@
-// Library slider (What We Offer)
+//slider 
 (function(){
   function attachSlider(trackId, prevId, nextId, dotsId){
     var track = document.getElementById(trackId);
     if (!track) return;
-    var container = track.parentElement; // has slider-draggable
+    var container = track.parentElement; 
     var slides = Array.prototype.slice.call(track.children);
     var total = slides.length;
     var index = 0;
@@ -23,7 +23,7 @@
     if (nextBtn) nextBtn.addEventListener('click', function(){ goTo(index + 1); });
     if (dotsWrap) dots.forEach(function(d, i){ d.addEventListener('click', function(){ goTo(i); }); });
 
-    // swipe/drag support with grab cursor
+    // swipe/drag 
     var startX=0, down=false; 
     track.addEventListener('pointerdown', function(e){ 
       down=true; startX=e.clientX; track.setPointerCapture(e.pointerId); 

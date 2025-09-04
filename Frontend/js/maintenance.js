@@ -1,4 +1,4 @@
-// Simple, reusable card slider with autoplay, dots, and drag/swipe support
+// slider with autoplay, dots, and drag/swipe 
 (function () {
   class CardSliderController {
     constructor(root) {
@@ -39,11 +39,11 @@
     }
 
     bindEvents() {
-      // Pause on hover
+      
       this.root.addEventListener('mouseenter', () => this.stop());
       this.root.addEventListener('mouseleave', () => this.start());
 
-      // Drag with mouse
+      // Drag 
       this.root.addEventListener('mousedown', (e) => this.onDragStart(e.clientX));
       window.addEventListener('mousemove', (e) => this.onDragMove(e.clientX));
       window.addEventListener('mouseup', () => this.onDragEnd());
@@ -53,7 +53,7 @@
       this.root.addEventListener('touchmove', (e) => this.onDragMove(e.touches[0].clientX), { passive: true });
       this.root.addEventListener('touchend', () => this.onDragEnd());
 
-      // Visibility change (save CPU)
+      
       document.addEventListener('visibilitychange', () => {
         if (document.hidden) this.stop(); else this.start();
       });
@@ -73,7 +73,7 @@
 
     onDragEnd() {
       if (!this.isDragging) return;
-      const threshold = 40; // px
+      const threshold = 40; 
       if (this.deltaX < -threshold) {
         this.next();
       } else if (this.deltaX > threshold) {

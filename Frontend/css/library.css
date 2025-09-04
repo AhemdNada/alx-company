@@ -1,5 +1,3 @@
-
-/* Library page styles */
 .sv-dot {
   width: 10px;
   height: 10px;
@@ -10,7 +8,7 @@
 }
 .sv-dot[aria-current="true"] { background: #2563eb; transform: scale(1.15); }
 
-/* Draggable sliders: disable text selection and show grab cursor */
+
 .slider-draggable {
   -webkit-user-select: none;
   -moz-user-select: none;

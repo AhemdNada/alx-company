@@ -1,9 +1,8 @@
-// Quality Control Sector sliders & smooth scroll
 (function(){
   function attachSlider(trackId, prevId, nextId, dotsId){
     var track = document.getElementById(trackId);
     if (!track) return;
-    var container = track.parentElement; // viewport
+    var container = track.parentElement; 
     var total = track.children.length;
     var index = 0;
     var prevBtn = document.getElementById(prevId);
@@ -50,12 +49,12 @@
     startAuto();
   }
 
-  // Attach all 21 sliders
+  
   for (var i=1;i<=21;i++){
     attachSlider('qs'+i+'-slider','qs'+i+'-prev','qs'+i+'-next','qs'+i+'-dots');
   }
 
-  // Smooth scroll for quick links
+ 
   document.querySelectorAll('a[data-scroll]').forEach(function(a){
     a.addEventListener('click', function(e){ var href=a.getAttribute('href')||''; if(href.charAt(0) !== '#') return; e.preventDefault(); var el=document.getElementById(href.slice(1)); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); });
   });
