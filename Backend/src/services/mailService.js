@@ -10,7 +10,7 @@ class MailService {
 
   async init() {
     try {
-      // Check if SendGrid is configured
+      
       if (process.env.SENDGRID_API_KEY) {
         this.transporter = nodemailer.createTransport({
           host: 'smtp.sendgrid.net',
@@ -23,7 +23,7 @@ class MailService {
         });
         logger.info('Mail service initialized with SendGrid');
       } 
-      // Fallback to Gmail
+      
       else if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
         this.transporter = nodemailer.createTransport({
           service: 'gmail',

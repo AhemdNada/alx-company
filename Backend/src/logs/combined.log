@@ -200,3 +200,10 @@
 {"level":"warn","message":"No email configuration found. Contact notifications will not be sent.","service":"apc-backend","timestamp":"2025-09-04 04:24:40"}
 {"level":"info","message":"API listening on http://localhost:4000","service":"apc-backend","timestamp":"2025-09-04 04:24:40"}
 {"level":"info","message":"Environment:","service":"apc-backend","timestamp":"2025-09-04 04:24:40"}
+{"contactId":23,"level":"info","message":"Contact created successfully","service":"apc-backend","timestamp":"2025-09-04 10:50:27"}
+{"level":"warn","message":"Mail service not configured. Skipping email notification.","service":"apc-backend","timestamp":"2025-09-04 10:50:27"}
+{"contactId":23,"email":"ahmednadaahmed@gmail.com","ip":"::1","level":"info","message":"Contact form submitted successfully","service":"apc-backend","timestamp":"2025-09-04 10:50:27"}
+{"contactId":23,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-09-04 10:50:49"}
+{"contactId":12,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-09-04 10:50:50"}
+{"contactId":11,"isReplied":true,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-09-04 10:50:50"}
+{"contactId":12,"isReplied":false,"level":"info","message":"Contact replied status updated","service":"apc-backend","timestamp":"2025-09-04 10:50:53"}

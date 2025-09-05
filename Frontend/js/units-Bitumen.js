@@ -1,4 +1,4 @@
-// Slider logic for Bitumen unit
+// Slider
 (function(){
     function onReady(fn){ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded', fn);} else { fn(); } }
     onReady(function(){

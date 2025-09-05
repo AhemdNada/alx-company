@@ -7,7 +7,7 @@ class ContactController {
     try {
       const { name, email, subject, message } = req.body;
 
-      // Create contact in database
+      
       const contact = await contactModel.create({
         name: name.trim(),
         email: email.trim().toLowerCase(),
@@ -15,7 +15,7 @@ class ContactController {
         message: message.trim()
       });
 
-      // Send email notification (don't wait for it to complete)
+      
       mailService.sendContactNotification(contact).catch(error => {
         logger.error('Failed to send contact notification email:', error);
       });

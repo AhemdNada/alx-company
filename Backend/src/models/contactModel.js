@@ -36,23 +36,23 @@ class ContactModel {
       `;
       const params = [];
 
-      // Add search filter
+      
       if (options.search) {
         query += ` AND (name LIKE ? OR email LIKE ? OR subject LIKE ?)`;
         const searchTerm = `%${options.search}%`;
         params.push(searchTerm, searchTerm, searchTerm);
       }
 
-      // Add replied filter
+      
       if (options.is_replied !== undefined) {
         query += ` AND is_replied = ?`;
         params.push(options.is_replied ? 1 : 0);
       }
 
-      // Add sorting
+      
       query += ` ORDER BY created_at DESC`;
 
-      // Add pagination
+      
       if (options.limit) {
         query += ` LIMIT ?`;
         params.push(parseInt(options.limit));
@@ -121,7 +121,7 @@ class ContactModel {
   async getStats() {
     const pool = await getPool();
     try {
-      // Optimized single query for all statistics
+      
       const [[stats]] = await pool.query(`
         SELECT 
           COUNT(*) AS total,

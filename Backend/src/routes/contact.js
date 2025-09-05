@@ -6,10 +6,10 @@ const logger = require('../services/logger');
 
 const router = Router();
 
-// Rate limiting for contact form submissions with configurable environment variables
+
 const contactFormLimiter = rateLimit({
-  windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS) || 60000, // 1 minute default
-  max: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS) || 5, // 5 requests per window default
+  windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS) || 60000, 
+  max: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS) || 5, 
   message: {
     error: 'Too many requests from this IP, please try again later.'
   },
@@ -26,7 +26,7 @@ const contactFormLimiter = rateLimit({
   }
 });
 
-// Validation helper
+
 function validate(req, res, next) {
   const result = validationResult(req);
   if (!result.isEmpty()) {
@@ -42,10 +42,9 @@ function validate(req, res, next) {
   next();
 }
 
-// Email validation regex
+
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Contact form submission (public endpoint)
 router.post('/submit',
   contactFormLimiter,
   [
@@ -73,7 +72,7 @@ router.post('/submit',
       .isLength({ min: 10, max: 1000 })
       .withMessage('Message is required and must be between 10 and 1000 characters'),
     
-    // Optional reCAPTCHA validation
+
     body('recaptchaToken')
       .optional()
       .isString()
@@ -81,7 +80,7 @@ router.post('/submit',
   ],
   validate,
   async (req, res) => {
-    // Verify reCAPTCHA if configured
+    
     if (process.env.RECAPTCHA_SECRET_KEY && req.body.recaptchaToken) {
       try {
         const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
@@ -121,7 +120,6 @@ router.post('/submit',
   }
 );
 
-// Admin endpoints (these would typically be protected with authentication)
 router.get('/admin/contacts',
   [
     query('search').optional().isString().trim(),

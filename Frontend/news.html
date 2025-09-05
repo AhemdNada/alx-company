@@ -4,14 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alexandria Petroleum Co. — Latest News</title>
+  <meta name="description" content="Alexandria Petroleum Company — Latest News and updates about our operations, achievements, and developments in the petroleum industry." />
+  <meta name="keywords" content="Alexandria Petroleum Company, Latest News, petroleum industry, operations, achievements, developments, APC" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.alx-pc.com/news.html" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="robots" href="/robots.txt" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alexandria Petroleum Co. — Latest News" />
+  <meta property="og:description" content="Alexandria Petroleum Company — Latest News and updates about our operations, achievements, and developments in the petroleum industry." />
+  <meta property="og:url" content="https://www.alx-pc.com/news.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Alexandria Petroleum Company" />
+  <meta property="og:image" content="https://www.alx-pc.com/images/logo.png" />
+  <meta property="og:image:alt" content="Alexandria Petroleum Company logo" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alexandria Petroleum Co. — Latest News" />
+  <meta name="twitter:description" content="Alexandria Petroleum Company — Latest News and updates about our operations, achievements, and developments in the petroleum industry." />
+  <meta name="twitter:image" content="https://www.alx-pc.com/images/logo.png" />
+  <meta name="twitter:image:alt" content="Alexandria Petroleum Company logo" />
+  
+  <!-- Caching -->
+  <meta http-equiv="Cache-Control" content="public, max-age=3600" />
+  <meta http-equiv="Expires" content="3600" />
+  
+  <!-- Resource hints -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="icon" href="images/logo.png">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Latest News — Alexandria Petroleum Company",
+    "url": "https://www.alx-pc.com/news.html",
+    "description": "Alexandria Petroleum Company — Latest News and updates about our operations, achievements, and developments in the petroleum industry.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Alexandria Petroleum Company",
+      "url": "https://www.alx-pc.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.alx-pc.com/images/logo.png"
+      }
+    }
+  }
+  </script>
 </head>
 <body class="font-sans antialiased bg-white">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90">
+    <!-- Start Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90" role="navigation" aria-label="Primary">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-20 items-center">
               <!-- Logo -->
@@ -19,8 +71,8 @@
                   <a href="index.html" class="flex items-center space-x-3">
                       <div class="block w-16 h-16 overflow-hidden">
                           <img src="images/logo.png" 
-                              alt="Logo" 
-                              class="w-full h-full object-contain" />
+                              alt="Alexandria Petroleum Company logo" 
+                              class="w-full h-full object-contain" loading="lazy" />
                       </div>
                       <div class="flex flex-col">
                           <div class="text-xl font-bold text-center">
@@ -79,9 +131,10 @@
           </div>
       </div>
   </nav>
+  <!-- End Navigation -->
 
-  <main id="main" class="min-h-screen">
-    <!-- Page Header -->
+  <main id="main-content" role="main" class="min-h-screen">
+    <!-- Start Page Header -->
     <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 id="news-heading" class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -90,77 +143,121 @@
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">Stay updated with the most recent developments and achievements across our operations.</p>
       </div>
     </section>
+    <!-- End Page Header -->
 
-    <!-- News Grid (dynamic) -->
+    <!-- Start News Grid -->
     <section class="pb-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div id="newsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         <div id="newsEmpty" class="hidden rounded-xl border border-dashed border-gray-300 p-10 text-center text-gray-500">No news available.</div>
       </div>
     </section>
+    <!-- End News Grid -->
   </main>
 
-  <!-- Footer (consistent with site) -->
-  <footer class="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+ <!-- Start Footer -->
+ <footer class="bg-gradient-to-b from-blue-900 to-blue-950 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
-        <!-- Brand -->
-        <div>
-          <a href="#" class="inline-flex items-center text-2xl font-extrabold tracking-tight">
-            <img src="images/logo.png" alt="Logo" class="w-16 h-16 object-contain" />
-          </a>
-          <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
-            Alexandria Petroleum Company. Supporting the national economy and ensuring the availability of petroleum products for the Egyptian market.
-          </p>
-        </div>
+          <!-- Brand -->
+          <div>
+              <a href="#" class="inline-flex items-center text-2xl font-extrabold tracking-tight">
+                  <img src="images/logo.png" 
+                      alt="Alexandria Petroleum Company logo" 
+                      class="w-16 h-16 object-contain" loading="lazy" />
+              </a>
+              <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-xs">
+                  Alexandria Petroleum Company. Supporting the national economy and ensuring the availability of petroleum products for the Egyptian market.
+              </p>
+          </div>
+          
 
-        <!-- Useful Links -->
-        <div>
-          <h3 class="text-white font-semibold text-lg mb-4">Useful Links</h3>
-          <ul class="space-y-3 text-sm">
-            <li><a href="index.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Home</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="about.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">About Us</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="projects.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Projects</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
-            <li><a href="services.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">Services</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a></li>
-          </ul>
-        </div>
+          <!-- Useful Links -->
+          <div>
+              <h3 class="text-white font-semibold text-lg mb-4">Useful Links</h3>
+              <ul class="space-y-3 text-sm">
+                  <li>
+                      <a href="index.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                          <span class="relative">Home</span>
+                          <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="about.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                          <span class="relative">About Us</span>
+                          <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="projects.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                          <span class="relative">Projects</span>
+                          <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="products.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                          <span class="relative">Products</span>
+                          <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="services.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                          <span class="relative">Services</span>
+                          <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="units.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                          <span class="relative">Units</span>
+                          <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="contact.html" class="group inline-block relative text-gray-300 hover:text-white transition-colors">
+                          <span class="relative">Contact</span>
+                          <span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                  </li>
+              </ul>
+          </div>
 
-        <!-- Contact -->
-        <div class="md:col-span-2 lg:col-span-2">
-          <h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
-          <ul class="space-y-3 text-sm">
-            <li class="flex items-start gap-3">
-              <i class="fas fa-map-marker-alt mt-0.5 text-blue-400"></i>
-              <span>3 Al Max - Alexandria - Egypt</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-phone mt-0.5 text-blue-400"></i>
-              <div class="space-y-1">
-                <a href="tel:+2034402832" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2832</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br />
-                <a href="tel:+2034402833" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2833</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br />
-                <a href="tel:+2034430123" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0123</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br />
-                <a href="tel:+2034430124" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0124</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-envelope mt-0.5 text-blue-400"></i>
-              <a href="mailto:chairman@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">chairman@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-laptop-code mt-0.5 text-blue-400"></i>
-              <div>
-                <p>Site Designed By Alexandria Petroleum Co., IT Deptartment.</p>
-                <a href="mailto:IT@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">IT@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
-              </div>
-            </li>
-          </ul>
-        </div>
+          <!-- Contact -->
+          <div class="md:col-span-2 lg:col-span-2">
+              <h3 class="text-white font-semibold text-lg mb-4">Contact</h3>
+              <ul class="space-y-3 text-sm">
+                  <li class="flex items-start gap-3">
+                      <i class="fas fa-map-marker-alt mt-0.5 text-blue-400"></i>
+                      <span>3 Al Max - Alexandria - Egypt</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                      <i class="fas fa-phone mt-0.5 text-blue-400"></i>
+                      <div class="space-y-1">
+                          <a href="tel:+2034402832" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2832</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                          <a href="tel:+2034402833" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 440 2833</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                          <a href="tel:+2034430123" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0123</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a><br/>
+                          <a href="tel:+2034430124" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">+203 443 0124</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                      </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                      <i class="fas fa-envelope mt-0.5 text-blue-400"></i>
+                      <a href="mailto:chairman@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">chairman@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                  </li>
+                  <li class="flex items-start gap-3">
+                      <i class="fas fa-laptop-code mt-0.5 text-blue-400"></i>
+                      <div>
+                          <p>Site Designed By Alexandria Petroleum Co., IT Deptartment.</p>
+                          <a href="mailto:IT@alx-pc.com" class="group inline-block relative text-gray-300 hover:text-white transition-colors"><span class="relative">IT@alx-pc.com</span><span class="pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 bg-gradient-to-r from-blue-300 to-blue-600 rounded-full transition-all duration-300 group-hover:w-full"></span></a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
       </div>
-      <div class="mt-12 pt-6 border-t border-white/10 text-xs text-gray-400 text-center">
-        <p>© <span id="year"></span> Alexandria Petroleum Company. All rights reserved.</p>
+      <div class="mt-12 pt-6 border-t border-white/10 text-xs text-gray-400 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+          <p>© <span id="year"></span> Alexandria Petroleum Company. All rights reserved.</p>
       </div>
-    </div>
-  </footer>
+  </div>
+</footer>
+<!-- End Footer -->
 
   <script>
     // Footer dynamic year
@@ -171,10 +268,11 @@
   </script>
 
 
-  <!-- Mobile menu overlay -->
+  <!-- Start Mobile menu overlay -->
   <div class="mobile-menu-overlay"></div>
+  <!-- End Mobile menu overlay -->
 
-  <!-- Mobile menu -->
+  <!-- Start Mobile menu -->
   <div class="mobile-menu-container">
       <div class="flex flex-col h-full">
           <!-- Mobile menu header -->
@@ -182,8 +280,8 @@
               <a href="index.html" class="logo-link" aria-label="Alexandria Petroleum Company home">
                   <div class="block w-16 h-16 overflow-hidden">
                       <img src="images/logo.png" 
-                          alt="Logo" 
-                          class="w-full h-full object-contain" />
+                          alt="Alexandria Petroleum Company logo" 
+                          class="w-full h-full object-contain" loading="lazy" />
                   </div>
                       <div class="flex flex-col">
                           <div class="text-xl font-bold text-center">
@@ -232,6 +330,7 @@
           </div>
       </div>
   </div>
+  <!-- End Mobile menu -->
 
 
 
@@ -254,7 +353,7 @@
             const card = document.createElement('article');
             card.className = 'group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden';
             card.innerHTML = `
-              <div class="relative w-full pt-[56.25%] overflow-hidden">${n.coverImage ? `<img src="${n.coverImage}" alt="${(n.title||'')}&nbsp;cover" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />` : ''}</div>
+              <div class="relative w-full pt-[56.25%] overflow-hidden">${n.coverImage ? `<img src="${n.coverImage}" alt="${(n.title||'')}&nbsp;cover" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />` : ''}</div>
               <div class="p-5">
                 <h3 class="text-lg font-bold text-gray-800 mb-2">${n.title || ''}</h3>
                 ${n.subtitle ? `<p class=\"text-gray-600 mb-3\">${n.subtitle}</p>` : ''}

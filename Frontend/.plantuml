@@ -1,0 +1,112 @@
+@startuml
+!theme plain
+skinparam backgroundColor #FFFFFF
+skinparam actorStyle awesome
+skinparam usecaseStyle rectangle
+
+title Alexandria Petroleum Company - Main System Use Cases
+
+actor "Website Visitor" as Visitor
+actor "Admin User" as Admin
+actor "System" as System
+
+package "Public Website Features" {
+    usecase "View Home Page" as UC1
+    usecase "Browse About Us" as UC2
+    usecase "View Products" as UC3
+    usecase "View Services" as UC4
+    usecase "View Units" as UC5
+    usecase "View Portfolio" as UC6
+    usecase "View Projects" as UC7
+    usecase "View News" as UC8
+    usecase "View News Details" as UC9
+    usecase "Submit Contact Form" as UC10
+    usecase "View Contact Information" as UC11
+    usecase "Browse Chemical Services" as UC12
+    usecase "View Quality Sector" as UC13
+    usecase "View Research Sector" as UC14
+    usecase "View Gas Sector" as UC15
+    usecase "View Water Sector" as UC16
+    usecase "View Product Analysis" as UC17
+    usecase "View Evaluation Services" as UC18
+    usecase "View Training Services" as UC19
+    usecase "View Maintenance Services" as UC20
+    usecase "View Library" as UC21
+}
+
+package "Admin Management Features" {
+    usecase "Manage Sharing Rates" as UC22
+    usecase "Manage Chairmen" as UC23
+    usecase "Manage News" as UC24
+    usecase "Manage News Ticker" as UC25
+    usecase "Manage Projects" as UC26
+    usecase "Manage Contacts" as UC27
+    usecase "View Contact Statistics" as UC28
+    usecase "Upload Images" as UC29
+    usecase "Delete Content" as UC30
+    usecase "Mark Contact as Replied" as UC31
+}
+
+package "System Features" {
+    usecase "Send Email Notifications" as UC32
+    usecase "Log System Events" as UC33
+    usecase "Real-time Updates (SSE)" as UC34
+    usecase "File Upload Management" as UC35
+    usecase "Data Validation" as UC36
+    usecase "Rate Limiting" as UC37
+}
+
+' Visitor relationships
+Visitor --> UC1
+Visitor --> UC2
+Visitor --> UC3
+Visitor --> UC4
+Visitor --> UC5
+Visitor --> UC6
+Visitor --> UC7
+Visitor --> UC8
+Visitor --> UC9
+Visitor --> UC10
+Visitor --> UC11
+Visitor --> UC12
+Visitor --> UC13
+Visitor --> UC14
+Visitor --> UC15
+Visitor --> UC16
+Visitor --> UC17
+Visitor --> UC18
+Visitor --> UC19
+Visitor --> UC20
+Visitor --> UC21
+
+' Admin relationships
+Admin --> UC22
+Admin --> UC23
+Admin --> UC24
+Admin --> UC25
+Admin --> UC26
+Admin --> UC27
+Admin --> UC28
+Admin --> UC29
+Admin --> UC30
+Admin --> UC31
+
+' System relationships
+System --> UC32
+System --> UC33
+System --> UC34
+System --> UC35
+System --> UC36
+System --> UC37
+
+' Dependencies
+UC10 ..> UC32 : triggers
+UC24 ..> UC34 : triggers
+UC25 ..> UC34 : triggers
+UC26 ..> UC34 : triggers
+UC27 ..> UC33 : triggers
+UC29 ..> UC35 : uses
+UC10 ..> UC36 : requires
+UC10 ..> UC37 : subject to
+
+@enduml

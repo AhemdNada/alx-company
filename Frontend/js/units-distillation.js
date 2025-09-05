@@ -1,11 +1,11 @@
-// Smooth scroll for ADU quick links
+// Smooth scroll 
 (function(){
     function onReady(fn){
         if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', fn); } else { fn(); }
     }
 
     onReady(function(){
-        // Smooth scroll for quick links
+        // Smooth scroll quick links
         var links = Array.prototype.slice.call(document.querySelectorAll('a.prod-link[href^="#"]'));
         links.forEach(function(a){
             a.addEventListener('click', function(e){
@@ -19,7 +19,7 @@
             });
         });
 
-        // Draggable slider
+        
         var slider = document.querySelector('.uds-slider .uds-track');
         var prevBtn = document.querySelector('.uds-slider .uds-prev');
         var nextBtn = document.querySelector('.uds-slider .uds-next');
@@ -49,11 +49,11 @@
                 if(!isDown) return;
                 e.preventDefault();
                 var x = e.pageX - slider.offsetLeft;
-                var walk = (x - startX) * 1.2; // scroll-fast
+                var walk = (x - startX) * 1.2;
                 slider.scrollLeft = scrollLeft - walk;
             });
 
-            // Touch support
+            
             var startTouchX = 0;
             var startScrollLeft = 0;
             slider.addEventListener('touchstart', function(e){
