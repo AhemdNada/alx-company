@@ -13,6 +13,7 @@ DROP TABLE IF EXISTS `news`;
 DROP TABLE IF EXISTS `chairmen`;
 DROP TABLE IF EXISTS `sharing_rates`;
 DROP TABLE IF EXISTS `contacts`;
+DROP TABLE IF EXISTS `admins`;
 
 -- Sharing Rates
 CREATE TABLE `sharing_rates` (
@@ -91,6 +92,24 @@ CREATE TABLE `contacts` (
   KEY `idx_contacts_is_replied` (`is_replied`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- Admins
+CREATE TABLE `admins` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(50) NOT NULL UNIQUE,
+  `password_hash` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `is_active` TINYINT(1) NOT NULL DEFAULT 1,
+  `last_login` TIMESTAMP NULL,
+  `failed_login_attempts` INT NOT NULL DEFAULT 0,
+  `locked_until` TIMESTAMP NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  CONSTRAINT `pk_admins` PRIMARY KEY (`id`),
+  UNIQUE KEY `u_admins_username` (`username`),
+  KEY `idx_admins_email` (`email`),
+  KEY `idx_admins_is_active` (`is_active`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 -- Projects
 CREATE TABLE `projects` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -133,6 +152,7 @@ SELECT * FROM news;
 SELECT * FROM news_images;
 SELECT * FROM news_ticker;
 SELECT * FROM contacts;
+SELECT * FROM admins;
 SELECT * FROM projects;
 SELECT * FROM project_images;
 SELECT * FROM project_details;
